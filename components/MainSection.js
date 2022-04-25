@@ -1,27 +1,28 @@
 import Image from "next/image";
+import text from "../config/text.json";
 
 export default function MainSection() {
+  const { main } = text;
   return (
-    <main className="px-4 py-20 my-12 md:px-8 lg:px-40 lg:my-20">
+    <main className="px-4 py-20 my-12 md:px-8 lg:px-30 xl:px-40 lg:my-20">
       <div className="md:hidden">
         <Image
           src="/mobile/image-grid-1.jpg"
           width={343}
           height={320}
           layout="responsive"
-          alt="main grid image mobile 1"
+          objectFit="cover"
+          alt="Dancing Couple"
           priority="true"
         />
       </div>
       <div className="space-x-20 md:flex">
         <div className="md:w-2/5 lg:w-[350px]">
-          <h2 className="font-bigShoulder uppercase text-headingM lg:text-headingXM font-black my-7 lg:my-14 lg:w-[280px]">
-            Your Day <br className="lg:hidden" />
-            at the Gallery
+          <h2 className="font-bigShoulder uppercase text-headingS lg:text-headingS font-black my-7 lg:my-14 lg:w-[280px]">
+            {main.top}
           </h2>
           <p className="my-8 text-bodyS text-darkGray lg:text-bodyM lg:w-[350px]">
-            Wander through our distinct collections and find new insights about
-            our artists. Dive into the details of their creative process.
+            {main.description}
           </p>
         </div>
         <div className="hidden md:block md:w-2/3 lg:hidden">
@@ -30,7 +31,8 @@ export default function MainSection() {
             width={398}
             height={400}
             layout="responsive"
-            alt="main grid image tablet 1"
+            objectFit="cover"
+            alt="Dancing Couple"
             priority="true"
           />
         </div>
@@ -39,8 +41,9 @@ export default function MainSection() {
             src="/desktop/image-grid-1.jpg"
             width={635}
             height={400}
+            objectFit="cover"
             layout="responsive"
-            alt="main grid image desktop 1"
+            alt="Dancing Couple"
             priority="true"
           />
         </div>
@@ -51,8 +54,9 @@ export default function MainSection() {
             src="/mobile/image-grid-2.jpg"
             width={343}
             height={480}
+            objectFit="cover"
             layout="responsive"
-            alt="main grid image mobile 2"
+            alt="Footwork of dancing couple"
             priority="true"
           />
         </div>
@@ -61,8 +65,9 @@ export default function MainSection() {
             src="/tablet/image-grid-2.jpg"
             width={398}
             height={720}
+            objectFit="cover"
             layout="responsive"
-            alt="main grid image tablet 2"
+            alt="Footwork of dancing couple"
             priority="true"
           />
         </div>
@@ -71,8 +76,9 @@ export default function MainSection() {
             src="/desktop/image-grid-2.jpg"
             width={635}
             height={720}
+            objectFit="cover"
             layout="responsive"
-            alt="main grid image desktop 2"
+            alt="Footwork of dancing couple"
             priority="true"
           />
         </div>
@@ -81,8 +87,9 @@ export default function MainSection() {
             src="/mobile/image-grid-3.jpg"
             width={343}
             height={200}
+            objectFit="cover"
             layout="responsive"
-            alt="main grid image mobile 3"
+            alt="Couple practising a spin"
             priority="true"
           />
         </div>
@@ -92,8 +99,9 @@ export default function MainSection() {
               src="/tablet/image-grid-3.jpg"
               width={280}
               height={313}
+              objectFit="cover"
               layout="responsive"
-              alt="main grid image tablet 3"
+              alt="Couple practising a spin"
               priority="true"
             />
           </div>
@@ -102,18 +110,18 @@ export default function MainSection() {
               src="/desktop/image-grid-3.jpg"
               width={445}
               height={313}
+              objectFit="cover"
               layout="responsive"
-              alt="main grid image desktop 3"
+              alt="Couple practising a spin"
               priority="true"
             />
           </div>
           <div className="bg-almostBlack text-white px-6 lg:px-10 py-10 md:w-[280px] lg:w-[445px] md:h-full md:flex-auto">
-            <h2 className="my-5 font-black uppercase font-bigShoulder text-headingM lg:text-headingXM md:my-8">
-              Come &amp; Be Inspired
+            <h2 className="my-5 font-black uppercase font-bigShoulder text-headingS lg:text-headingS md:my-8">
+              {main.text}
             </h2>
             <p className="font-light font-outfit text-bodyS lg:text-bodyM md:pt-2">
-              We’re excited to welcome you to our gallery and see how our
-              collections influence you.
+              {main.final}
             </p>
           </div>
         </div>

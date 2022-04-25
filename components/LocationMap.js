@@ -1,8 +1,6 @@
 import React, { useState, useRef, useEffect } from 'react';
-import ButtonB from './ButtonB';
 import { Wrapper, Status } from '@googlemaps/react-wrapper';
-
-const center = { lat: 51.628251252028704, lng: -0.7512566406302787 };
+const center = { lat: 51.62945971678308, lng: -0.7514637303734821 };
 
 const render = (status) => {
   const zoom = 17;
@@ -15,11 +13,6 @@ const render = (status) => {
     case Status.SUCCESS:
       return (<MyMapComponent center={center} zoom={zoom}>
         <Marker key={0} position={center} icon={'/icon-location.svg'} />
-        {/* <AnyReactComponent
-            position={center}
-            text="My Marker"
-          /> */}
-        {/* <CustomMarker key={0} position={center} /> */}
       </MyMapComponent>);
   }
 };
@@ -59,6 +52,8 @@ function MyMapComponent({ center, zoom, children }) {
     setMap(new window.google.maps.Map(ref.current, {
       center,
       zoom,
+      mapTypeControl: false,
+      fullscreenControl: false,
     }));
   }, [ref, map]);
 
@@ -82,29 +77,6 @@ export default function LocationMap() {
         apiKey={process.env.NEXT_PUBLIC_MAP_API}
         render={render}>
       </Wrapper>
-      <ButtonB path="/" title="Back to Home" />
-      <div
-        onClick={() => {
-          scroll({
-            top: 1000,
-            left: 0,
-            behavior: 'smooth',
-          });
-        }}
-        className="mr-2 md:mr-4 lg:mr-10 absolute top-2 right-0 hover:bg-almostBlack w-[60px] h-[60px] flex justify-center items-center rounded-full bg-gold cursor-pointer transition fill-white stroke-white">
-        <svg
-          className="w-6 h-6"
-          // fill='none'
-          // stroke='currentColor'
-          viewBox="0 0 24 24"
-          xmlns="http://www.w3.org/2000/svg">
-          <path
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            strokeWidth="2"
-            d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
-        </svg>
-      </div>
     </div>
   );
 }
