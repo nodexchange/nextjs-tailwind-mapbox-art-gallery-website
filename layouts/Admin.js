@@ -6,7 +6,7 @@ export const Admin = ({
   children,
 }) => {
   return (
-    <div className="w-screen h-screen flex flex-col overflow-x-hidden">
+    <div className="w-screen h-screen flex flex-col overflow-x-hidden bg-almostBlack">
       <Header />
       {children}
       <FooterB />

@@ -35,6 +35,6 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/deploym
 
 ## Prisma 
 
-`▶ npx prisma db push`
+`npx prisma db push`
 
 `npm prisma studio`

@@ -29,12 +29,40 @@ model User {
 
   accounts      Account[]
   sessions      Session[]
+  dance_classes DanceClass[]
+  transactions  Transaction[]
 
   @@map(name: "users")
 }
 
+
+model DanceClass {
+  id                 String  @default(cuid()) @id
+  type               String
+  date               DateTime
+  location           String @default("Guildhall")
+  time               DateTime
+  users              User[]
+  transactions       Transaction[]
+
+  @@map("dance_classes")
+}
+
+model Transaction {
+  id                 String  @default(cuid()) @id
+  type               String
+  createdAt          DateTime @default(now()) @map(name: "created_at")
+  userId             String  @map("user_id")
+  dance_classes      DanceClass[]
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+  @@map("transaction")
+}
+// dance_classId            String  @map("class_id")
+// dance_class DanceClass @relation(field: [dance_classId], reference: [id])
+
+
 model Account {
-  id                 String  @id @default(cuid())
+  id                 String  @default(cuid()) @id
   userId             String  @map("user_id")
   type               String
   provider           String

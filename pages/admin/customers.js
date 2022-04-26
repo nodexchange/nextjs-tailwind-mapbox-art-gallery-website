@@ -10,7 +10,8 @@ const tableHeader = {
   header1: 'Email',
   header2: 'Status',
   header3: 'Name',
-  header4: 'Created',
+  header4: 'Is Admin?',
+  header4: 'Created'
 }
 
 const caption = "Latin Shine Registered Customers";
@@ -23,7 +24,6 @@ const Customers = (props) => {
     if (!session) {
       router.push('/api/auth/signin');
     }
-    console.log('session', session);
   }, [session, router]);
 
   if (typeof window === 'undefined') return null;
@@ -46,7 +46,7 @@ export async function getServerSideProps({ req, res }) {
   const session = await getSession({ req });
   if (!session) {
     res.statusCode = 403;
-    return { props: { drafts: [] } };
+    return { props: { users: [] } };
   }
   if (session) {
     if (session.user.admin === false) {

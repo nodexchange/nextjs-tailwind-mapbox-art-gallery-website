@@ -1,26 +1,67 @@
-import { useEffect } from 'react';
+import { useEffect, useRef, useState } from 'react';
+import ButtonC from '../../components/ButtonC';
+import Link from 'next/link';
+
 import { useSession, getSession } from 'next-auth/react';
 import { useRouter } from 'next/router';
 import { Admin as Layout } from '../../layouts';
 
-const Profile = (props) => {
+const Profile = ({ user }) => {
   const { data: session } = useSession();
+  const inputEmailEl = useRef(null);
+  const inputFirstNameEl = useRef(null);
+  const inputLastNameEl = useRef(null);
+  const inputTelephoneEl = useRef(null);
+  const inputENameEl = useRef(null);
+  const inputETelEl = useRef(null);
+
   const router = useRouter();
 
   useEffect(() => {
     if (!session) {
       router.push('/api/auth/signin');
     }
-  }, [session, router]);
+    console.log('user', user);
+    const { email, name, surname, telephone, eName, eContact} = user;
+    inputEmailEl.current.value = email;
+    inputFirstNameEl.current.value = name;
+    inputLastNameEl.current.value = surname;
+    inputTelephoneEl.current.value = telephone;
+    inputENameEl.current.value = eName;
+    inputETelEl.current.value = eContact;
+  }, [session, router, user]);
+
+  const register = async (e) => {};
+  const checkboxHandler = (e) => {
+    setTermsChecked(e.target.checked);
+  }
 
   if (typeof window === 'undefined') return null;
 
   if (session) {
     return (
       <Layout>
-        <div>
-          <p>PROFILE</p>
-        </div>
+        <form className="w-full max-w-sm mx-auto">
+          <div className="flex items-center border-b border-shine py-2">
+            <input ref={inputEmailEl} readOnly className="appearance-none bg-transparent border-none w-full text-white mr-3 py-1 px-2 leading-tight focus:outline-none" type="email" placeholder="your email: eg. youremail@gmail.com" aria-label="Email Address Input Field" />
+          </div>
+          <div className="flex items-center border-b border-shine py-2">
+            <input ref={inputFirstNameEl} readOnly className="appearance-none bg-transparent border-none w-full text-white mr-3 py-1 px-2 leading-tight focus:outline-none" id="fname" name="fname" type="text" placeholder="Your First name" aria-label="First Name Input Field" />
+          </div>
+          <div className="flex items-center border-b border-shine py-2">
+            <input ref={inputLastNameEl} readOnly className="appearance-none bg-transparent border-none w-full text-white mr-3 py-1 px-2 leading-tight focus:outline-none" id="lname" name="lname" type="text" placeholder="Your Second name" aria-label="Second Name Input Field" />
+          </div>
+          <div className="flex items-center border-b border-shine py-2">
+            <input ref={inputTelephoneEl} readOnly className="appearance-none bg-transparent border-none w-full text-white mr-3 py-1 px-2 leading-tight focus:outline-none" type="tel" placeholder="Telephone eg. 07500905702" aria-label="Telephone Input Field" />
+          </div>
+          <div className="flex items-center border-b border-shine py-2">
+            <input ref={inputENameEl} readOnly className="appearance-none bg-transparent border-none w-full text-white mr-3 py-1 px-2 leading-tight focus:outline-none" type="text" placeholder="Emergency Contact Name" aria-label="Your emergency contact name input field" />
+          </div>
+          <div className="flex items-center border-b border-shine py-2">
+            <input ref={inputETelEl} readOnly className="appearance-none bg-transparent border-none w-full text-white mr-3 py-1 px-2 leading-tight focus:outline-none" type="tel" placeholder="Emergency Telephone Number" aria-label="Emergency Contact Telephone Name" />
+          </div>
+          {/* <ButtonC title="Update" action={register} disabled={!termsChecked} /> */}
+        </form>
       </Layout>
     );
   }
@@ -35,17 +76,24 @@ export async function getServerSideProps({ req, res }) {
     res.statusCode = 403;
     return { props: { session: {} } };
   }
-  // if (session.user) {
-  //   return {
-  //     redirect: {
-  //       destination: '/',
-  //       permanent: false,
-  //     },
-  //   }
-  // }
+  let user = await prisma.user.findUnique({
+    where: { email: session.user.email },
+    select: {
+      email: true,
+      paid: true,
+      name: true,
+      surname: true,
+      telephone: true,
+      eName: true,
+      name: true,
+      image: true,
+      eContact: true,
+    },
+  });
 
   return {
     props: {
+      user,
       session,
     },
   };

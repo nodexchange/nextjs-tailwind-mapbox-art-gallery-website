@@ -1,6 +1,6 @@
 {
-  "name": "art-gallery-website-nextjs",
-  "version": "1.0.0",
+  "name": "latin-shine-website",
+  "version": "1.0.1",
   "private": true,
   "scripts": {
     "dev": "next dev",
