@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import Link from 'next/link';
 import ButtonA from '../components/ButtonA';
 import SocialIcons from './SocialIcons';
 
@@ -26,15 +27,17 @@ const HeroLogo = ({hero}) => {
               );
             })}
           </div>
-          <div className="ml-[76px] text-white font-light text-bodyM mb-20  mr-[61px]">
+          <div className="ml-[76px] text-white font-light text-4xl uppercase drop-shadow-xl mb-20  mr-[61px]">
             {hero.logoWhite.split('_').map((item, id) => {
               return (
                 <p key={`item-${id}`}>
-                  {item}
+                  <Link href="/reserve">
+                    {item}
+                  </Link>
                 </p>
               );
             })}
-            <a className="underline text-blue-600 hover:text-blue-800 visited:text-purple-600" href={emailLink}>{hero.email}</a>
+            {/* <a className="underline text-blue-600 hover:text-blue-800 visited:text-purple-600" href={emailLink}>{hero.email}</a> */}
           </div>
         </div>
         <p className="font-outfit text-white font-light text-bodyM w-[550px] mb-10">

@@ -1,5 +1,5 @@
 import { useRef, useState } from 'react';
-
+import { gaEvent } from '../lib/ga';
 import { Secondary as Layout } from "../layouts";
 import ButtonC from '../components/ButtonC';
 
@@ -34,6 +34,7 @@ const Reserve = () => {
     inputFirstNameEl.current.value = '';
     inputLastNameEl.current.value = '';
     setMessage('Success! 🎉 You have reserved your spot! We will contact you shortly.');
+    gaEvent({ action: "reserve_success" });
   }
   return (
     <Layout>

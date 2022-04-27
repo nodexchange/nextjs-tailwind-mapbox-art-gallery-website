@@ -17,6 +17,7 @@ module.exports = {
 				'shineDark': '#610324',
 			},
 			dropShadow: {
+				'xl': '0 2px 2px rgba(0, 0, 0, 0.4)',
 				'3xl': '0 5px 2px rgba(0, 0, 0, 0.9)',
 			},
 			backgroundImage: {
