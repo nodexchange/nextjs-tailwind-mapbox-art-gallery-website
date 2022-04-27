@@ -40,6 +40,7 @@ const options = {
       authorize: async (credentials, req) => {
         // const hostname = `http://${req.headers.host}`;
         // const hostname = 'h'
+        console.log('AUTHORIZE???');
         const hostname = req.headers.origin;
         if ('username' in credentials && 'password' in credentials) {
           const res = await fetch(`${hostname}/api/login`, {
@@ -68,22 +69,27 @@ const options = {
   ],
   callbacks: {
     async session({ session, user, token }) {
+      console.log('>>> SESSION CALLBACK');
       if (token) {
         session.user.admin = token.admin;
       }
-      return session;
+      console.log('>>> SESSION return');
+      return Promise.resolve(session); 
     },
     async jwt({ token, user, account, profile, isNewUser }) {
       token.user = user;
+      console.log('>>> jwt return');
       if (user) {
         token.admin = user.admin;
       }
-      return token;
+      console.log('>>> jwt return');
+      // return token;
+      return Promise.resolve(token);
     },
   },
   // session: {
   //   strategy: 'jwt',
   // },
   adapter: PrismaAdapter(prisma),
-  // secret: process.env.SECRET,
+  secret: process.env.NEXTAUTH_SECRET,
 };
