@@ -60,35 +60,31 @@ const options = {
         }
         return null;
       },
-    })
-    /* GitHubProvider({
+    }),
+    GitHubProvider({
       clientId: process.env.GITHUB_ID,
       clientSecret: process.env.GITHUB_SECRET,
-    }), */
+    }),
   ],
   callbacks: {
     async session({ session, user, token }) {
-      console.log('>>> SESSION CALLBACK');
       if (token) {
         session.user.admin = token.admin;
       }
-      console.log('>>> SESSION return');
       return Promise.resolve(session); 
     },
     async jwt({ token, user, account, profile, isNewUser }) {
       token.user = user;
-      console.log('>>> jwt return');
       if (user) {
         token.admin = user.admin;
       }
-      console.log('>>> jwt return');
       // return token;
       return Promise.resolve(token);
     },
   },
-  // session: {
-  //   strategy: 'jwt',
-  // },
+  session: {
+    strategy: 'jwt',
+  },
   adapter: PrismaAdapter(prisma),
   secret: process.env.NEXTAUTH_SECRET,
 };
