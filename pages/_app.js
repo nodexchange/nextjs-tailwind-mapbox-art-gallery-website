@@ -46,7 +46,7 @@ function MyApp({ Component, pageProps }) {
           />
         </>
       )}
-      <SessionProvider session={pageProps.session}>
+      <SessionProvider session={pageProps.session} refetchInterval={0}>
         <Component {...pageProps} />
       </SessionProvider>
     </>

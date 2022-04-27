@@ -1,23 +1,34 @@
-import { NextApiHandler } from 'next';
 import NextAuth from 'next-auth';
 import { PrismaAdapter } from '@next-auth/prisma-adapter';
 import GitHubProvider from 'next-auth/providers/github';
 import CredentialsProvider from 'next-auth/providers/credentials';
 import prisma from '../../../lib/prisma';
 
-const authHandler = (req, res) => NextAuth(req, res, options);
-export default authHandler;
+export default NextAuth(options)
+
+const auth0 = {
+  providers: [
+    Auth0Provider({
+      clientId: process.env.AUTH0_ID,
+      clientSecret: process.env.AUTH0_SECRET,
+      issuer: process.env.AUTH0_ISSUER,
+    })
+  ],
+  theme: {
+    colorScheme: "light",
+  },
+  callbacks: {
+    async jwt({ token }) {
+      token.userRole = "admin"
+      return token
+    },
+  },
+}
 
 const options = {
-  debug: true,
   providers: [
     CredentialsProvider({
-      // The name to display on the sign in form (e.g. 'Sign in with...')
       name: 'Email and Password',
-      // The credentials is used to generate a suitable form on the sign in page.
-      // You can specify whatever fields you are expecting to be submitted.
-      // e.g. domain, username, password, 2FA token, etc.
-      // You can pass any HTML attribute to the <input> tag through the object.
       credentials: {
         username: {
           label: 'Email',
@@ -28,8 +39,8 @@ const options = {
       },
       authorize: async (credentials, req) => {
         // const hostname = `http://${req.headers.host}`;
+        // const hostname = 'h'
         const hostname = req.headers.origin;
-        // const hostname = `http://${req.headers.host}`;
         if ('username' in credentials && 'password' in credentials) {
           const res = await fetch(`${hostname}/api/login`, {
             method: 'POST',
@@ -49,11 +60,11 @@ const options = {
         }
         return null;
       },
-    }),
-    GitHubProvider({
+    })
+    /* GitHubProvider({
       clientId: process.env.GITHUB_ID,
       clientSecret: process.env.GITHUB_SECRET,
-    }),
+    }), */
   ],
   callbacks: {
     async session({ session, user, token }) {
@@ -70,9 +81,9 @@ const options = {
       return token;
     },
   },
-  session: {
-    strategy: 'jwt',
-  },
+  // session: {
+  //   strategy: 'jwt',
+  // },
   adapter: PrismaAdapter(prisma),
-  secret: process.env.SECRET,
+  // secret: process.env.SECRET,
 };
