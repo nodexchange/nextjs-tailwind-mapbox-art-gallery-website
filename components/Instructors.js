@@ -18,7 +18,7 @@ export const Instructors = () => {
               priority="true"
             />
           </div>
-          <div className="grow px-4 pt-0 lg:pt-0">
+          <div className="grow px-4 pt-4 md:pt-0">
             <h2 className="font-black uppercase font-bigShoulder text-headingS lg:text-headingS md:mb-4">
               Meet your teachers
             </h2>

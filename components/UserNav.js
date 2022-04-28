@@ -1,12 +1,13 @@
 import Link from 'next/link';
+import SocialIcons from './SocialIcons';
+import ProfileIcon from './ProfileIcon';
+import LogoutIcon from './LogoutIcon';
+import LoginIcon from './LoginIcon';
+import HomeIcon from './HomeIcon';
+
 
 const NavLeft = ({ isActive }) => (
   <div className="left">
-    <Link href="/">
-      <a className="bold" data-active={isActive('/')}>
-        Home page
-      </a>
-    </Link>
     <style jsx>{`
       .bold {
         font-weight: bold;
@@ -31,9 +32,10 @@ const NavLeft = ({ isActive }) => (
 
 const NavRight = ({ isActive }) => (
   <div className="right">
-    <Link href="/api/auth/signin">
-      <a data-active={isActive('/signup')}>Log in</a>
-    </Link>
+    <div className='absolute top-10 lg:right-20 sm:right-12 row flex flex-row gap-5 justify-center'>
+      <LoginIcon />
+      <SocialIcons />
+    </div>
     <style jsx>{`
       a {
         text-decoration: none;
@@ -62,14 +64,7 @@ const NavRight = ({ isActive }) => (
 const UserNavLeft = ({ isActive }) => {
   return (
     <div className="left">
-      <Link href="/">
-        <a className="bold" data-active={isActive('/')}>
-          Home Page
-        </a>
-      </Link>
-      <Link href="/payments">
-        <a data-active={isActive('/payments')}>Payments</a>
-      </Link>
+      {/* <Link href="/"> */ }
       <style jsx>{`
         .bold {
           font-weight: bold;
@@ -93,14 +88,19 @@ const UserNavLeft = ({ isActive }) => {
   );
 };
 
+
+
 const UserNavRight = ({ isActive, info, signOut }) => (
   <div className="right">
-    <p>
-      {info}
-    </p>
-    <button onClick={() => signOut()}>
-      <a>Log out</a>
-    </button>
+    <div className='absolute top-10 lg:right-20 sm:right-12 row flex flex-row gap-5 justify-center'>
+      <p>
+        Welcome, {info}
+      </p>
+      <HomeIcon />
+      <ProfileIcon />
+      <LogoutIcon action={signOut} />
+      <SocialIcons />
+    </div>
     <style jsx>{`
       a {
         text-decoration: none;
@@ -143,11 +143,6 @@ const AdminMenu = ({ isActive, info, signOut }) => (
     <Link href="/admin/customers">
       <a className="bold" data-active={isActive('/')}>
         Customers
-      </a>
-    </Link>
-    <Link href="/account/profile">
-      <a className="bold" data-active={isActive('/')}>
-        Profile
       </a>
     </Link>
     <button onClick={() => signOut()}>

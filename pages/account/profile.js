@@ -1,13 +1,19 @@
 import { useEffect, useRef, useState } from 'react';
-import ButtonC from '../../components/ButtonC';
-import Link from 'next/link';
 
-import { useSession, getSession } from 'next-auth/react';
+import { getSession } from 'next-auth/react';
 import { useRouter } from 'next/router';
 import { Admin as Layout } from '../../layouts';
+import UpcomingEvent from '../../components/UpcomingEvent';
+import ButtonPay from '../../components/ButtonPay';
 
-const Profile = ({ user }) => {
-  const { data: session } = useSession();
+const eventText = "Tester Bachata Class (2h) 04/05, Guildhall.";
+const eventAmount = "£10.00";
+const eventStudentAmount = "£10.00";
+const url = "https://buy.stripe.com/test_fZe03wbckcqGbpSaEH";
+const fullUrl = "https://buy.stripe.com/test_8wM17AbckeyO51u4gi";
+// ?prefilled_email=jenny%40example.com&client_reference_id=id_1234
+
+const Profile = ({ user, session }) => {
   const inputEmailEl = useRef(null);
   const inputFirstNameEl = useRef(null);
   const inputLastNameEl = useRef(null);
@@ -20,8 +26,12 @@ const Profile = ({ user }) => {
   useEffect(() => {
     if (!session) {
       router.push('/api/auth/signin');
+      return;
     }
-    console.log('user', user);
+    if (!session.user) {
+      router.push('/api/auth/signin');
+      return;
+    }
     const { email, name, surname, telephone, eName, eContact} = user;
     inputEmailEl.current.value = email;
     inputFirstNameEl.current.value = name;
@@ -38,10 +48,27 @@ const Profile = ({ user }) => {
 
   if (typeof window === 'undefined') return null;
 
-  if (session) {
+  if (session && Object.keys(session).length > 0) {
     return (
       <Layout>
-        <form className="w-full max-w-sm mx-auto">
+        <div className="w-full max-w-sm mx-auto">
+        <UpcomingEvent type={"Normal"} text={eventText}>
+          {user.paid ? (
+            <button className="inline-flex items-center px-4 py-2 text-indigo-100 bg-green-700 rounded-md">
+              PAID
+            </button>
+          ) : (
+            <>
+              <ButtonPay text={"Pay £10 "} url={`${fullUrl}?prefilled_email=${user.email}`} />
+              <ButtonPay text={"Pay £7 (student)"} url={`${url}?prefilled_email=${user.email}`} />
+            </>
+          )}
+        </UpcomingEvent>
+        <br />
+        <h1 className="text-shine text-xl text-center">
+          --- Your details ---
+        </h1>
+        <form>
           <div className="flex items-center border-b border-shine py-2">
             <input ref={inputEmailEl} readOnly className="appearance-none bg-transparent border-none w-full text-white mr-3 py-1 px-2 leading-tight focus:outline-none" type="email" placeholder="your email: eg. youremail@gmail.com" aria-label="Email Address Input Field" />
           </div>
@@ -62,6 +89,7 @@ const Profile = ({ user }) => {
           </div>
           {/* <ButtonC title="Update" action={register} disabled={!termsChecked} /> */}
         </form>
+        </div>
       </Layout>
     );
   }

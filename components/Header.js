@@ -1,5 +1,4 @@
 import React from 'react';
-import Link from 'next/link';
 import { useRouter } from 'next/router';
 import { signOut, useSession } from 'next-auth/react';
 
@@ -36,7 +35,7 @@ const Header = () => {
   if (session) {
     if (session.user) {
       const { admin } = session.user; 
-      const info = `${session.user.name} ${session.user.email}`
+      const info = `${session.user.name}`
       left = (<UserNavLeft isActive={isActive} />);
       right = !admin ? (
         <UserNavRight isActive={isActive} info={info} signOut={signOut} />
@@ -54,6 +53,9 @@ const Header = () => {
       {right}
       <style jsx>{`
         nav {
+          position: fixed;
+          width: 100%;
+          z-index: 100;
           display: flex;
           padding: 2rem;
           align-items: center;

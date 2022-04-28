@@ -9,11 +9,17 @@ One pager
 ✔ lower tablet break point font size issue @done (4/11/2022, 11:20:06 PM)
 ✔ center align mobile (email foooter and upper copy) @done (4/11/2022, 11:21:28 PM)
 ✔ Map remove controls maybe? @done (4/11/2022, 11:26:28 PM)
-☐ Instructors
-☐ Latest -> Instagram frame
-Classes in progress - please enter quietly and wait by the registration desk.
+✔ Instructors @done (4/28/2022, 1:36:26 PM)
 ✔ Mobile layout and images @done (4/11/2022, 9:47:08 PM)
 ✔ New Hero image @done (4/11/2022, 9:47:10 PM)
 ✔ Email address @done (4/11/2022, 12:47:15 PM)
 ✔ Location @done (4/11/2022, 12:44:48 PM)
 ✔ email in footer @done (3/22/2022, 10:05:39 PM)
+☐ Latest -> Instagram frame
+☐ Classes in progress - please enter quietly and wait by the registration desk.
+☐ Offline form 
+☐ Register success to payment link -> prefilled example:
+☐ Profile - pay now (if paid status is false);
+☐ Profile - grid for payments;
+☐ Status - grid for payments;
+https://buy.stripe.com/test_fZe03wbckcqGbpSaEH?prefilled_email=jenny%40example.com&client_reference_id=id_1234

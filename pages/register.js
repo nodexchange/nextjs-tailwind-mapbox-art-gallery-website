@@ -1,5 +1,5 @@
 import { useRef, useState } from 'react';
-
+import { getSession } from 'next-auth/react';
 import { Secondary as Layout } from "../layouts";
 import ButtonC from '../components/ButtonC';
 import Link from 'next/link';
@@ -106,6 +106,21 @@ const Register = (props) => {
       </main>
     </Layout>
   )
+}
+
+
+export async function getServerSideProps({ req, res }) {
+  const session = await getSession({ req });
+  if (session) {
+    if (session.user) {
+      return {
+        redirect: {
+          destination: '/account/profile',
+          permanent: false,
+        },
+      }
+    }
+  }
 }
 
 export default Register;

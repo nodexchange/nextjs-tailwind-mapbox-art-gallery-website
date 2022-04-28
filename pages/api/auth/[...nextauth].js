@@ -87,6 +87,11 @@ const options = {
   },
   adapter: PrismaAdapter(prisma),
   secret: process.env.NEXTAUTH_SECRET,
+  theme: {
+    colorScheme: "dark", // "auto" | "dark" | "light"
+    brandColor: "#bb0546", // Hex color code
+    logo: "https://www.latinshine.co.uk/_next/image?url=%2Fdesktop%2Flogo.png&w=1080&q=75" // Absolute URL to image
+  }
 };
 
 export default NextAuth(options);
