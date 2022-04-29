@@ -28,6 +28,10 @@ const Header = () => {
     );
   }
 
+  const customSignup = () => {
+    signOut({callbackUrl: '/'});
+  }
+
   if (!session) {
     right = (<NavRight isActive={isActive} />);
   }
@@ -38,9 +42,9 @@ const Header = () => {
       const info = `${session.user.name}`
       left = (<UserNavLeft isActive={isActive} />);
       right = !admin ? (
-        <UserNavRight isActive={isActive} info={info} signOut={signOut} />
+        <UserNavRight isActive={isActive} info={info} signOut={customSignup} />
         ) : (
-        <AdminMenu isActive={isActive} info={info} signOut={signOut} />
+        <AdminMenu isActive={isActive} info={info} signOut={customSignup} />
       );
     } else {
       right = (<NavRight isActive={isActive} />);

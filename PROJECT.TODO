@@ -1,5 +1,15 @@
 One pager
 ---
+☐ Latest -> Instagram frame
+☐ Classes in progress - please enter quietly and wait by the registration desk.
+☐ Offline form 
+☐ stripe screet to dev and prod 
+☐ mobile menu
+☐ profile - accordion 
+☐ profile - previous events
+☐ profile - upcoming events 
+☐ prisma - events
+☐ admin - events section
 ✔ Website copy - venue - time - location @done (4/11/2022, 11:02:24 PM)
 ✔ Reserve your spot (no cc details needed) - button - hero @done (4/11/2022, 11:02:21 PM)
 ✔ Reserve your spot section / Sign up @done (4/11/2022, 11:02:20 PM)
@@ -15,11 +25,11 @@ One pager
 ✔ Email address @done (4/11/2022, 12:47:15 PM)
 ✔ Location @done (4/11/2022, 12:44:48 PM)
 ✔ email in footer @done (3/22/2022, 10:05:39 PM)
-☐ Latest -> Instagram frame
-☐ Classes in progress - please enter quietly and wait by the registration desk.
-☐ Offline form 
-☐ Register success to payment link -> prefilled example:
-☐ Profile - pay now (if paid status is false);
-☐ Profile - grid for payments;
-☐ Status - grid for payments;
-https://buy.stripe.com/test_fZe03wbckcqGbpSaEH?prefilled_email=jenny%40example.com&client_reference_id=id_1234
+✔ confirmation screen - redirect to thank you page. @done (4/29/2022, 12:18:21 PM)
+✔ stripe confirmation link redirect update. @done (4/29/2022, 3:44:13 PM)
+✔ headers profile text @done (4/29/2022, 12:18:17 PM)
+✔ sign in -> profile redirect @done (4/29/2022, 3:44:18 PM)
+✔ Register success to payment link -> prefilled example: @done (4/29/2022, 11:58:36 AM)
+✔ Profile - pay now (if paid status is false); @done (4/29/2022, 11:58:33 AM)
+✔ Profile - grid for payments; @done (4/29/2022, 11:58:21 AM)
+✔ Status - grid for payments; @done (4/29/2022, 11:58:20 AM)

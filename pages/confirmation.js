@@ -6,7 +6,9 @@ import { getSession } from 'next-auth/react';
 import { loadStripe } from '@stripe/stripe-js';
 import { Elements } from '@stripe/react-stripe-js';
 import { Secondary as Layout } from "../layouts";
+import UpcomingEvent from '../components/UpcomingEvent';
 
+const eventText = "Tester Bachata Class (2h) 04/05, Guildhall.";
 
 const Confirmation = ({ user, session }) => {
   // useEffect(() => {
@@ -29,7 +31,19 @@ const Confirmation = ({ user, session }) => {
         <main className="text-left bg-almostBlack text-white px-8 py-10 md:py-20 lg:py-30 lg:px-30 xl:px-40 justify-between md:items-start">
           <p>🎉 Success! 🎉 We have received your payment! Thank you for your support from ✨ Latin Shine team ✨</p>
           <br />
-          {isSessionAvailable && (<p>Enjoy your class {session.user.name}!</p>)}
+          {isSessionAvailable && (
+            <>
+              <p>Enjoy your class {session.user.name}!</p>
+              <div className="mt-4 gap-4 flex row justify-center">
+                <UpcomingEvent type={""} text={eventText}>
+                  {user.paid ? (
+                    <button className="inline-flex items-center px-4 py-2 text-indigo-100 bg-green-700 rounded-md">
+                      PAID
+                    </button>
+                  ) : (<p></p>)}
+                </UpcomingEvent>
+              </div>
+            </>)}
         </main>
       </Layout>
     )

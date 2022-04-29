@@ -39,7 +39,6 @@ const options = {
       authorize: async (credentials, req) => {
         // const hostname = `http://${req.headers.host}`;
         // const hostname = 'h'
-        console.log('AUTHORIZE???');
         const hostname = req.headers.origin;
         if ('username' in credentials && 'password' in credentials) {
           const res = await fetch(`${hostname}/api/login`, {
@@ -87,6 +86,9 @@ const options = {
   },
   adapter: PrismaAdapter(prisma),
   secret: process.env.NEXTAUTH_SECRET,
+  pages: {
+    newUser: '/account/profile' // New users will be directed here on first sign in (leave the property out if not of interest)
+  },
   theme: {
     colorScheme: "dark", // "auto" | "dark" | "light"
     brandColor: "#bb0546", // Hex color code

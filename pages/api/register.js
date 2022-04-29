@@ -8,10 +8,15 @@ export default async function handle(req, res) {
   // const { email, firstName, lastName, telephone, eName, eContact } = req.body;
 
   // const session = await getSession({ req });
-  const result = await prisma.user.create({
-    data: {
-      ...req.body
-    },
-  });
-  res.json(result);
+  try {
+    const result = await prisma.user.create({
+      data: {
+        ...req.body
+      },
+    });
+    res.json(result);
+  } catch (e) {
+    console.log('Register error', e.message);
+    return res.status(400).json({error: true, message: `Register error. Are you already registered? If error presists, please contact us at latin_shine@outlook.co.uk.`});
+  }
 }

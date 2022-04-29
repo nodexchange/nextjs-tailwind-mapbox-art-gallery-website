@@ -1,8 +1,12 @@
-import { useRef, useState } from 'react';
-import { getSession } from 'next-auth/react';
-import { Secondary as Layout } from "../layouts";
-import ButtonC from '../components/ButtonC';
+import { useEffect, useRef, useState } from 'react';
+import validator from 'email-validator'
+import { signIn, getSession } from 'next-auth/react';
 import Link from 'next/link';
+import { getCsrfToken } from "next-auth/react"
+
+import { Secondary as Layout } from "../layouts";
+import ButtonA from '../components/ButtonA';
+import ButtonC from '../components/ButtonC';
 
 const Register = (props) => {
   const inputEmailEl = useRef(null);
@@ -15,6 +19,24 @@ const Register = (props) => {
 
   const [message, setMessage] = useState('');
   const [termsChecked, setTermsChecked] = useState(false);
+  const [valid, setValid] = useState(false);
+  const [emailError, setEmailError] = useState(true);
+
+  useEffect(() => {
+    if (emailError === false && termsChecked === true) {
+      setValid(true);
+    }
+  }, [emailError, termsChecked]);
+  const validateEmail = (e) => {
+    var email = e.target.value
+  
+    if (validator.validate(email)) {
+      setEmailError(false);
+    } else {
+      setEmailError(true);
+      setValid(false);
+    }
+  }
 
   const register = async (e) => {
     e.preventDefault();
@@ -35,10 +57,14 @@ const Register = (props) => {
       method: 'POST'
     });
     const response = await res.json();
-
     if (response.error) {
-      setMessage(error);
+      setMessage(response.message);
       return;
+    }
+
+    const credentials = {
+      email: inputEmailEl.current.value,
+      password: inputPwdEl.current.value
     }
 
     inputEmailEl.current.value = '';
@@ -48,20 +74,32 @@ const Register = (props) => {
     inputTelephoneEl.current.value = '';
     inputENameEl.current.value = '';
     inputETelEl.current.value = '';
-    setMessage('Success! 🎉 You have Registered!');
+    setMessage('Success! 🎉 You have Registered! 🎉 redirecting to profile...');
+    setTimeout(() => {
+      signInHandler(credentials);
+    }, [2000]);
   }
   const checkboxHandler = (e) => {
     setTermsChecked(e.target.checked);
+    if(e.target.checked === false) setValid(false);
+  }
+
+  const signInHandler = (credentials) => {
+    const { email, password } = credentials;
+    signIn('credentials', { username: email, password, callbackUrl: '/account/profile' });
   }
 
   return (
     <Layout>
       <main className="text-center bg-almostBlack text-white px-8 py-10 md:py-20 lg:py-30 lg:px-30 xl:px-40 justify-between md:items-start">
         {message ? (
+          <>
           <h3
             className="text-bodyM font-black uppercase font-bigShoulder cursor-pointer"
-            style={{ lineHeight: "1.5rem" }}
-          >{message}</h3>
+            style={{ lineHeight: "1.5rem" }}>
+              {message}
+            </h3>
+          </>
         ) : 
         (
           <>
@@ -73,7 +111,7 @@ const Register = (props) => {
             </h3>
             <form className="w-full max-w-sm mx-auto">
               <div className="flex items-center border-b border-shine py-2">
-                <input ref={inputEmailEl} className="appearance-none bg-transparent border-none w-full text-white mr-3 py-1 px-2 leading-tight focus:outline-none" type="email" placeholder="your email: eg. youremail@gmail.com" aria-label="Email Address Input Field" />
+                <input onChange={(e) => validateEmail(e)} ref={inputEmailEl} className="appearance-none bg-transparent border-none w-full text-white mr-3 py-1 px-2 leading-tight focus:outline-none" type="email" placeholder="your email: eg. youremail@gmail.com" aria-label="Email Address Input Field" />
               </div>
               <div className="flex items-center border-b border-shine py-2">
                 <input ref={inputPwdEl} type="password" className="appearance-none bg-transparent border-none w-full text-white mr-3 py-1 px-2 leading-tight focus:outline-none" minLength="6" placeholder="your password (min 6 characters)" aria-label="Password Input Field" />
@@ -99,8 +137,9 @@ const Register = (props) => {
                   You agree to the <Link href="/terms"><a className="underline text-white hover:text-shine" target="_self">Terms and Conditions</a></Link> set out by this site, including our Cookie Use.
                 </label>
               </div>
-              <ButtonC title="Register" action={register} disabled={!termsChecked} />
+              <ButtonC title="Register" action={register} disabled={!valid} />
             </form>
+            <span className="text-bodyM text-shine">{(emailError && 'Please enter a valid email address')}</span>
           </>
         )}
       </main>
@@ -120,6 +159,9 @@ export async function getServerSideProps({ req, res }) {
         },
       }
     }
+  }
+  return {
+    props: {}
   }
 }
 

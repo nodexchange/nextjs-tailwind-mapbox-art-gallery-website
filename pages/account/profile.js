@@ -7,13 +7,8 @@ import UpcomingEvent from '../../components/UpcomingEvent';
 import ButtonPay from '../../components/ButtonPay';
 
 const eventText = "Tester Bachata Class (2h) 04/05, Guildhall.";
-const eventAmount = "£10.00";
-const eventStudentAmount = "£10.00";
-const url = "https://buy.stripe.com/test_fZe03wbckcqGbpSaEH";
-const fullUrl = "https://buy.stripe.com/test_8wM17AbckeyO51u4gi";
-// ?prefilled_email=jenny%40example.com&client_reference_id=id_1234
 
-const Profile = ({ user, session }) => {
+const Profile = ({ user, links, session }) => {
   const inputEmailEl = useRef(null);
   const inputFirstNameEl = useRef(null);
   const inputLastNameEl = useRef(null);
@@ -51,24 +46,35 @@ const Profile = ({ user, session }) => {
   if (session && Object.keys(session).length > 0) {
     return (
       <Layout>
-        <div className="w-full max-w-sm mx-auto">
-        <UpcomingEvent type={"Normal"} text={eventText}>
-          {user.paid ? (
-            <button className="inline-flex items-center px-4 py-2 text-indigo-100 bg-green-700 rounded-md">
-              PAID
-            </button>
-          ) : (
-            <>
-              <ButtonPay text={"Pay £10 "} url={`${fullUrl}?prefilled_email=${user.email}`} />
-              <ButtonPay text={"Pay £7 (student)"} url={`${url}?prefilled_email=${user.email}`} />
-            </>
-          )}
-        </UpcomingEvent>
+        <div className="w-full mx-auto pt-14">
+        <h3
+              className="text-shine text-center text-bodyM font-black uppercase font-bigShoulder cursor-pointer"
+              style={{ lineHeight: "1.5rem" }}
+            >
+              Upcoming Events!
+            </h3>
+        <div className="mt-4 gap-4 flex row justify-center">
+          <UpcomingEvent type={""} text={eventText}>
+            {user.paid ? (
+              <button className="inline-flex items-center px-4 py-2 text-indigo-100 bg-green-700 rounded-md">
+                PAID
+              </button>
+            ) : (
+              <>
+                <ButtonPay text={"Pay £10 "} url={`${links.fullLink}?prefilled_email=${user.email}`} />
+                <ButtonPay text={"Pay £7 (student)"} url={`${links.link}?prefilled_email=${user.email}`} />
+              </>
+            )}
+          </UpcomingEvent>
+        </div>
         <br />
-        <h1 className="text-shine text-xl text-center">
-          --- Your details ---
-        </h1>
-        <form>
+        <h3
+          className="text-shine text-bodyM text-center font-black uppercase font-bigShoulder cursor-pointer"
+          style={{ lineHeight: "1.5rem" }}
+        >
+          Your account details!
+        </h3>
+        <form className="mx-auto w-[50%]">
           <div className="flex items-center border-b border-shine py-2">
             <input ref={inputEmailEl} readOnly className="appearance-none bg-transparent border-none w-full text-white mr-3 py-1 px-2 leading-tight focus:outline-none" type="email" placeholder="your email: eg. youremail@gmail.com" aria-label="Email Address Input Field" />
           </div>
@@ -104,6 +110,12 @@ export async function getServerSideProps({ req, res }) {
     res.statusCode = 403;
     return { props: { session: {} } };
   }
+
+  const links = {
+    fullLink: process.env.STRIPE_PAYMENT_FULL_LINK,
+    link: process.env.STRIPE_PAYMENT_LINK
+  }
+
   let user = await prisma.user.findUnique({
     where: { email: session.user.email },
     select: {
@@ -122,6 +134,7 @@ export async function getServerSideProps({ req, res }) {
   return {
     props: {
       user,
+      links,
       session,
     },
   };
