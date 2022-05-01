@@ -2,7 +2,7 @@ import Link from 'next/link';
 
 const SocialIcons = () => {
   return (
-    <div className="row flex flex-row gap-5 justify-center">
+    <div className="row flex flex-row gap-5 justify-center mt-[1px]">
           <Link href="https://www.facebook.com/LatinShineDance" passHref>
             <a target="_blank" rel="noopener noreferrer">
               <svg

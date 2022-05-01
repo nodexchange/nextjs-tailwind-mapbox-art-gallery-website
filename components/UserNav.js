@@ -32,9 +32,11 @@ const NavLeft = ({ isActive }) => (
 
 const NavRight = ({ isActive }) => (
   <div className="right">
-    <div className='absolute top-10 lg:right-20 sm:right-12 row flex flex-row gap-5 justify-center'>
+    <div className='absolute top-4 right-2 gap-3 lg:right-20 md:right-20 md:top-10 sm:gap-5 sm:top-5 row flex flex-row justify-center'>
       <LoginIcon />
-      <SocialIcons />
+      <div className="hidden md:inline">
+        <SocialIcons />
+      </div>
     </div>
     <style jsx>{`
       a {
@@ -92,26 +94,22 @@ const UserNavLeft = ({ isActive }) => {
 
 const UserNavRight = ({ isActive, info, signOut }) => (
   <div className="right">
-    <div className='absolute top-10 lg:right-20 sm:right-12 row flex flex-row gap-5 justify-center'>
-      <p>
+    <div className='absolute top-4 right-2 gap-3 lg:right-20 md:right-20 md:top-10 sm:gap-5 sm:top-5 row flex flex-row justify-center'>
+      <p className="hidden text-sm pr-1 lg:inline-block">
         Welcome, {info}
       </p>
       <HomeIcon />
       <ProfileIcon />
       <LogoutIcon action={signOut} />
-      <SocialIcons />
+      <div className="hidden md:inline">
+        <SocialIcons />
+      </div>
     </div>
     <style jsx>{`
       a {
         text-decoration: none;
         color: var(--geist-foreground);
         display: inline-block;
-      }
-
-      p {
-        display: inline-block;
-        font-size: 13px;
-        padding-right: 1rem;
       }
 
       a + a {

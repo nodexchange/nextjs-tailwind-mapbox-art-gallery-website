@@ -37,7 +37,7 @@ const Confirmation = ({ user, session }) => {
               <div className="mt-4 gap-4 flex row justify-center">
                 <UpcomingEvent type={""} text={eventText}>
                   {user.paid ? (
-                    <button className="inline-flex items-center px-4 py-2 text-indigo-100 bg-green-700 rounded-md">
+                    <button className="inline-flex items-center px-4 py-2 text-indigo-100 bg-shine rounded-md">
                       PAID
                     </button>
                   ) : (<p></p>)}

@@ -5,6 +5,8 @@ import { useRouter } from 'next/router'
 import { SessionProvider } from 'next-auth/react';
 import { gaPageView } from '../lib/ga';
 import '../styles/globals.css';
+
+import '../styles/accordion.css';
 import 'mapbox-gl/dist/mapbox-gl.css';
 
 function MyApp({ Component, pageProps }) {
