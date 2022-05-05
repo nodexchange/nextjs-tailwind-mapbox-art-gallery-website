@@ -10,7 +10,7 @@ export default function HeroSection() {
     <div className="sm:relative lg:flex bg-custom-stone overflow-hidden">
       <div className="hidden lg:relative lg:block lg:bg-almostBlack lg:w-[990px] lg:h-[800px] lg:bg-desktopHero lg:bg-no-repeat lg:bg-right lg:bg-cover">
         {/* <h1 className="absolute top-[189px] left-[165px] mix-blend-exclusion font-black w-screen text-white font-bigShoulder uppercase text-headingL"> */}
-        <div className="bg-shine-alpha absolute top-[289px] w-[480px]">
+        {/* <div className="bg-shine-alpha absolute top-[289px] w-[480px]">
           <h1 className="pl-[85px] font-black w-auto text-white font-bigShoulder uppercase text-headingM">
             {hero.heading.split('_').map((item, id) => {
               return (
@@ -20,7 +20,7 @@ export default function HeroSection() {
               );
             })}
           </h1>
-        </div>
+        </div> */}
       </div>
       <HeroLogo hero={hero} />
 

@@ -1,3 +1,4 @@
+import Link from "next/link";
 import text from "../config/text.json";
 
 export const CourseInfo = () => {
@@ -8,14 +9,14 @@ export const CourseInfo = () => {
         className="text-bodyM font-black uppercase font-bigShoulder cursor-pointer"
         style={{ lineHeight: "1.5rem" }}
       >
-        NEW BEGINNERS COURSE STARTING IN MAY 2022!
+        BACHATA CLASSES IN HIGH WYCOMBE - EVERY WEDNESDAY!
       </h1>
       <p className="my-4 l:my-12 md:m-0 font-light font-outfit text-bodyXS md:text-bodyS md:w-100">
-        The wait is finally over, on the 4th of May, we are launching Bachata Sensual classes at the High Wycombe Guildhall (High Street). Classes will be taught by two of our instructors Alyssa and Martin to represent Sensual Style dynamics of followers and leaders.
+        We are teaching Bachata Sensual classes at the High Wycombe Guildhall (High Street). Classes are taught by two of our instructors Alyssa and Martin to represent Sensual Style dynamics of followers and leaders.
       </p>
       <br/>
       <p className="my-0 l:my-12 md:m-0 font-light font-outfit text-bodyXS md:text-bodyS md:w-100">
-        Our first &apos;taster&apos; class (May 4th) will be approximately 2hrs to teach the basics, technique, and an introduction to partner work. 
+        Complete beginner starts at 7pm. The improver class starts at 8pm. You will learn the basics of Bachata sensual, dancing technique, and partner work.
       </p>
       <p className="l:my-12 md:m-0 sm:my-0 font-light font-outfit text-bodyXS md:text-bodyS md:w-100">
         Partners are not required!
@@ -28,13 +29,16 @@ export const CourseInfo = () => {
         Price: £10 per person, (£7 for student with the valid NUS/University card).
       </p>
       <p className="l:my-12 md:m-0 sm:my-0 font-light font-outfit text-bodyXS md:text-bodyS md:w-100">
-        Date: Every Wednesday, starting 4th of May.
+        Date: Every Wednesday.
       </p>
       <p className="l:my-12 md:m-0 sm:my-0 font-light font-outfit text-bodyXS md:text-bodyS md:w-100">
         Time: 7pm - 9pm
       </p>
       <p className="l:my-12 md:m-0 sm:my-0 font-light font-outfit text-bodyXS md:text-bodyS md:w-100">
-        Venue: Guildhall (High Street), High Wycombe.
+        Venue: {' '}
+        <Link href='/location' passHref>
+          <a className="underline text-white">Guildhall (High Street), High Wycombe.</a>
+        </Link>
       </p>
       <p className="l:my-12 md:m-0 sm:my-0 font-light font-outfit text-bodyXS md:text-bodyS md:w-100">
         Follow us on our {' '}
