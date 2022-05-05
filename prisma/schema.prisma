@@ -43,23 +43,19 @@ model DanceClass {
   location           String @default("Guildhall")
   time               DateTime
   users              User[]
-  transactions       Transaction[]
 
   @@map("dance_classes")
 }
 
 model Transaction {
-  id                 String  @default(cuid()) @id
+  id                 String
   type               String
   createdAt          DateTime @default(now()) @map(name: "created_at")
   userId             String  @map("user_id")
-  dance_classes      DanceClass[]
-  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+  user User @relation(fields: [userId], references: [id])
   @@map("transaction")
+  @@unique([id])
 }
-// dance_classId            String  @map("class_id")
-// dance_class DanceClass @relation(field: [dance_classId], reference: [id])
-
 
 model Account {
   id                 String  @default(cuid()) @id

@@ -21,20 +21,22 @@ export default async function webhookHandler(req, res) {
       if (!sign || !webhookSecret) return;
       event = stripe.webhooks.constructEvent(buf, sign, webhookSecret);
       if (event.type === 'checkout.session.completed') {
-        const { metadata, customer_details } = event.data.object;
-        // console.log('metadata', metadata);
-        // console.log('customer_details', customer_details);
+        const { metadata: { type }, customer_details: { email } } = event.data.object;
         try {
-          const updateUser = await prisma.user.update({
+          const user = await prisma.user.findUnique({
             where: {
-              email: customer_details.email,
-            },
-            data: {
-              paid: true,
-              transaction: event.data.object.payment_intent,
+              email: email,
             },
           });
-          // console.log(updateUser);
+          if (!user) return res.status(400).send(`Webhook error: User not found.`);
+
+          const transaction = await prisma.transaction.create({
+            data: {
+              id: event.data.object.payment_intent,
+              type,
+              userId: user.id,
+            }
+          });
         } catch (e) {
           console.log('[update prisma] error', e);
         }

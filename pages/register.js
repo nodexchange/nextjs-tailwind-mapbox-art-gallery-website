@@ -111,10 +111,10 @@ const Register = (props) => {
             </h3>
             <form className="w-full max-w-sm mx-auto">
               <div className="flex items-center border-b border-shine py-2">
-                <input onChange={(e) => validateEmail(e)} ref={inputEmailEl} className="appearance-none bg-transparent border-none w-full text-white mr-3 py-1 px-2 leading-tight focus:outline-none" type="email" placeholder="your email: eg. youremail@gmail.com" aria-label="Email Address Input Field" />
+                <input onChange={(e) => validateEmail(e)} autoComplete="off" ref={inputEmailEl} className="appearance-none bg-transparent border-none w-full text-white mr-3 py-1 px-2 leading-tight focus:outline-none" type="email" placeholder="your email: eg. youremail@gmail.com" aria-label="Email Address Input Field" />
               </div>
               <div className="flex items-center border-b border-shine py-2">
-                <input ref={inputPwdEl} type="password" className="appearance-none bg-transparent border-none w-full text-white mr-3 py-1 px-2 leading-tight focus:outline-none" minLength="6" placeholder="your password (min 6 characters)" aria-label="Password Input Field" />
+                <input ref={inputPwdEl} type="password" autoComplete="off" className="appearance-none bg-transparent border-none w-full text-white mr-3 py-1 px-2 leading-tight focus:outline-none" minLength="6" placeholder="your password (min 6 characters)" aria-label="Password Input Field" />
               </div>
               <div className="flex items-center border-b border-shine py-2">
                 <input ref={inputFirstNameEl} className="appearance-none bg-transparent border-none w-full text-white mr-3 py-1 px-2 leading-tight focus:outline-none" id="fname" name="fname" type="text" placeholder="Your First name" aria-label="First Name Input Field" />
