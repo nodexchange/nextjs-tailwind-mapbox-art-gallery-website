@@ -46,7 +46,7 @@ const DataTable = ({ caption, header, rows }) => {
 
   return (
     <table>
-      <caption>{caption}</caption>
+      <caption className="text-white">{caption}</caption>
       {thead}
       {tbody}
     </table>

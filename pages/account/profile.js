@@ -142,16 +142,20 @@ export async function getServerSideProps({ req, res }) {
   let user = await prisma.user.findUnique({
     where: { email: session.user.email },
     select: {
-      email: true,
-      paid: true,
       name: true,
       surname: true,
+      email: true,
       telephone: true,
       eName: true,
-      name: true,
-      image: true,
       eContact: true,
+      transactions: true
     },
+  });
+
+  user.transactions.map((transaction) => {
+    transaction.createdAt = transaction.createdAt.toString();
+    transaction.price = `£ ${(transaction.type === 'student') ? '7' : '10'}`;
+    delete transaction.userId;
   });
 
   return {

@@ -14,8 +14,6 @@ model User {
   id            String    @default(cuid()) @id
   name          String?
   surname       String?
-  paid          Boolean   @default(false)
-  transaction   String    @default("123")
   email         String?   @unique
   emailVerified DateTime? @map("email_verified")
   image         String?
