@@ -21,6 +21,12 @@ const ImageItem = ({ src, setMainImg, mainImg }) => {
   );
 };
 
+const removeProxy = (url) => {
+  const coreUrl = url.split('.');
+  coreUrl[0] = 'https://scontent';
+  return coreUrl.join('.');
+}
+
 const ImageGallery = () => {
   const [mainImg, setMainImg] = useState('');
   const [mainImgCaption, setMainImgCaption] = useState('');
@@ -39,11 +45,17 @@ const ImageGallery = () => {
       // set error message? 
       return;
     }
-    setMainImg(response.data[0].media_url);
+    setMainImg(removeProxy(response.data[0].media_url));
     setMainImgCaption(response.data[0].caption);
-    console.log(response.data[0].media_url);
-    const imagesOnly = response.data.filter((item) => item.media_type === 'IMAGE');
-    setImages(imagesOnly.slice(1, 5));
+    console.log(removeProxy(response.data[0].media_url));
+    let imagesOnly = response.data.filter((item) => item.media_type === 'IMAGE');
+    imagesOnly = imagesOnly.slice(1, 5);
+    imagesOnly = imagesOnly.map((item) => { 
+      item.media_url = removeProxy(item.media_url);
+      return item;
+    });
+    console.log(imagesOnly);
+    setImages(imagesOnly);
     setLoading(false);
   }
 
@@ -82,6 +94,7 @@ const ImageGallery = () => {
           </div>
         </div>
         {images.map((image, index) => {
+          
             if (image.media_type === 'IMAGE') {
               return (
                 <div className={`thumb${index}`}>
