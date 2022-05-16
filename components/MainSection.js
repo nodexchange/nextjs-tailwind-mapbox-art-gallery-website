@@ -4,7 +4,7 @@ import text from "../config/text.json";
 export default function MainSection() {
   const { main } = text;
   return (
-    <main className="px-4 py-20 my-12 md:px-8 lg:px-30 xl:px-40 lg:my-20">
+    <main className="px-4 md:px-8 lg:px-30 xl:px-40 lg:my-5">
       <div className="md:hidden">
         <Image
           src="/mobile/image-grid-1.jpg"
@@ -84,7 +84,7 @@ export default function MainSection() {
         </div>
         <div className="my-5 md:hidden">
           <Image
-            src="/mobile/image-grid-3.jpg"
+            src="/mobile/image-grid-3.jpeg"
             width={343}
             height={200}
             objectFit="cover"
@@ -96,7 +96,7 @@ export default function MainSection() {
         <div className="md:flex md:flex-col md:justify-between md:gap-3">
           <div className="hidden md:block lg:hidden md:w-[280px] md:flex-auto">
             <Image
-              src="/tablet/image-grid-3.jpg"
+              src="/tablet/image-grid-3.jpeg"
               width={280}
               height={313}
               objectFit="cover"
@@ -107,7 +107,7 @@ export default function MainSection() {
           </div>
           <div className="hidden lg:block lg:w-[445px] lg:flex-auto">
             <Image
-              src="/desktop/image-grid-3.jpg"
+              src="/desktop/image-grid-3.jpeg"
               width={445}
               height={313}
               objectFit="cover"

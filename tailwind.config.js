@@ -21,9 +21,9 @@ module.exports = {
 				'3xl': '0 5px 2px rgba(0, 0, 0, 0.9)',
 			},
 			backgroundImage: {
-				mobileMap: "url('/mobile/image-map.png')",
-				tabletMap: "url('/tablet/image-map.png')",
-				desktopMap: "url('/desktop/image-map.png')",
+				mobileMap: "url('/mobile/image-map.jpg')",
+				tabletMap: "url('/tablet/image-map.jpg')",
+				desktopMap: "url('/desktop/image-map.jpg')",
 				desktopHero: "url('/desktop/image-hero.jpg');",
 			},
 			colors: {

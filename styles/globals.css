@@ -50,7 +50,41 @@ table th {
   text-transform: uppercase;
 }
 
+
+.container {
+  display: grid;
+  width: 80%;
+  margin: 0 auto;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "Main-Image Main-Image thumb0 thumb1"
+    "Main-Image Main-Image thumb2 thumb3";
+}
+
+.Main-Image { grid-area: Main-Image; width:500px; height:500px; position: relative;}
+
+.thumb0 { grid-area: thumb0; width:250px; height:250px; }
+
+.thumb1 { grid-area: thumb1; width:250px; height:250px; }
+
+.thumb2 { grid-area: thumb2; width:250px; height:250px; }
+
+.thumb3 { grid-area: thumb3; width:250px; height:250px; }
+
+
 @media screen and (max-width: 600px) {
+  .container {
+    width: 100%;
+    grid-template-areas:
+    "Main-Image Main-Image"
+    "Main-Image Main-Image"
+    "thumb0 thumb1"
+    "thumb2 thumb3";
+  }
+
   table {
     border: 0;
   }

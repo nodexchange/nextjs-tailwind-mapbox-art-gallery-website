@@ -1,18 +1,6 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
-
-const images = [
-  {
-    url: 'https://api.lorem.space/image/shoes?w=400&h=400&hash=8B7BCDC2',
-  },
-  {
-    url: 'https://api.lorem.space/image/shoes?w=400&h=400&hash=500B67FB',
-  },
-  {
-    url: 'https://api.lorem.space/image/shoes?w=400&h=400&hash=4F32C4CF',
-  },
-];
 
 const ImageItem = ({ src, setMainImg, mainImg }) => {
   const [srcUrl, setSrcUrl] = useState(src);
@@ -24,6 +12,7 @@ const ImageItem = ({ src, setMainImg, mainImg }) => {
       alt="new"
       height="250"
       width="250"
+      objectFit='cover'
       onClick={() => {
         setMainImg(srcUrl);
         setSrcUrl(mainImg);
@@ -33,16 +22,42 @@ const ImageItem = ({ src, setMainImg, mainImg }) => {
 };
 
 const ImageGallery = () => {
-  const [mainImg, setMainImg] = useState(images[0].url);
+  const [mainImg, setMainImg] = useState('');
+  const [mainImgCaption, setMainImgCaption] = useState('');
+  const [images, setImages] = useState('');
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(false);
+
+  useEffect(() => {
+    loadInstaImages();
+  }, []);
+  const loadInstaImages = async () => {
+    const res = await fetch('/api/insta');
+    const response = await res.json();
+    if (response.error) {
+      setError(true);
+      // set error message? 
+      return;
+    }
+    setMainImg(response.data[0].media_url);
+    setMainImgCaption(response.data[0].caption);
+    console.log(response.data[0].media_url);
+    const imagesOnly = response.data.filter((item) => item.media_type === 'IMAGE');
+    setImages(imagesOnly.slice(1, 5));
+    setLoading(false);
+  }
+
+  if (loading || images.length === 0) return (<>Loading...</>);
+  if (error) return (<>Error...</>);
 
   return (
     <main className=" bg-white text-almostBlack px-8 py-10 md:py-20 lg:py-30 lg:px-30 xl:px-40 justify-between md:items-start">
       <div>
         <div className="inline-block">
           <h3
-            className="text-bodyM font-black uppercase font-bigShoulder cursor-pointer"
+            className="text-bodyM pb-1 font-black uppercase font-bigShoulder cursor-pointer"
             style={{ lineHeight: '1.5rem' }}>
-            <Link href="https://www.instagram.com/latinshinedance/" passHref>Follow us on</Link>
+            <Link href="https://www.instagram.com/latinshinedance/" passHref>Latest from our Instagram</Link>
           </h3>
         </div>
         <div className="inline-block ml-1">
@@ -57,38 +72,29 @@ const ImageGallery = () => {
           </Link>
         </div>
       </div>
-      <div
-        style={{
-          flexDirection: 'row',
-          display: 'flex',
-          justifyContent: 'center',
-          alignContent: 'center',
-        }}>
-        <Image src={mainImg} alt="new" height="500" width="500" />
-        <div style={{ display: 'flex', flexDirection: 'column' }}>
-          <ImageItem
-            src={images[1].url}
-            setMainImg={setMainImg}
-            mainImg={mainImg}
-          />
-          <ImageItem
-            src={images[2].url}
-            setMainImg={setMainImg}
-            mainImg={mainImg}
-          />
+      <div className="container">
+        <div className="Main-Image">
+          <div className='absolute'>
+            <Image src={mainImg} alt="new" height="500" width="500" objectFit='cover' />
+          </div>
+          <div className='absolute bottom-0 p-3 bg-gradient-to-t from-shine to-transparent opacity-75 hover:opacity-100'>
+            <p className='text-white text-bodyXS'>{mainImgCaption}</p>
+          </div>
         </div>
-        <div style={{ display: 'flex', flexDirection: 'column' }}>
-          <ImageItem
-            src={images[1].url}
-            setMainImg={setMainImg}
-            mainImg={mainImg}
-          />
-          <ImageItem
-            src={images[2].url}
-            setMainImg={setMainImg}
-            mainImg={mainImg}
-          />
-        </div>
+        {images.map((image, index) => {
+            if (image.media_type === 'IMAGE') {
+              return (
+                <div className={`thumb${index}`}>
+                  <ImageItem
+                    key={'image' + index}
+                    src={image.media_url}
+                    setMainImg={setMainImg}
+                    mainImg={mainImg}
+                  />
+                </div>
+              )
+            }
+        })}
       </div>
     </main>
   );

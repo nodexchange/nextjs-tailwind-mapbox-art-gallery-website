@@ -6,7 +6,7 @@ export const CourseInfo = () => {
   return (
     <main className=" bg-shine text-white px-8 py-10 md:py-20 lg:py-30 lg:px-30 xl:px-40 justify-between md:items-start">
       <h1
-        className="text-bodyM font-black uppercase font-bigShoulder cursor-pointer"
+        className="text-bodyM font-black uppercase font-bigShoulder cursor-pointer pb-1"
         style={{ lineHeight: "1.5rem" }}
       >
         BACHATA CLASSES IN HIGH WYCOMBE - EVERY WEDNESDAY!

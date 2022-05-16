@@ -14,10 +14,10 @@ export default function Home() {
       {/* <HeroVideo /> */}
       <HeroSection />
       <CourseInfo />
+      <ImageGallery />
       {/* <Signup /> */}
       <MainSection />
       <Instructors />
-      {/* <ImageGallery /> */}
     </Layout>
   );
 }
