@@ -45,8 +45,8 @@ export default function HeroSection() {
         />
       </div>
       <div className="px-4 py-10 sm:absolute sm:top-[45px] sm:left-1/2 lg:static lg:hidden">
-        <div className="p-[0px] border-2 border-white mb-10 w-[290px]">
-          <div className="ml-[20px] mt-[15px] s:mx-auto">
+        <div className="mx-0 p-[0px] border-2 border-white mb-10 w-[290px]">
+          <div className="ml-[20px] mt-[15px]">
             <Image
               src="/tablet/logo.png"
               width={250}

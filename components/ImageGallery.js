@@ -72,7 +72,7 @@ const ImageGallery = () => {
             <Link href="https://www.instagram.com/latinshinedance/" passHref>Latest from our Instagram</Link>
           </h3>
         </div>
-        <div className="inline-block ml-1">
+        <div className="inline-block ml-1 ">
           <Link href="https://www.instagram.com/latinshinedance/" passHref>
             <svg
               className="dark:fill-white relative top-[1px] left-0 fill-black transition-colors cursor-pointer"
@@ -84,30 +84,31 @@ const ImageGallery = () => {
           </Link>
         </div>
       </div>
-      <div className="container">
-        <div className="Main-Image">
-          <div className='absolute'>
-            <Image src={mainImg} alt="new" height="500" width="500" objectFit='cover' />
+      <div className="container-wrapper mx-auto">
+        <div className="container">
+          <div className="main-image">
+            <div className='absolute'>
+              <Image src={mainImg} alt="new" height="500" width="500" objectFit='cover' />
+            </div>
+            <div className='absolute bottom-0 p-3 bg-gradient-to-t from-shine to-transparent opacity-75 hover:opacity-100'>
+              <p className='text-white text-bodyXS main-text'>{mainImgCaption}</p>
+            </div>
           </div>
-          <div className='absolute bottom-0 p-3 bg-gradient-to-t from-shine to-transparent opacity-75 hover:opacity-100'>
-            <p className='text-white text-bodyXS'>{mainImgCaption}</p>
-          </div>
+          {images.map((image, index) => {
+              if (image.media_type === 'IMAGE') {
+                return (
+                  <div className={`thumb${index} thumb`}>
+                    <ImageItem
+                      key={'image' + index}
+                      src={image.media_url}
+                      setMainImg={setMainImg}
+                      mainImg={mainImg}
+                    />
+                  </div>
+                )
+              }
+          })}
         </div>
-        {images.map((image, index) => {
-          
-            if (image.media_type === 'IMAGE') {
-              return (
-                <div className={`thumb${index}`}>
-                  <ImageItem
-                    key={'image' + index}
-                    src={image.media_url}
-                    setMainImg={setMainImg}
-                    mainImg={mainImg}
-                  />
-                </div>
-              )
-            }
-        })}
       </div>
     </main>
   );
