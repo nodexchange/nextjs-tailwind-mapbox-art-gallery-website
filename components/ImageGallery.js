@@ -47,14 +47,12 @@ const ImageGallery = () => {
     }
     setMainImg(removeProxy(response.data[0].media_url));
     setMainImgCaption(response.data[0].caption);
-    console.log(removeProxy(response.data[0].media_url));
     let imagesOnly = response.data.filter((item) => item.media_type === 'IMAGE');
     imagesOnly = imagesOnly.slice(1, 5);
     imagesOnly = imagesOnly.map((item) => { 
       item.media_url = removeProxy(item.media_url);
       return item;
     });
-    console.log(imagesOnly);
     setImages(imagesOnly);
     setLoading(false);
   }
