@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 
-const ImageItem = ({ src, setMainImg, mainImg }) => {
+const ImageItem = ({ src, setMainImg, mainImg, caption, setMainImgCaption }) => {
   const [srcUrl, setSrcUrl] = useState(src);
 
   return (
@@ -14,6 +14,7 @@ const ImageItem = ({ src, setMainImg, mainImg }) => {
       width="250"
       objectFit='cover'
       onClick={() => {
+        setMainImgCaption(truncate(caption, 400));
         setMainImg(srcUrl);
         setSrcUrl(mainImg);
       }}
@@ -26,6 +27,14 @@ const removeProxy = (url) => {
   coreUrl[0] = 'https://scontent';
   return coreUrl.join('.');
 }
+
+function truncate( str, n, useWordBoundary=true ){
+  if (str.length <= n) { return str; }
+  const subString = str.substr(0, n-1); // the original check
+  return (useWordBoundary 
+    ? subString.substr(0, subString.lastIndexOf(" ")) 
+    : subString) + " (...)";
+};
 
 const ImageGallery = () => {
   const [mainImg, setMainImg] = useState('');
@@ -45,9 +54,9 @@ const ImageGallery = () => {
       // set error message? 
       return;
     }
-    setMainImg(removeProxy(response.data[0].media_url));
-    setMainImgCaption(response.data[0].caption);
     let imagesOnly = response.data.filter((item) => item.media_type === 'IMAGE');
+    setMainImg(removeProxy(imagesOnly[0].media_url));
+    setMainImgCaption(truncate(imagesOnly[0].caption, 400));
     imagesOnly = imagesOnly.slice(1, 5);
     imagesOnly = imagesOnly.map((item) => { 
       item.media_url = removeProxy(item.media_url);
@@ -99,6 +108,8 @@ const ImageGallery = () => {
                     <ImageItem
                       key={'image' + index}
                       src={image.media_url}
+                      caption={image.caption}
+                      setMainImgCaption={setMainImgCaption}
                       setMainImg={setMainImg}
                       mainImg={mainImg}
                     />
