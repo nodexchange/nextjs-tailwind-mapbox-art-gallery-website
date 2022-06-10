@@ -1,6 +1,9 @@
-Sitemap: https://latinshine.co.uk/api/sitemap
-
+# *
 User-agent: *
-Allow: /*
+Allow: /
 
-Disallow: /api/*
+# Host
+Host: https://latinshine.co.uk
+
+# Sitemaps
+Sitemap: https://latinshine.co.uk/sitemap.xml
