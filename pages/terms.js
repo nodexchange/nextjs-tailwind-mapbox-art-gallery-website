@@ -4,7 +4,7 @@ import text from "../config/terms.json";
 const Terms = () => {
   const { terms } = text;
   return (
-    <Layout>
+    <Layout title="Latin Shine - Terms and Conditions page" description="Read about our Terms and Conditions for Latin Shine Dance Academy on this page">
       <main className="text-left bg-almostBlack text-white px-8 py-10 md:py-20 lg:py-30 lg:px-30 xl:px-40 justify-between md:items-start">
         <h3 className="text-bodyM font-black uppercase font-bigShoulder cursor-pointer">
           {terms.title}

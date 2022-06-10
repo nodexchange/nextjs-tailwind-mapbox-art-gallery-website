@@ -29,8 +29,11 @@ module.exports = {
 			colors: {
 				gold: '#D5966C',
 				almostBlack: '#151515',
+				navBlack: 'rgba(0, 0, 0, 0.3)',
+				navBlackEnd: 'rgba(0, 0, 0, 0.1)',
 				darkGray: '#444444',
-				shine: '#bb0546'
+				shine: '#bb0546',
+				'shineDark': '#610324',
 			},
 			width: {
 				btn: '260px',

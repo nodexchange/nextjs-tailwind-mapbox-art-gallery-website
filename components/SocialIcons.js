@@ -6,7 +6,7 @@ const SocialIcons = () => {
           <Link href="https://www.facebook.com/LatinShineDance" passHref>
             <a target="_blank" rel="noopener noreferrer">
               <svg
-                className="fill-white dark:fill-almostBlack dark:hover:fill-white hover:fill-shine transition-colors cursor-pointer"
+                className="fill-white dark:fill-almostBlack dark:hover:fill-white hover:fill-shineDark transition-colors cursor-pointer"
                 width="20"
                 height="20"
                 xmlns="http://www.w3.org/2000/svg">
@@ -17,7 +17,7 @@ const SocialIcons = () => {
           <Link href="https://www.instagram.com/latinshinedance/" passHref>
             <a target="_blank" rel="noopener noreferrer">
               <svg
-                className="dark:fill-almostBlack dark:hover:fill-white fill-white hover:fill-shine transition-colors cursor-pointer"
+                className="dark:fill-almostBlack dark:hover:fill-white fill-white hover:fill-shineDark transition-colors cursor-pointer"
                 width="20"
                 height="20"
                 xmlns="http://www.w3.org/2000/svg">

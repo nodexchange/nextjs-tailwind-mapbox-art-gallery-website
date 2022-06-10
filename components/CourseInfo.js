@@ -4,7 +4,7 @@ import text from "../config/text.json";
 export const CourseInfo = () => {
   const { footer } = text;
   return (
-    <main className=" bg-shine text-white px-8 py-10 md:py-20 lg:py-30 lg:px-30 xl:px-40 justify-between md:items-start">
+    <section className=" bg-shine text-white px-8 py-10 md:py-20 lg:py-30 lg:px-30 xl:px-40 justify-between md:items-start">
       <h1
         className="text-bodyM font-black uppercase font-bigShoulder cursor-pointer pb-1"
         style={{ lineHeight: "1.5rem" }}
@@ -47,6 +47,6 @@ export const CourseInfo = () => {
         <a className="underline text-white" href="https://www.instagram.com/latinshinedance/" target="_self">Instagram</a>
         {' '} for more exciting news and events. 
       </p>
-    </main>
+    </section>
   );
 }

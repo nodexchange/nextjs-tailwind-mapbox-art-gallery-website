@@ -90,7 +90,7 @@ const Register = (props) => {
   }
 
   return (
-    <Layout>
+    <Layout title="Latin Shine - Register" description="You can register on our website to manage payments and reserve spots for our Bachata Sensual latin dance classes.">
       <main className="text-center bg-almostBlack text-white px-8 py-10 md:py-20 lg:py-30 lg:px-30 xl:px-40 justify-between md:items-start">
         {message ? (
           <>

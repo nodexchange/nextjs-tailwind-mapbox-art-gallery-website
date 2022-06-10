@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import Link from 'next/link';
 import ButtonA from './ButtonA';
 import HeroLogo from './HeroLogo';
 import SocialIcons from './SocialIcons';
@@ -44,7 +45,7 @@ export default function HeroSection() {
           priority="true"
         />
       </div>
-      <div className="px-4 py-10 sm:absolute sm:top-[45px] sm:left-1/2 lg:static lg:hidden">
+      <div className="px-4 py-10 sm:absolute sm:top-[5px] sm:left-1/2 lg:static lg:hidden">
         <div className="mx-0 p-[0px] border-2 border-white mb-10 w-[290px]">
           <div className="ml-[20px] mt-[15px]">
             <Image
@@ -77,7 +78,9 @@ export default function HeroSection() {
             {hero.logoWhite.split('_').map((item, id) => {
               return (
                 <p key={`item-${id}`}>
-                  {item}
+                  <Link href="/reserve">
+                    {item}
+                  </Link>
                 </p>
               );
             })}

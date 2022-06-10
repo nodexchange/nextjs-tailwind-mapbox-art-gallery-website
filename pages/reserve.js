@@ -1,7 +1,8 @@
 import { useRef, useState } from 'react';
 import { gaEvent } from '../lib/ga';
-import { Secondary as Layout } from "../layouts";
+import { Secondary as Layout } from '../layouts';
 import ButtonC from '../components/ButtonC';
+import LocationMap from '../components/LocationMap';
 
 const Reserve = () => {
   const inputEmailEl = useRef(null);
@@ -16,12 +17,12 @@ const Reserve = () => {
       body: JSON.stringify({
         email: inputEmailEl.current.value,
         firstName: inputFirstNameEl.current.value,
-        lastName: inputLastNameEl.current.value
+        lastName: inputLastNameEl.current.value,
       }),
       headers: {
-        'Content-Type': 'application/json'
+        'Content-Type': 'application/json',
       },
-      method: 'POST'
+      method: 'POST',
     });
     const { error } = await res.json();
 
@@ -33,35 +34,65 @@ const Reserve = () => {
     inputEmailEl.current.value = '';
     inputFirstNameEl.current.value = '';
     inputLastNameEl.current.value = '';
-    setMessage('Success! 🎉 You have reserved your spot! We will contact you shortly.');
-    gaEvent({ action: "reserve_success" });
-  }
+    setMessage(
+      'Success! 🎉 Thank you for reserving your spot! See you on Wednesday, in High Wycombe!'
+    );
+    gaEvent({ action: 'reserve_success' });
+  };
   return (
-    <Layout>
+    <Layout title="Latin Shine - Reserve your spot" description="You can use the form below to reserve spot for our Bachata Sensual latin dance class. Join our class every Wednesday, in High Wycombe">
       <main className="text-center bg-almostBlack text-white px-8 py-10 md:py-20 lg:py-30 lg:px-30 xl:px-40 justify-between md:items-start">
         {message ? (
           <h3
             className="text-bodyM font-black uppercase font-bigShoulder cursor-pointer"
-            style={{ lineHeight: "1.5rem" }}
-          >{message}</h3>
-        ) : 
-        (
+            style={{ lineHeight: '1.5rem' }}>
+            {message}
+          </h3>
+        ) : (
           <>
-            <h3
-              className="text-bodyM font-black uppercase font-bigShoulder cursor-pointer"
-              style={{ lineHeight: "1.5rem" }}
-            >
-              Reserve your spot!
-            </h3>
+            <header>
+              <h1
+                className="text-bodyM font-black uppercase font-bigShoulder cursor-pointer"
+                style={{ lineHeight: '1.5rem' }}>
+                Reserve your spot!
+              </h1>
+            </header>
+            <br />
+            <p className="font-light">
+              Please fill in your details below to reserve your spot.
+            </p>
+            <div className="font-light">
+              <p>Our Schedule:</p>
+              <p>19:00 - 20:00 - Bachata Beginners Class</p>
+              <p>20:00 - 21:00 - Bachata Improvers Class</p>
+            </div>
             <form className="w-full max-w-sm mx-auto">
               <div className="flex items-center border-b border-shine py-2">
-                <input ref={inputEmailEl} className="appearance-none bg-transparent border-none w-full text-white mr-3 py-1 px-2 leading-tight focus:outline-none" type="text" placeholder="youremail@gmail.com" aria-label="Email Input Field" />
+                <input
+                  ref={inputEmailEl}
+                  className="appearance-none bg-transparent border-none w-full text-white mr-3 py-1 px-2 leading-tight focus:outline-none"
+                  type="text"
+                  placeholder="youremail@gmail.com"
+                  aria-label="Email Input Field"
+                />
               </div>
               <div className="flex items-center border-b border-shine py-2">
-                <input ref={inputFirstNameEl} className="appearance-none bg-transparent border-none w-full text-white mr-3 py-1 px-2 leading-tight focus:outline-none" type="text" placeholder="Your First name" aria-label="First Name Input Field" />
+                <input
+                  ref={inputFirstNameEl}
+                  className="appearance-none bg-transparent border-none w-full text-white mr-3 py-1 px-2 leading-tight focus:outline-none"
+                  type="text"
+                  placeholder="Your First name"
+                  aria-label="First Name Input Field"
+                />
               </div>
               <div className="flex items-center border-b border-shine py-2">
-                <input ref={inputLastNameEl} className="appearance-none bg-transparent border-none w-full text-white mr-3 py-1 px-2 leading-tight focus:outline-none" type="text" placeholder="Your second name" aria-label="Last Name Input Field" />
+                <input
+                  ref={inputLastNameEl}
+                  className="appearance-none bg-transparent border-none w-full text-white mr-3 py-1 px-2 leading-tight focus:outline-none"
+                  type="text"
+                  placeholder="Your second name"
+                  aria-label="Last Name Input Field"
+                />
               </div>
               {/* <div className="form-check">
                 <input className="form-check-input appearance-none h-4 w-4 border border-gray-300 rounded-sm bg-white checked:bg-blue-600 checked:border-blue-600 focus:outline-none transition duration-200 mt-1 align-top bg-no-repeat bg-center bg-contain float-left mr-2 cursor-pointer" type="checkbox" value="" id="flexCheckChecked" checked />
@@ -71,11 +102,25 @@ const Reserve = () => {
               </div> */}
               <ButtonC title="Reserve" action={reserve} />
             </form>
+            <br />
+            <h1
+              className="text-bodyM font-black uppercase font-bigShoulder cursor-pointer"
+              style={{ lineHeight: '1.5rem' }}>
+              Here is our location!
+            </h1>
+            <div className="font-light">
+              <p>Location: Guildhall, High Wycombe</p>
+            </div>
+            <div className="w-full">
+              <div className="w-[350px] overflow-hidden mx-auto md:w-[500px] lg:w-[1000px]">
+                <LocationMap />
+              </div>
+            </div>
           </>
         )}
       </main>
     </Layout>
-  )
-}
+  );
+};
 
 export default Reserve;

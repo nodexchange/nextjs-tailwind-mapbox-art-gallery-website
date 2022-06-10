@@ -52,20 +52,9 @@ const Header = () => {
   }
 
   return (
-    <nav>
+    <nav className="bg-gradient-to-b from-navBlack to-navBlackEnd fixed w-full z-[100] flex p-4 text-white items-center">
       {left}
       {right}
-      <style jsx>{`
-        nav {
-          position: fixed;
-          width: 100%;
-          z-index: 100;
-          display: flex;
-          padding: 2rem;
-          align-items: center;
-          color: white;
-        }
-      `}</style>
     </nav>
   );
 };

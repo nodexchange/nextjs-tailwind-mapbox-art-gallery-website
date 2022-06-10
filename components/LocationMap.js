@@ -72,7 +72,7 @@ function MyMapComponent({ center, zoom, children }) {
 
 export default function LocationMap() {
   return (
-    <div className="relative w-screen h-550 md:h-600">
+    <div className="relative w-full h-550 md:h-600">
       <Wrapper
         apiKey={process.env.NEXT_PUBLIC_MAP_API}
         render={render}>
