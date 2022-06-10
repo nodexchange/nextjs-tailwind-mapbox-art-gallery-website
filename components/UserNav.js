@@ -16,7 +16,7 @@ const NavLeft = ({ isActive }) => (
       width={22}
       height={22}
       // layout="responsive"
-      alt="Latin Shine - Dance Academy - Logo"
+      alt="Latin Shine - Dance Company - Logo"
       priority="true"
     />
   </div>
@@ -59,7 +59,14 @@ const NavRight = ({ isActive }) => (
 const UserNavLeft = ({ isActive }) => {
   return (
     <div className="left">
-      Latin Shine - Dance Academy
+      <Image
+        src="/android-chrome-192x192.png"
+        width={22}
+        height={22}
+        // layout="responsive"
+        alt="Latin Shine - Dance Company - Logo"
+        priority="true"
+      />
     </div>
   );
 };

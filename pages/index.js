@@ -10,7 +10,7 @@ import ImageGallery from "../components/ImageGallery";
 
 export default function Home() {
   return (
-    <Layout title="Latin Shine | Dance Academy - Home Page" description="Fun and friendly Bachata Sensual dance classes in High Wycombe, every Wednesday. Beginners are welcome; partners are not required. Learn about history of Bachata Sensual, our about Dance Instructors, their dance history, teaching background, and our weekly classes schedule.">
+    <Layout title="Latin Shine | Dance Company - Home Page" description="Fun and friendly Bachata Sensual dance classes in High Wycombe, every Wednesday. Beginners are welcome; partners are not required. Learn about history of Bachata Sensual, our about Dance Instructors, their dance history, teaching background, and our weekly classes schedule.">
       <Header />
       {/* <HeroVideo /> */}
       <HeroSection />

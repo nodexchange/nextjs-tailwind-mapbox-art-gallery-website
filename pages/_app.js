@@ -40,7 +40,7 @@ function MyApp({ Component, pageProps }) {
           url,
           description:
             'Fun and friendly Bachata Sensual dance classes in High Wycombe, every Wednesday. Beginners are welcome; partners are not required. -Latin Shine',
-          site_name: 'Latin Shine | Dance Academy',
+          site_name: 'Latin Shine | Dance Company',
           images: [],
         }}
         canonical={url}
