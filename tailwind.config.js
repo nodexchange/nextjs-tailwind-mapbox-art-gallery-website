@@ -17,14 +17,17 @@ module.exports = {
         reserveBounce: {
           '0%, 100%': {
             transform: 'translateX(-15%)',
+            color: '#fff',
             'animation-timing-function': 'cubic-bezier(0.8, 0, 1, 1)',
           },
           '10%, 90%': {
             transform: 'translateX(-15%)',
+            color: '#fff',
             'animation-timing-function': 'cubic-bezier(0.8, 0, 1, 1)',
           },
           '50%': {
             transform: 'translateX(0)',
+            color: '#bb0546',
             'animation-timing-function': 'cubic-bezier(0, 0, 0.2, 1)',
           },
         },

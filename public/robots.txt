@@ -2,8 +2,5 @@
 User-agent: *
 Allow: /
 
-# Host
-Host: https://latinshine.co.uk
-
 # Sitemaps
 Sitemap: https://latinshine.co.uk/sitemap.xml
