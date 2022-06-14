@@ -1,13 +1,31 @@
 import Link from "next/link";
+import { useEffect } from 'react';
+import { gaEvent } from '../lib/ga';
 import text from "../config/text.json";
+
 
 export const About = () => {
   const { about } = text;
+  const handlePlay = () => {
+    gaEvent({ action: 'about_video_play' });
+  }
+  useEffect(() => {
+    if (document.getElementById('player')) {
+      const player = document.getElementById('player');
+      player.addEventListener('play', handlePlay);
+    }
+    return () => {
+      if (document.getElementById('player')) {
+        const player = document.getElementById('player');
+        player.removeEventListener('play', handlePlay);
+      }
+    }
+  }, []);
   return (
     <section className=" bg-shine text-white px-8 py-10 md:py-20 lg:py-30 lg:px-30 xl:px-40 justify-between md:items-start">
       <div className="block lg:flex">
         <div className="block w-full h-[300px] relative pb-10 md:w-[500px]">
-        <video controls className="w-auto h-[300px] absolute top-0 left-0 sm:w-[320px] md:w-full lg:w-auto">
+        <video id="player" controls className="w-auto h-[300px] absolute top-0 left-0 sm:w-[320px] md:w-full lg:w-auto">
           <source src="/about.mp4" />
         </video>
         </div>

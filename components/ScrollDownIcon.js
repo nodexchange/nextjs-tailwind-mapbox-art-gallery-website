@@ -1,9 +1,10 @@
-import React from 'react';
+import { gaEvent } from '../lib/ga';
 
 const ScrollDownIcon = () => {
   return (
     <div
       onClick={() => {
+        gaEvent({ action: 'scroll_button_click' });
         scroll({
           top: 1000,
           left: 0,

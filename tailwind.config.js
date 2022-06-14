@@ -12,22 +12,37 @@ module.exports = {
     extend: {
       animation: {
         'reserve-bounce': 'reserveBounce 3s infinite',
+        'reserve-color': 'reserveColor 3s infinite',
       },
       keyframes: {
-        reserveBounce: {
+        reserveColor: {
           '0%, 100%': {
-            transform: 'translateX(-15%)',
-            color: '#fff',
+            color: '#ffb2b2',
             'animation-timing-function': 'cubic-bezier(0.8, 0, 1, 1)',
           },
           '10%, 90%': {
-            transform: 'translateX(-15%)',
+            color: '#ffb2b2',
+            'animation-timing-function': 'cubic-bezier(0.8, 0, 1, 1)',
+          },
+          '50%': {
             color: '#fff',
+            'animation-timing-function': 'cubic-bezier(0, 0, 0.2, 1)',
+          },
+        },
+        reserveBounce: {
+          '0%, 100%': {
+            transform: 'translateX(-10%)',
+            color: '#bb0546',
+            'animation-timing-function': 'cubic-bezier(0.8, 0, 1, 1)',
+          },
+          '10%, 90%': {
+            transform: 'translateX(-10%)',
+            color: '#bb0546',
             'animation-timing-function': 'cubic-bezier(0.8, 0, 1, 1)',
           },
           '50%': {
             transform: 'translateX(0)',
-            color: '#bb0546',
+            color: '#fff',
             'animation-timing-function': 'cubic-bezier(0, 0, 0.2, 1)',
           },
         },
@@ -51,8 +66,8 @@ module.exports = {
       colors: {
         gold: '#D5966C',
         almostBlack: '#151515',
-        navBlack: 'rgba(0, 0, 0, 0.3)',
-        navBlackEnd: 'rgba(0, 0, 0, 0.1)',
+        navBlack: 'rgba(0, 0, 0, 0.4)',
+        navBlackEnd: 'rgba(0, 0, 0, 0.2)',
         darkGray: '#444444',
         shine: '#bb0546',
         shineDark: '#610324',

@@ -1,7 +1,12 @@
 import Link from 'next/link';
 import SocialIcons from './SocialIcons';
+import { gaEvent } from '../lib/ga';
 
 export default function Footer() {
+  const handleClick = ({currentTarget}) => {
+    gaEvent({ action: `${currentTarget.id}_click` });
+  }
+
   return (
     <footer className="flex flex-col md:flex-row bg-almostBlack dark:bg-shine text-white dark:text-almostBlack px-8 py-10 md:py-20 lg:py-30 lg:px-30 xl:px-40 justify-between md:items-start">
       <h3
@@ -26,7 +31,7 @@ export default function Footer() {
       <div className="gap-5">
         <SocialIcons />
         <div className="flex flex-row justify-center">
-          <a className="hover:underline hover:text-shine" href="mailto:latin_shine@outlook.com?subject = Website&body = Hi Latin Shine,">
+          <a id="email_us_text" className="hover:underline hover:text-shine" href="mailto:latin_shine@outlook.com?subject = Website&body = Hi Latin Shine," onClick={handleClick}>
             latin_shine@outlook.com
           </a>
         </div>

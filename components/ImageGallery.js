@@ -104,7 +104,7 @@ const ImageGallery = () => {
           {images.map((image, index) => {
               if (image.media_type === 'IMAGE') {
                 return (
-                  <div className={`thumb${index} thumb`}>
+                  <div key={'imageContainer' + index} className={`thumb${index} thumb`}>
                     <ImageItem
                       key={'image' + index}
                       src={image.media_url}

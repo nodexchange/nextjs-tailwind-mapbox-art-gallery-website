@@ -12,7 +12,6 @@ import 'mapbox-gl/dist/mapbox-gl.css';
 
 function MyApp({ Component, pageProps }) {
   const router = useRouter();
-  console.log(router.route);
   const url = `https://latinshine.co.uk${router.route}`;
 
   useEffect(() => {

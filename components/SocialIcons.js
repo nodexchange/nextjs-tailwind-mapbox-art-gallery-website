@@ -1,10 +1,15 @@
 import Link from 'next/link';
+import { gaEvent } from '../lib/ga';
 
 const SocialIcons = () => {
+  const handleClick = ({currentTarget}) => {
+    gaEvent({ action: `social_${currentTarget.id}_click` });
+  }
+
   return (
     <div className="row flex flex-row gap-5 justify-center mt-[1px]">
           <Link href="https://www.facebook.com/LatinShineDance" passHref>
-            <a target="_blank" rel="noopener noreferrer">
+            <a id="facebook_icon" target="_blank" rel="noopener noreferrer" onClick={handleClick}>
               <svg
                 className="fill-white dark:fill-almostBlack dark:hover:fill-white hover:fill-shineDark transition-colors cursor-pointer"
                 width="20"
@@ -14,8 +19,8 @@ const SocialIcons = () => {
               </svg>
             </a>
           </Link>
-          <Link href="https://www.instagram.com/latinshinedance/" passHref>
-            <a target="_blank" rel="noopener noreferrer">
+          <Link href="https://www.instagram.com/latinshinedance" passHref>
+            <a id="instagram_icon" target="_blank" rel="noopener noreferrer" onClick={handleClick}>
               <svg
                 className="dark:fill-almostBlack dark:hover:fill-white fill-white hover:fill-shineDark transition-colors cursor-pointer"
                 width="20"
