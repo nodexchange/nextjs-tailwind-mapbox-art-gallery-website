@@ -1,3 +1,4 @@
+import { useEffect } from 'react';
 import { Secondary as Layout } from '../layouts';
 import { gaEvent } from '../lib/ga';
 import ButtonA from '../components/ButtonA';
@@ -8,7 +9,9 @@ const text =
 const description = '✨ Enjoy your class with Latin Shine team ✨';
 
 const ReserveConfirmation = () => {
-  gaEvent({ action: 'reserve_success' });
+  useEffect(() => {
+    gaEvent({ action: 'reserve_success' });
+  }, []);
 
   return (
     <Layout
