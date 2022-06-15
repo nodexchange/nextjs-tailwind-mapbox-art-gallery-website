@@ -14,12 +14,12 @@ export default function HeroSection() {
           <h1 className="pl-[85px] font-black w-auto text-white font-bigShoulder uppercase text-headingM">
             {hero.heading.split('_').map((item, id) => {
               return (
-                <>
-                  <span key={`item-${id}`} className="lg:p-2 drop-shadow-3xl">
+                <span key={`item-${id}`}>
+                  <span className="lg:p-2 drop-shadow-3xl">
                     {item}
                   </span>
                   <br />
-                </>
+                </span>
               );
             })}
           </h1>
@@ -63,10 +63,10 @@ export default function HeroSection() {
         <h1 className="font-black w-screen text-white font-bigShoulder uppercase text-headingS md:text-headingS">
           {hero.headingMobile.split('_').map((item, id) => {
             return (
-              <>
-                <span key={`item-${id}`}>{item}</span>
+              <span key={`item-${id}`}>
+                {item}
                 <br />
-              </>
+              </span>
             );
           })}
         </h1>

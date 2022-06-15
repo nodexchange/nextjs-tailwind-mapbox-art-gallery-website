@@ -1,8 +1,10 @@
 import Link from 'next/link';
 import SocialIcons from './SocialIcons';
 import { gaEvent } from '../lib/ga';
+import text from "../config/text.json";
 
 export default function Footer() {
+  const { footer } = text;
   const handleClick = ({currentTarget}) => {
     gaEvent({ action: `${currentTarget.id}_click`, params: { section: 'footer' }});
   }
@@ -19,7 +21,7 @@ export default function Footer() {
         <span className="text-[10px]">© All Rights Reserved</span>
       </h3>
       <p className="my-12 md:m-0 font-light font-outfit text-bodyXS md:w-2/5">
-        Wednesday Bachata classes in High Wycombe, Buckinghamshire.
+        {footer.description}
         <br />
         <Link href="/terms"><a className="underline text-white hover:text-shine" target="_self">Terms and Conditions</a></Link>
         {' | '}
