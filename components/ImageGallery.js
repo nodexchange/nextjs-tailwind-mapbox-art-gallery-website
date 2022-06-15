@@ -9,7 +9,7 @@ const ImageItem = ({ src, setMainImg, mainImg, caption, setMainImgCaption }) => 
     <Image
       className="opacity-100 hover:opacity-70"
       src={srcUrl}
-      alt="new"
+      alt={caption}
       height="250"
       width="250"
       objectFit='cover'
@@ -95,7 +95,7 @@ const ImageGallery = () => {
         <div className="container">
           <div className="main-image">
             <div className='absolute'>
-              <Image src={mainImg} alt="new" height="500" width="500" objectFit='cover' />
+              <Image src={mainImg} alt={mainImgCaption} height="500" width="500" objectFit='cover' />
             </div>
             <div className='absolute bottom-0 p-3 bg-gradient-to-t from-shine to-transparent opacity-75 hover:opacity-100'>
               <p className='text-white text-bodyXS main-text'>{mainImgCaption}</p>
