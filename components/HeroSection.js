@@ -15,10 +15,10 @@ export default function HeroSection() {
             {hero.heading.split('_').map((item, id) => {
               return (
                 <>
-                <span key={`item-${id}`} className="lg:p-2 drop-shadow-3xl">
-                  {item}
-                </span>
-                <br />
+                  <span key={`item-${id}`} className="lg:p-2 drop-shadow-3xl">
+                    {item}
+                  </span>
+                  <br />
                 </>
               );
             })}
@@ -61,43 +61,31 @@ export default function HeroSection() {
           </div>
         </div>
         <h1 className="font-black w-screen text-white font-bigShoulder uppercase text-headingS md:text-headingS">
-          {hero.heading.split('_').map((item, id) => {
-              return (
-                <>
-                <span key={`item-${id}`}>
-                  {item}
-                </span>
+          {hero.headingMobile.split('_').map((item, id) => {
+            return (
+              <>
+                <span key={`item-${id}`}>{item}</span>
                 <br />
-                </>
-              );
-            })}
+              </>
+            );
+          })}
         </h1>
         <div className="font-outfit text-white font-light text-bodyS py-8 sm:py-12 sm:w-[280px] md:w-[340px]">
           {hero.logoText.split('_').map((item, id) => {
-              return (
-                <p key={`item-${id}`}>
-                  {item}
-                </p>
-              );
-            })}
-            {hero.logoWhite.split('_').map((item, id) => {
-              return (
-                <p key={`item-${id}`}>
-                  <Link href="/reserve">
-                    {item}
-                  </Link>
-                </p>
-              );
-            })}
+            return <p key={`item-${id}`}>{item}</p>;
+          })}
+          {hero.logoWhite.split('_').map((item, id) => {
+            return (
+              <p key={`item-${id}`}>
+                <Link href="/reserve">{item}</Link>
+              </p>
+            );
+          })}
         </div>
-        
+
         <ButtonA path="/location" title="Our Location" />
         <br />
         <ButtonA path="/reserve" title="Reserve your spot" />
-        {/* <br />
-        <ButtonA path="/classes" title="Our Classes" />
-        <br />
-        <ButtonA path="/promotions" title="Promotions" /> */}
       </div>
     </div>
   );

@@ -5,12 +5,12 @@ export const CourseInfo = () => {
   const { footer } = text;
   return (
     <section className=" bg-shine text-white px-8 py-10 md:py-20 lg:py-30 lg:px-30 xl:px-40 justify-between md:items-start">
-      <h1
+      <h2
         className="text-bodyM font-black uppercase font-bigShoulder cursor-pointer pb-1"
         style={{ lineHeight: "1.5rem" }}
       >
         BACHATA CLASSES IN HIGH WYCOMBE - EVERY WEDNESDAY!
-      </h1>
+      </h2>
       <p className="my-4 l:my-12 md:m-0 font-light font-outfit text-bodyXS md:text-bodyS md:w-100">
         We are teaching Bachata Sensual classes at the High Wycombe Guildhall (High Street). Classes are taught by two of our instructors Alyssa and Martin to represent Sensual Style dynamics of followers and leaders.
       </p>

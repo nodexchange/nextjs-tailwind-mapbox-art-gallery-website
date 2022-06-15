@@ -1,6 +1,7 @@
 {
   "hero": {
     "heading": "Beginners Classes_Every Week!",
+    "headingMobile": "Join Us for_Beginners Classes_Every Week!",
     "logoText": "BACHATA CLASSES_AT THE GUILDHALL_IN HIGH WYCOMBE",
     "logoWhite": "Reserve your spot now! ➡"
   },
@@ -40,6 +41,6 @@
   "footer": {
     "line1": "Bachata Sensual in High Wycombe",
     "line2": "Dance Classes Every Wednesday",
-    "description": "Fun and friendly Bachata Latin dance classes in High Wycombe, every Wednesday. Beginners are welcome; partners are not required. Learn with us and become a part of the Latin Shine community."
+    "description": "Fun & friendly Bachata Latin dance classes in High Wycombe, every Wednesday. Beginners are welcome; partners are not required. Learn with us and become a part of the Latin Shine community."
   }
 }
