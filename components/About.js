@@ -7,7 +7,7 @@ import text from "../config/text.json";
 export const About = () => {
   const { about } = text;
   const handlePlay = () => {
-    gaEvent({ action: 'about_video_play' });
+    gaEvent({ action: 'about_video_play', params: { section: 'about' } });
   }
   useEffect(() => {
     if (document.getElementById('player')) {

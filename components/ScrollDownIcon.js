@@ -4,7 +4,7 @@ const ScrollDownIcon = () => {
   return (
     <div
       onClick={() => {
-        gaEvent({ action: 'scroll_button_click' });
+        gaEvent({ action: 'scroll_button_click', params: { section: 'secondary_layout' }});
         scroll({
           top: 1000,
           left: 0,

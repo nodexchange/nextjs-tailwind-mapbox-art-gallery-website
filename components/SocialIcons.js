@@ -3,7 +3,7 @@ import { gaEvent } from '../lib/ga';
 
 const SocialIcons = () => {
   const handleClick = ({currentTarget}) => {
-    gaEvent({ action: `social_${currentTarget.id}_click` });
+    gaEvent({ action: `social_${currentTarget.id}_click`, params: { section: 'social_icons' }});
   }
 
   return (

@@ -10,7 +10,7 @@ const description = '✨ Enjoy your class with Latin Shine team ✨';
 
 const ReserveConfirmation = () => {
   useEffect(() => {
-    gaEvent({ action: 'reserve_success' });
+    gaEvent({ action: 'reserve_success', params: { section: 'reserve_confirmation' }});
   }, []);
 
   return (

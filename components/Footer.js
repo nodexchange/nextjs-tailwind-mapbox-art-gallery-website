@@ -4,7 +4,7 @@ import { gaEvent } from '../lib/ga';
 
 export default function Footer() {
   const handleClick = ({currentTarget}) => {
-    gaEvent({ action: `${currentTarget.id}_click` });
+    gaEvent({ action: `${currentTarget.id}_click`, params: { section: 'footer' }});
   }
 
   return (

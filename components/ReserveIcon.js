@@ -3,7 +3,7 @@ import { gaEvent } from '../lib/ga';
 
 const ReserveIcon = () => {
   const handleClick = () => {
-    gaEvent({ action: 'reserve_icon_click' });
+    gaEvent({ action: 'reserve_icon_click', params: { section: 'navigation' }});
   }
   return (
     <div className="row flex flex-row gap-5 justify-center">

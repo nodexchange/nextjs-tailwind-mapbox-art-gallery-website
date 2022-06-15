@@ -37,11 +37,11 @@ const Reserve = () => {
   const reserve = async (e) => {
     e.preventDefault();
     if (!validate()) {
-      gaEvent({ action: 'reserve_validation_error' });
+      gaEvent({ action: 'reserve_validation_error', params: { section: 'reserve' }});
       return;
     }
 
-    gaEvent({ action: 'reserve_button_click' });
+    gaEvent({ action: 'reserve_button_click', params: { section: 'reserve' }});
     const res = await fetch('/api/reserve', {
       body: JSON.stringify({
         email: inputEmailEl.current.value,
@@ -56,7 +56,7 @@ const Reserve = () => {
     const { error } = await res.json();
 
     if (error) {
-      gaEvent({ action: 'reserve_error' });
+      gaEvent({ action: 'reserve_error', params: { section: 'reserve' }});
       setMessage(error);
       return;
     }
