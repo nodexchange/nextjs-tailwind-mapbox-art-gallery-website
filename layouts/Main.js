@@ -3,6 +3,7 @@ import { motion } from 'framer-motion';
 
 import { Header } from './Header';
 import Footer from '../components/Footer';
+import SideNav from '../components/SideNav';
 
 const variants = {
   hidden: { opacity: 0, x: -200, y: 0 },
@@ -23,6 +24,7 @@ export const Main = ({
         openGraph={{ title, description }}
       />
       <Header title={title} />
+      <SideNav />
       <motion.main
         initial="hidden"
         animate="enter"

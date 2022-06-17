@@ -5,6 +5,7 @@ import { Header } from './Header';
 import FooterB from '../components/FooterB';
 import ButtonB from '../components/ButtonB';
 import ScrollDownIcon from '../components/ScrollDownIcon';
+import SideNav from '../components/SideNav';
 
 const variants = {
   hidden: { opacity: 0, x: -200, y: 0 },
@@ -25,6 +26,7 @@ export const Secondary = ({
         openGraph={{ title, description }}
       />
       <Header title={title} />
+      <SideNav />
       <motion.main
         initial="hidden"
         animate="enter"

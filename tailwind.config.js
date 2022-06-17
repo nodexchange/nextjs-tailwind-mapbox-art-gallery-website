@@ -51,6 +51,7 @@ module.exports = {
         'custom-stone': '#151515',
         shine: '#bb0546',
         'shine-alpha': 'rgba(187, 5, 69, 0.5)',
+        'shine-low-alpha': 'rgba(187, 5, 69, 0.9)',
         shineDark: '#610324',
       },
       dropShadow: {
