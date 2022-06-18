@@ -22,12 +22,12 @@ export const About = () => {
     }
   }, []);
   return (
-    <section className=" bg-shine text-white px-8 py-10 md:py-20 lg:py-30 lg:px-30 xl:px-40 justify-between md:items-start">
+    <section className="bg-no-repeat bg-cover bg-aboutImage text-white px-8 py-10 md:py-20 lg:py-30 lg:px-30 xl:px-40 justify-between md:items-start">
       <div className="block lg:flex">
         <div className="block w-full h-[300px] relative pb-10 md:w-[500px]">
-        <video id="player" controls className="w-auto h-[300px] absolute top-0 left-0 sm:w-[320px] md:w-full lg:w-auto">
-          <source src="/about.mp4" />
-        </video>
+          <video id="player" controls className="w-auto h-[300px] absolute top-0 left-0 sm:w-[320px] md:w-full lg:w-auto">
+            <source src="/about.mp4" />
+          </video>
         </div>
         <div className="w-[100%] px-4 pt-10 md:pt-2 lg:w-[70%]">
           <h2 className="font-black uppercase font-bigShoulder text-headingS lg:text-headingS md:mb-4">

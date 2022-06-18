@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
+import { gaEvent } from '../lib/ga';
 
 const ImageItem = ({ src, setMainImg, mainImg, caption, setMainImgCaption }) => {
   const [srcUrl, setSrcUrl] = useState(src);
@@ -14,6 +15,7 @@ const ImageItem = ({ src, setMainImg, mainImg, caption, setMainImgCaption }) => 
       width="250"
       objectFit='cover'
       onClick={() => {
+        gaEvent({ action: 'instagram_image_click', params: { caption: truncate(caption, 100) } });
         setMainImgCaption(truncate(caption, 400));
         setMainImg(srcUrl);
         setSrcUrl(mainImg);
@@ -46,6 +48,7 @@ const ImageGallery = () => {
   useEffect(() => {
     loadInstaImages();
   }, []);
+
   const loadInstaImages = async () => {
     const res = await fetch('/api/insta');
     const response = await res.json();
@@ -54,7 +57,7 @@ const ImageGallery = () => {
       // set error message? 
       return;
     }
-    let imagesOnly = response.data.filter((item) => item.media_type === 'IMAGE');
+    let imagesOnly = response.data.filter((item) => item.media_type === 'IMAGE' || item.media_type === 'CAROUSEL_ALBUM');
     setMainImg(removeProxy(imagesOnly[0].media_url));
     setMainImgCaption(truncate(imagesOnly[0].caption, 400));
     imagesOnly = imagesOnly.slice(1, 5);
@@ -102,20 +105,18 @@ const ImageGallery = () => {
             </div>
           </div>
           {images.map((image, index) => {
-              if (image.media_type === 'IMAGE') {
-                return (
-                  <div key={'imageContainer' + index} className={`thumb${index} thumb`}>
-                    <ImageItem
-                      key={'image' + index}
-                      src={image.media_url}
-                      caption={image.caption}
-                      setMainImgCaption={setMainImgCaption}
-                      setMainImg={setMainImg}
-                      mainImg={mainImg}
-                    />
-                  </div>
-                )
-              }
+            return (
+              <div key={'imageContainer' + index} className={`thumb${index} thumb`}>
+                <ImageItem
+                  key={'image' + index}
+                  src={image.media_url}
+                  caption={image.caption}
+                  setMainImgCaption={setMainImgCaption}
+                  setMainImg={setMainImg}
+                  mainImg={mainImg}
+                />
+              </div>
+            )
           })}
         </div>
       </div>

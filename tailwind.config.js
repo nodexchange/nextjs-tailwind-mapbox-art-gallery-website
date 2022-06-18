@@ -63,6 +63,9 @@ module.exports = {
         tabletMap: "url('/tablet/image-map.jpg')",
         desktopMap: "url('/desktop/image-map.jpg')",
         desktopHero: "url('/desktop/image-hero.jpg');",
+        aboutImage: "linear-gradient(rgba(187, 5, 69, 0.9), rgba(187, 5, 69, 0.95)), url('/desktop/image-hero.jpg');",
+        courseImage: "linear-gradient(rgba(187, 5, 69, 0.95), rgba(187, 5, 69, 0.95)), url('/bachata-dancing.jpg');",
+        instructorsImage: "linear-gradient(rgba(187, 5, 69, 0.95), rgba(187, 5, 69, 0.99)), url('/logo.png');",
       },
       colors: {
         gold: '#D5966C',
