@@ -1,4 +1,4 @@
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import { Secondary as Layout } from '../layouts';
 import { gaEvent } from '../lib/ga';
 import ButtonA from '../components/ButtonA';
@@ -9,7 +9,17 @@ const text =
 const description = '✨ Enjoy your class with Latin Shine team ✨';
 
 const ReserveConfirmation = () => {
+  const [nextDate, setNextDate] = useState('');
   useEffect(() => {
+    const d = new Date();
+    const n = d.getTime(); // n == time in milliseconds since 1st Jan 1970
+    const weekday = d.getDay() // 0...6 ; 0 == Sunday, 6 = Saturday, 4 = Thursday
+    const numDaysToNextThursday = weekday >= 3 ? 7 - (weekday-3) : 3 - weekday;
+    const nextThursday_msecs = n + numDaysToNextThursday * 24 * 60 * 60 * 1000;
+    const theDate = new Date(nextThursday_msecs); // this is the date
+    setNextDate(theDate.toLocaleDateString('en-GB'));
+    console.log('theDate', theDate);
+
     gaEvent({ action: 'reserve_success', params: { section: 'reserve_confirmation' }});
   }, []);
 
@@ -24,6 +34,7 @@ const ReserveConfirmation = () => {
           {title}
         </h1>
         <div>
+          <p>You are all set for your next Wednesday Bachata Class on {nextDate}</p>
           <p>{text}</p>
           <p>{description}</p>
         </div>
