@@ -14,7 +14,9 @@ export default function Home() {
       <Header />
       {/* <HeroVideo /> */}
       <HeroSection />
-      <CourseInfo />
+      <div className='overflow-auto h-[32vh] scroll-smooth hover:scroll-auto'>
+        <CourseInfo />
+      </div>
       <ImageGallery />
       <About />
       {/* <Signup /> */}

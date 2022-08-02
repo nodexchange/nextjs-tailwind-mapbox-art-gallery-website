@@ -17,7 +17,46 @@ export const CourseInfo = () => {
           className="text-bodyS font-black uppercase font-bigShoulder cursor-pointer pb-1"
           style={{ lineHeight: "1.5rem" }}
         >
-          BACHATA CLASSES IN HIGH WYCOMBE - EVERY WEDNESDAY! | Wednesday, 6th July 2022
+          Tuesday, 2nd August 2022 | August Classes!
+        </h3>
+        <p className="my-4 l:my-12 md:m-0 font-light font-outfit text-bodyXS md:text-bodyS md:w-100">
+        💃🕺Interested in trying something new in August 🌤?
+        Join us for our Latin #dance Bachata classes in #highwycombe.
+        Our Latin Shine community is growing every week ❤️
+        Come meet new people and have fun learning something new!
+        New complete beginners course starts this Wednesday! (4 Week course)
+        </p>
+        <p className="my-4 l:my-12 md:m-0 font-light font-outfit text-bodyXS md:text-bodyS md:w-100">
+        🕖 Time: 7PM (beginners)
+        </p>
+        <p className="my-4 l:my-12 md:m-0 font-light font-outfit text-bodyXS md:text-bodyS md:w-100">
+        📆 Date: 3rd of August, 2022 (every Wednesday)
+        </p>
+        <p className="my-4 l:my-12 md:m-0 font-light font-outfit text-bodyXS md:text-bodyS md:w-100">
+        📣 Price: £10 or £7 for students
+        </p>
+        <p className="my-4 l:my-12 md:m-0 font-light font-outfit text-bodyXS md:text-bodyS md:w-100">
+        🔹 Venue: Guildhall (1st floor), High Street, High Wycombe
+        </p>
+        <p className="my-4 l:my-12 md:m-0 font-light font-outfit text-bodyXS md:text-bodyS md:w-100">
+        ▶️ Details: 
+          <a className="underline text-white" href="https://fb.me/e/3nBtbBFEi" target="_self">
+            https://fb.me/e/3nBtbBFEi
+          </a>
+        </p>
+        <p className="my-4 l:my-12 md:m-0 font-light font-outfit text-bodyXS md:text-bodyS md:w-100">
+        No partner or prior dancing experience is necessary.
+        Our instructors will guide you through basic steps, dancing technique, body movement and safety.
+        </p>
+        <br/>
+      </article>
+      <p>------------</p>
+      <article className="pt-4">
+        <h3
+          className="text-bodyS font-black uppercase font-bigShoulder cursor-pointer pb-1"
+          style={{ lineHeight: "1.5rem" }}
+        >
+          Wednesday, 6th July 2022 | BACHATA CLASSES IN HIGH WYCOMBE - EVERY WEDNESDAY!
         </h3>
         <p className="my-4 l:my-12 md:m-0 font-light font-outfit text-bodyXS md:text-bodyS md:w-100">
           We are teaching Bachata Sensual classes at the High Wycombe Guildhall (High Street). Classes are taught by two of our instructors Alyssa and Martin to represent Sensual Style dynamics of followers and leaders.

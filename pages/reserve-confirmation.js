@@ -18,7 +18,6 @@ const ReserveConfirmation = () => {
     const nextThursday_msecs = n + numDaysToNextThursday * 24 * 60 * 60 * 1000;
     const theDate = new Date(nextThursday_msecs); // this is the date
     setNextDate(theDate.toLocaleDateString('en-GB'));
-    console.log('theDate', theDate);
 
     gaEvent({ action: 'reserve_success', params: { section: 'reserve_confirmation' }});
   }, []);
