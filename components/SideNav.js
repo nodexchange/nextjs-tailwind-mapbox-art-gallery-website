@@ -8,8 +8,8 @@ const config = [
     path: "/",
   },
   {
-    title: "Course Info",
-    path: "/course-info",
+    title: "Latest News",
+    path: "/latest-news",
   },
   {
     title: "About Bachata",

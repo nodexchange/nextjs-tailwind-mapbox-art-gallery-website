@@ -1,8 +1,12 @@
 import Link from "next/link";
-import text from "../config/text.json";
+// import text from "../config/text.json";
+import { Article } from './Article';
 
-export const CourseInfo = () => {
-  const { footer } = text;
+
+/* Reminder: No classes this week (Wed, 24/08) due to the summer break 💆💆‍♀️
+We are back on the 31st of Aug. See you all then! */
+
+export const News = () => {
   return (
     <section className="bg-no-repeat bg-cover bg-courseImage text-white px-8 py-10 md:py-20 lg:py-30 lg:px-30 xl:px-40 justify-between md:items-start">
       <h2
@@ -12,14 +16,12 @@ export const CourseInfo = () => {
         LATEST NEWS
       </h2>
       <hr />
-      <article className="pt-4">
-        <h3
-          className="text-bodyS font-black uppercase font-bigShoulder cursor-pointer pb-1"
-          style={{ lineHeight: "1.5rem" }}
-        >
-          Tuesday, 2nd August 2022 | August Classes!
-        </h3>
-        <p className="my-4 l:my-12 md:m-0 font-light font-outfit text-bodyXS md:text-bodyS md:w-100">
+      <Article header={(<>Tuesday, 23rd August 2022 | Summer Break!</>)} body={(<>
+        Reminder: No classes this week (Wed, 24/08) due to the summer break 💆💆‍♀️
+We are back on the 31st of August, 2022. See you all then!
+      </>)} />
+      <p>------------</p>
+      <Article header={(<>Tuesday, 2nd August 2022 | August Classes!</>)} body={(<><p className="my-4 l:my-12 md:m-0 font-light font-outfit text-bodyXS md:text-bodyS md:w-100">
         💃🕺Interested in trying something new in August 🌤?
         Join us for our Latin #dance Bachata classes in #highwycombe.
         Our Latin Shine community is growing every week ❤️
@@ -47,18 +49,9 @@ export const CourseInfo = () => {
         <p className="my-4 l:my-12 md:m-0 font-light font-outfit text-bodyXS md:text-bodyS md:w-100">
         No partner or prior dancing experience is necessary.
         Our instructors will guide you through basic steps, dancing technique, body movement and safety.
-        </p>
-        <br/>
-      </article>
+        </p></>)} />
       <p>------------</p>
-      <article className="pt-4">
-        <h3
-          className="text-bodyS font-black uppercase font-bigShoulder cursor-pointer pb-1"
-          style={{ lineHeight: "1.5rem" }}
-        >
-          Wednesday, 6th July 2022 | BACHATA CLASSES IN HIGH WYCOMBE - EVERY WEDNESDAY!
-        </h3>
-        <p className="my-4 l:my-12 md:m-0 font-light font-outfit text-bodyXS md:text-bodyS md:w-100">
+      <Article header={(<>Wednesday, 6th July 2022 | BACHATA CLASSES IN HIGH WYCOMBE - EVERY WEDNESDAY!</>)} body={(<><p className="my-4 l:my-12 md:m-0 font-light font-outfit text-bodyXS md:text-bodyS md:w-100">
           We are teaching Bachata Sensual classes at the High Wycombe Guildhall (High Street). Classes are taught by two of our instructors Alyssa and Martin to represent Sensual Style dynamics of followers and leaders.
         </p>
         <br/>
@@ -97,8 +90,7 @@ export const CourseInfo = () => {
           {' '} or {' '}
           <a className="underline text-white" href="https://www.instagram.com/latinshinedance/" target="_self">Instagram</a>
           {' '} for more exciting news and events. 
-        </p>
-      </article>
+        </p></>)} />
     </section>
   );
 }
