@@ -16,6 +16,11 @@ export const News = () => {
         LATEST NEWS
       </h2>
       <hr />
+      <Article header={(<>Tuesday, 6th September 2022 | Extended hours!</>)} body={(<>
+        We are back this week with a new beginners course and new extended hours (📣) to add an additional hour of social dancing!
+        Join us this week and practise with us. ❤️
+        - Latin Shine Dance Company
+      </>)} />
       <Article header={(<>Tuesday, 23rd August 2022 | Summer Break!</>)} body={(<>
         Reminder: No classes this week (Wed, 24/08) due to the summer break 💆💆‍♀️
 We are back on the 31st of August, 2022. See you all then!
