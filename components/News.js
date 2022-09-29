@@ -16,6 +16,18 @@ export const News = () => {
         LATEST NEWS
       </h2>
       <hr />
+      <Article header={(<>Thursday, 29th September 2022 | October Classes!</>)} body={(<>
+        💃🕺Interested in trying something new in October? 💃🕺
+        Come learn Sensual Bachata which includes basic steps, dancing technique and shines and body movement in High Wycombe! 
+        Our new complete beginner`s course starts this Wednesday! (4 Week course)
+        🕖 Time: 7PM (beginners)
+        📆 Date: 5th of October, 2022 (every Wednesday)
+        📣 Price: £10 or £7 for students
+        🔹 Venue: Guildhall (1st floor), High Street, High Wycombe
+        ▶️ Details: https://fb.me/e/208mrMMqg
+        No partner or prior dancing experience is necessary.
+        Our Latin Shine community is growing every week ❤️ Come meet new people and have fun learning something new!
+      </>)} />
       <Article header={(<>Tuesday, 6th September 2022 | Extended hours!</>)} body={(<>
         We are back this week with a new beginners course and new extended hours (📣) to add an additional hour of social dancing!
         Join us this week and practise with us. ❤️
