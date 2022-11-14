@@ -16,6 +16,14 @@ export const News = () => {
         LATEST NEWS
       </h2>
       <hr />
+      <Article header={(<>Monday, 14th November 2022 | Reminder!</>)} body={(<>
+        🎄🎄🎄 Early Winter break! 🎄🎄🎄
+       Quick reminder to all of our students that this week (16th) it will be our last November class.
+       <br />
+       No classes on the 23rd & 30th of November.
+       <br />
+       We will resume on the 7th of December. See you all then!
+      </>)} />
       <Article header={(<>Thursday, 29th September 2022 | October Classes!</>)} body={(<>
         💃🕺Interested in trying something new in October? 💃🕺
         Come learn Sensual Bachata which includes basic steps, dancing technique and shines and body movement in High Wycombe! 
