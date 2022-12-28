@@ -30,6 +30,10 @@ const config = [
   {
     title: "Reserve",
     path: "/reserve",
+  },
+  {
+    title: "Payments",
+    path: "/payments",
   }
 ]
 

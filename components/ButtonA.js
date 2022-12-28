@@ -3,7 +3,7 @@ import Link from "next/link";
 function ButtonA({ path, title }) {
   return (
     <Link href={path} passHref>
-      <div className="top-0 flex cursor-pointer group h-btn">
+      <div className="top-0 flex cursor-pointer group h-btn justify-center">
         <a className="flex items-center justify-center px-6 font-extrabold text-white uppercase transition bg-almostBlack group-hover:bg-shineDark font-bigShoulder text-button">
           {title}
         </a>

@@ -16,6 +16,12 @@ export const News = () => {
         LATEST NEWS
       </h2>
       <hr />
+      <Article header={(<>Wednesday, 28th December 2022 | Classes are on!</>)} body={(<>
+        📣 Join us tonight for our last class of 2022! 📣
+        We are back this week for more fun Bachata classes. 🕺💃
+        <br />
+        See you tonight!
+      </>)} />
       <Article header={(<>Monday, 14th November 2022 | Reminder!</>)} body={(<>
         🎄🎄🎄 Early Winter break! 🎄🎄🎄
        Quick reminder to all of our students that this week (16th) it will be our last November class.

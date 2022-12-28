@@ -37,17 +37,18 @@ export default function HeroSection() {
           priority="true"
         />
       </div>
-      <div className="hidden sm:block sm:w-3/5 lg:hidden">
+      <div className="hidden sm:block sm:w-100 lg:hidden">
         <Image
           src="/tablet/image-hero.jpg"
           width={437}
-          height={700}
+          height={100}
           layout="responsive"
+          objectFit="cover"
           alt="hero image tablet"
           priority="true"
         />
       </div>
-      <div className="px-4 py-10 sm:absolute sm:top-[5px] sm:left-1/2 lg:static lg:hidden">
+      <div className="flex flex-col px-4 py-10 sm:top-[5px] lg:hidden">
         <div className="mx-0 p-[0px] border-2 border-white mb-10 w-[290px]">
           <div className="ml-[20px] mt-[15px]">
             <Image
