@@ -1,18 +1,18 @@
 {
   "hero": {
-    "heading": "Beginners Classes_Every Week!",
+    "heading": "NEWS!",
     "headingMobile": "Join Us for_Beginners Classes_Every Week!",
-    "logoText": "BACHATA CLASSES_AT THE GUILDHALL_IN HIGH WYCOMBE",
+    "logoText": "SALSA & BACHATA_CLASSES (WEEKLY)_IN HIGH WYCOMBE",
     "logoWhite": "Reserve your spot now! ➡"
   },
   "main": {
     "top": "All Levels Welcome",
-    "description": "Our beginner bachata classes are run in a friendly and professional environment, designed to help you to learn new skills in a relaxed settings. Join us weekly to meet new like-minded people. No partner required.",
+    "description": "Our beginner dance classes are run in a friendly and professional environment, designed to help you to learn new skills in a relaxed settings. Join us weekly to meet new like-minded people. No partner required.",
     "text": "Private Dance Classes",
     "final": "Do you have a special celebration upcoming, need help with a wedding dance routine or simply interested in taking your dancing skills to the next level, contact our team to learn more about private dance class lessons."
   },
   "locationCopy": {
-    "title": "Our Location",
+    "title": "Bachata Location",
     "street": "Guildhall",
     "body1": "High Street",
     "body2": "High Wycombe",
@@ -24,6 +24,20 @@
     "byCarText": "From London or Oxfordshire, take A4, or M40 to High Wycombe, and follow directions for Eden Shopping Center (the parking at Eden, after 6:30pm, is only £1.50 for the whole evening). We are located near the TKMAXX. The Guildhall is just a short walk away from either Eden Shopping Center Car Park or Wycombe Swan Car Park. From Aylesbury, take A4010 and follow direction for High Wycombe.",
     "byTrain": "By Train",
     "byTrainText": "There is a regular service from London, Aylesbury and Oxford. High Wycombe station, located on the Amersham Hill and it is around 10min walk from Guildhall. Follow the main road down the hill and turn right on the high street."
+  },
+  "locationSalsaCopy": {
+    "title": "Salsa Location",
+    "street": "Castle Street Dance Studio",
+    "body1": "52a Castle Street",
+    "body2": "High Wycombe",
+    "body3": "HP13 6RG",
+    "body4": "Bucks",
+    "description": "Salsa LA Style every Tuesday! 7pm - 9pm!",
+    "gettingHere": "Getting Here",
+    "byCar": "By Car",
+    "byCarText": "From London or Oxfordshire, take A4, or M40 to High Wycombe, and follow directions for High Wycombe Rail Station",
+    "byTrain": "By Train",
+    "byTrainText": "There is a regular service from London, Aylesbury and Oxford. High Wycombe station, located on the Amersham Hill and it is around 2min walk from our dance studio. Follow the main road down the hill and turn right on the Castle Street."
   },
   "instructors": {
     "main:": "Meet your Teachers",
@@ -39,8 +53,8 @@
     "link": "https://korkeyjudith.com/"
   },
   "footer": {
-    "line1": "Bachata Sensual in High Wycombe",
-    "line2": "Dance Classes Every Wednesday",
-    "description": "Fun and friendly Bachata Latin dance classes in High Wycombe, every Wednesday. Beginners are welcome; partners are not required. Learn with us and become a part of the Latin Shine community."
+    "line1": "Latin Dance Classes",
+    "line2": "in High Wycombe, every Week",
+    "description": "Fun and friendly Latin dance classes in High Wycombe, every Wednesday. Beginners are welcome; partners are not required. Learn with us and become a part of the Latin Shine community."
   }
 }

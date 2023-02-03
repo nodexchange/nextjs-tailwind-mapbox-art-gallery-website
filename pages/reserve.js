@@ -16,7 +16,7 @@ const Reserve = () => {
   const inputLastNameEl = useRef(null);
 
   const [message, setMessage] = useState('');
-  const [completeBeginnerCheck, setCompleteBeginnerCheck] = useState(false);
+  const [completeBeginnerCheck, setCompleteBeginnerCheck] = useState(true);
   const [validation, setValidation] = useState('');
 
   const testForEmail = (email) => {
@@ -115,7 +115,7 @@ const Reserve = () => {
             <br />
             <p className="font-light">
               Please fill in your details below to let us know that you coming
-              for the upcoming Wednesday class.
+              for the upcoming class. Our team will be in touch to confirm.
             </p>
             <form className="w-full max-w-sm mx-auto">
               {validation && (
@@ -151,9 +151,9 @@ const Reserve = () => {
                 />
               </div>
               <div className="form-check inline-block pt-4">
-                <input className="form-check-input appearance-none h-4 w-4 border border-gray-300 rounded-sm bg-white checked:bg-shine checked:border-white focus:outline-none transition duration-200 mt-1 align-top bg-no-repeat bg-center bg-contain float-left mr-2 cursor-pointer" type="checkbox" id="flexCheckChecked" onChange={checkboxHandler} />
+                <input className="form-check-input appearance-none h-4 w-4 border border-gray-300 rounded-sm bg-white checked:bg-shine checked:border-white focus:outline-none transition duration-200 mt-1 align-top bg-no-repeat bg-center bg-contain float-left mr-2 cursor-pointer" type="checkbox" id="flexCheckChecked" onChange={checkboxHandler} defaultChecked={completeBeginnerCheck} />
                 <label className="form-check-label block w-full pl-7 text-left text-white" htmlFor="flexCheckChecked">
-                  Check this box if you are <span className="underline">a complete beginner</span> to Bachata Latin Dancing.
+                  Check this box if you are <span className="underline">a complete beginner</span> to Latin Dancing.
                 </label>
               </div>
               {/* <div className="form-check">
@@ -171,24 +171,20 @@ const Reserve = () => {
                 style={{ lineHeight: '1.5rem' }}>
                 Our Schedule!
               </h1>
+              <h3>Tuesdays (Starting March 2023!)</h3>
+              <p>19:00 - 20:00 - Salsa LA (Crossbody on1) Beginners Class</p>
+              <p>20:00 - 21:00 - Salsa LA (Crossbody on1) Improvers Class</p>
+              <br />
+              <h3>Wednesdays</h3>
               <p>19:00 - 20:00 - Bachata Beginners Class</p>
               <p>20:00 - 21:00 - Bachata Improvers Class</p>
             </div>
             <br />
-            <h1
-              className="text-bodyM font-black uppercase font-bigShoulder cursor-pointer"
-              style={{ lineHeight: '1.5rem' }}>
-              Here is our location
-            </h1>
-            <div className="font-light">
-              <p>Guildhall, High Wycombe, HP11 2BJ, Buckinghamshire</p>
-            </div>
-            <br />
-            <div className="w-full">
-              <div className="w-[320px] overflow-hidden mx-auto md:w-[500px] lg:w-[960px]">
-                <LocationMap />
-              </div>
-            </div>
+            <Link href="/location" passHref>
+                <a className="underline text-white">
+                  Locations in High Wycombe.
+                </a>
+              </Link>
           </>
         )}
       </main>

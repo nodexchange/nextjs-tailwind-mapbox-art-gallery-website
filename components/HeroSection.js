@@ -10,9 +10,9 @@ export default function HeroSection() {
     <div className="sm:relative lg:flex bg-custom-stone overflow-hidden">
       <div className="hidden lg:relative lg:block lg:bg-almostBlack lg:w-[990px] lg:h-[800px] lg:bg-desktopHero lg:bg-no-repeat lg:bg-right lg:bg-cover">
         {/* <h1 className="absolute top-[189px] left-[165px] mix-blend-exclusion font-black w-screen text-white font-bigShoulder uppercase text-headingL"> */}
-        <div className="bg-shine-alpha absolute top-[289px] w-[480px] pt-4 pb-4">
+        <div className="bg-shine-alpha absolute top-[88px] w-[590px] pt-4 pb-4">
           <h1 className="pl-[85px] font-black w-auto text-white font-bigShoulder uppercase text-headingM">
-            {hero.heading.split('_').map((item, id) => {
+            {/* {hero.heading.split('_').map((item, id) => {
               return (
                 <span key={`item-${id}`}>
                   <span className="lg:p-2 drop-shadow-3xl">
@@ -21,8 +21,13 @@ export default function HeroSection() {
                   <br />
                 </span>
               );
-            })}
+            })} */}
           </h1>
+          <Link href="/classes" passHref>
+            <a target="_self">
+              <Image src="/desktop/news.jpg" width={940} height={788} layout="responsive" alt="Latin Shine Dance Company - New Salsa Course" priority="true" />
+            </a>
+          </Link>
         </div>
       </div>
       <HeroLogo hero={hero} />
@@ -62,14 +67,19 @@ export default function HeroSection() {
           </div>
         </div>
         <h1 className="font-black w-screen text-white font-bigShoulder uppercase text-headingS md:text-headingS">
-          {hero.headingMobile.split('_').map((item, id) => {
+          {/* {hero.headingMobile.split('_').map((item, id) => {
             return (
               <span key={`item-${id}`}>
                 {item}
                 <br />
               </span>
             );
-          })}
+          })} */}
+          <Link href="/classes" passHref>
+            <a target="_self">
+              <Image src="/mobile/news.jpg" width={470} height={394} layout="responsive" alt="Latin Shine Dance Company - New Salsa Course" priority="true" />
+            </a>
+          </Link>
         </h1>
         <div className="font-outfit text-white font-light text-bodyS py-8 sm:py-12 sm:w-[280px] md:w-[340px]">
           {hero.logoText.split('_').map((item, id) => {

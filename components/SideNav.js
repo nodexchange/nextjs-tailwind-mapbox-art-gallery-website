@@ -12,8 +12,20 @@ const config = [
     path: "/latest-news",
   },
   {
+    title: "Classes",
+    path: "/classes",
+  },
+  {
+    title: "Location",
+    path: "/location",
+  },
+  {
     title: "About Bachata",
     path: "/about-bachata",
+  },
+  {
+    title: "About Salsa",
+    path: "/about-salsa",
   },
   {
     title: "Why Dance",
@@ -22,10 +34,6 @@ const config = [
   {
     title: "Instructors",
     path: "/instructors",
-  },
-  {
-    title: "Location",
-    path: "/location",
   },
   {
     title: "Reserve",

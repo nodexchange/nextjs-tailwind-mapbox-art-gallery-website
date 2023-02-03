@@ -3,7 +3,6 @@ import Link from 'next/link';
 import ButtonA from '../components/ButtonA';
 
 const HeroLogo = ({hero}) => {
-  const emailLink = `mailto:${hero.email}?subject=Interested!`;
   return (
     <div className="hidden lg:block lg:absolute lg:top-[89px] lg:right-0 text-center mr-20">
         <div className="p-[0px] border-2 border-white">
@@ -44,7 +43,7 @@ const HeroLogo = ({hero}) => {
         </p>
         <div className="flex">
           <div className="flex-1">
-            <ButtonA path="/location" title="Our Location" />
+            <ButtonA path="/location" title="Our Locations" />
           </div>
           <div className="flex-1">
             <ButtonA path="/reserve" title="Reserve your spot" />
