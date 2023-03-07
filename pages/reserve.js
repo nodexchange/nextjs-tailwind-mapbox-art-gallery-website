@@ -82,7 +82,7 @@ const Reserve = () => {
   return (
     <Layout
       title="Latin Shine | Dance Company - Reserve your spot"
-      description="You can use the form below to reserve spot for our Bachata Sensual latin dance class. Join our class every Wednesday, in High Wycombe">
+      description="You can use the form below to reserve spot for our Salsa (LA Style) and Bachata Sensual latin dance class. Join our class every Tuesday & Wednesday, in High Wycombe">
       <main className="text-center bg-almostBlack text-white px-8 py-10 sm:py-[80px] md:py-20 lg:py-30 lg:px-30 xl:px-40 justify-between md:items-start">
         {message ? (
           <>

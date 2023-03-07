@@ -15,7 +15,34 @@ export const News = () => {
         LATEST NEWS
       </h2>
       <hr />
-
+      <Article
+        header={<>Tue, 7th March 2023 | SALSA Tuesday Courses!</>}
+        body={
+          <>
+          📣 SALSA! Today is finally here! 📣
+          <br />
+          <br />
+          💃🕺 Our new LA Style (Crossbody on1) Salsa classes at Castle Street Dance Studio are finally here. 
+          Come and join our instructors Alyssa and Martin and start your Salsa Journey with us! 💆💆‍♀️
+          Partners are not required! 
+          <br />
+          Beginners are welcome!
+          <br />
+          <br />
+          Price: £10 per person 
+          <br />
+          (£7 for student with the valid NUS/University card).
+          <br />
+          Time:
+          <br />
+          7pm - Beginners Salsa (LA - crossbody on1)
+          <br />
+          8pm - Improvers Salsa (LA - crossbody on1)
+          <br />
+          Venue: Castle Dance Studio, 52a Castle Street High Wycombe HP13 6RG.
+          </>
+        }
+      />
     <Article
         header={<>Fri, 3rd Feb 2023 | New SALSA Courses!</>}
         body={

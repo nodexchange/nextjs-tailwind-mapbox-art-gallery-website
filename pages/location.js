@@ -7,7 +7,9 @@ import { DanceLocation } from '../components/DanceLocation';
 const Location = () => {
   const { locationCopy, locationSalsaCopy } = text;
   return (
-    <Layout title="Latin Shine | Dance Company - Our Dance Classes Location" description="Learn more about location for our High Wycombe, Bachata Sensual Latin Dance classes">
+    <Layout 
+      title="Latin Shine | Dance Company - Our Dance Classes Location" 
+      description="Learn more about our venues and map locations for our Tuesday (Salsa) and Wednesday (Bachata) High Wycombe dance classes.">
       <LocationMap />
       <DanceLocation copy={locationCopy} />
       <DanceLocation copy={locationSalsaCopy} />
