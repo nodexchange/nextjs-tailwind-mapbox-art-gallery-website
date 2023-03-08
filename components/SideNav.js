@@ -68,7 +68,7 @@ const SideNav = () => {
     // if (window.innerWidth < 768) {
     // }
     
-  }, [showSidebar]);
+  }, []);
 
   return (
     <>
