@@ -171,18 +171,19 @@ const Reserve = () => {
                 style={{ lineHeight: '1.5rem' }}>
                 Our Schedule!
               </h1>
-              <h3>Tuesdays (Starting March 2023!)</h3>
-              <p>19:00 - 20:00 - Salsa LA (Crossbody on1) Beginners Class</p>
-              <p>20:00 - 21:00 - Salsa LA (Crossbody on1) Improvers Class</p>
+              <h3>Tuesdays</h3>
+              <p>7PM - 8PM - Salsa LA (Crossbody on1) Beginners Class</p>
+              <p>8PM - 9PM - Salsa LA (Crossbody on1) Improvers Class</p>
               <br />
               <h3>Wednesdays</h3>
-              <p>19:00 - 20:00 - Bachata Beginners Class</p>
-              <p>20:00 - 21:00 - Bachata Improvers Class</p>
+              <p>7PM - 8PM - Bachata Beginners Class</p>
+              <p>8PM - 9PM - Bachata Improvers Class</p>
+              <p>9PM - 10PM - Bachata & Salsa Social</p>
             </div>
             <br />
             <Link href="/location" passHref>
                 <a className="underline text-white">
-                  Locations in High Wycombe.
+                  Click here for venues (address) in High Wycombe.
                 </a>
               </Link>
           </>

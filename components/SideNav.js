@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { useRouter } from 'next/router';
 import Link from 'next/link';
 
@@ -58,9 +58,17 @@ const NavLink = ({title, path, isActive}) => (
 );
 
 const SideNav = () => {
-  const [showSidebar, setShowSidebar] = useState(false);
+  const [showSidebar, setShowSidebar] = useState(true);
   const router = useRouter();
   const isActive = (pathname) => router.pathname === pathname;
+  useEffect(() => {
+    setTimeout(() => {
+      setShowSidebar(false);
+    }, 1000);
+    // if (window.innerWidth < 768) {
+    // }
+    
+  }, [showSidebar]);
 
   return (
     <>
