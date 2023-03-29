@@ -1,4 +1,5 @@
 import { About } from "../components/About";
+import { AboutSalsa } from "../components/AboutSalsa";
 import HeroSection from "../components/HeroSection";
 // import HeroVideo from "../components/HeroVideo";
 import MainSection from "../components/MainSection";
@@ -19,6 +20,7 @@ export default function Home() {
       </div>
       <ImageGallery />
       <About />
+      <AboutSalsa />
       {/* <Signup /> */}
       <MainSection />
       <Instructors />

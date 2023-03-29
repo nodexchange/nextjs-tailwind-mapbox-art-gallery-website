@@ -31,6 +31,8 @@ const AboutOurClasses = () => {
           <p>19:00 - 20:00 - Salsa LA (Crossbody on1) Beginners Class</p>
           <p>20:00 - 21:00 - Salsa LA (Crossbody on1) Improvers Class</p>
           <br />
+        </main>
+        <main className="text-left bg-courseImage text-white px-8 py-10 md:py-20 lg:py-30 lg:px-30 xl:px-40 justify-between md:items-start">
           <h2 className="font-black uppercase font-bigShoulder text-headingS lg:text-headingS md:mb-4">
             Bachata Wednesdays - Guildhall (High Wycombe)
           </h2>

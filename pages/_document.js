@@ -35,7 +35,7 @@ class MyDocument extends Document {
           <meta name="msapplication-config" content="/browserconfig.xml" />
           <meta name="theme-color" content="#ffffff" />
           <meta name="apple-mobile-web-app-title" content="Latin Shine" />
-          <meta name="keywords" content="Bachata,Classes,Salsa,Kizomba,Zouk,Latin Dance,Latin Shine,Dancing,Beginners,Student,High Wycombe,Buckinghamshire,New Course,Oxford,Aylesbury,Friendly,Fun,Wednesday,Evening" />
+          <meta name="keywords" content="Bachata,Classes,Salsa,Kizomba,Zouk,Latin Dance,Adult Dance,Adult Dance Class,Latin Shine,Dancing,Beginners,Student,High Wycombe,Buckinghamshire,New Course,Oxford,Aylesbury,Friendly,Fun,Wednesday,Evening" />
         </Head>
         <body>
           <Main />

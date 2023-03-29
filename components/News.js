@@ -1,6 +1,6 @@
-import Link from "next/link";
+import Link from 'next/link';
 // import text from "../config/text.json";
-import { Article } from "./Article";
+import { Article } from './Article';
 
 /* Reminder: No classes this week (Wed, 24/08) due to the summer break 💆💆‍♀️
 We are back on the 31st of Aug. See you all then! */
@@ -10,64 +10,89 @@ export const News = () => {
     <section className="bg-no-repeat bg-cover bg-courseImage text-white px-8 py-10 md:py-20 lg:py-30 lg:px-30 xl:px-40 justify-between md:items-start">
       <h2
         className="text-bodyM font-black uppercase font-bigShoulder cursor-pointer pb-1"
-        style={{ lineHeight: "1.5rem" }}
-      >
+        style={{ lineHeight: '1.5rem' }}>
         LATEST NEWS
       </h2>
       <hr />
       <Article
-        header={<>Tue, 7th March 2023 | SALSA Tuesday Courses!</>}
+        header={<>Wed, 29th March 2023 | New April Courses!</>}
         body={
           <>
-          📣 SALSA! Today is finally here! 📣
-          <br />
-          <br />
-          💃🕺 Our new LA Style (Crossbody on1) Salsa classes at Castle Street Dance Studio are finally here. 
-          Come and join our instructors Alyssa and Martin and start your Salsa Journey with us! 💆💆‍♀️
-          Partners are not required! 
-          <br />
-          Beginners are welcome!
-          <br />
-          <br />
-          Price: £10 per person 
-          <br />
-          (£7 for student with the valid NUS/University card).
-          <br />
-          Time:
-          <br />
-          7pm - Beginners Salsa (LA - crossbody on1)
-          <br />
-          8pm - Improvers Salsa (LA - crossbody on1)
-          <br />
-          Venue: Castle Dance Studio, 52a Castle Street High Wycombe HP13 6RG.
+            Join us in April for our new LA Style (Crossbody on1) Salsa classes
+            at Castle Street Dance Studio. Come and join our instructors Alyssa
+            and Martin and start your Salsa Journey with us! 💆💆‍♀️ Partners are
+            not required! Beginners are welcome!
+            <br />
+            Price: £10 per person
+            <br />
+            (£7 for student with the valid NUS/University card).
+            <br />
+            Time:
+            <br />
+            7pm - Beginners Salsa (LA - crossbody on1)
+            <br />
+            8pm - Improvers Salsa (LA - crossbody on1)
+            <br />
+            Venue: Castle Dance Studio, 52a Castle Street High Wycombe HP13 6RG.
           </>
         }
       />
-    <Article
+      <Article
+        header={<>Tue, 7th March 2023 | SALSA Tuesday Courses!</>}
+        body={
+          <>
+            📣 SALSA! Today is finally here! 📣
+            <br />
+            <br />
+            💃🕺 Our new LA Style (Crossbody on1) Salsa classes at Castle Street
+            Dance Studio are finally here. Come and join our instructors Alyssa
+            and Martin and start your Salsa Journey with us! 💆💆‍♀️ Partners are
+            not required!
+            <br />
+            Beginners are welcome!
+            <br />
+            <br />
+            Price: £10 per person
+            <br />
+            (£7 for student with the valid NUS/University card).
+            <br />
+            Time:
+            <br />
+            7pm - Beginners Salsa (LA - crossbody on1)
+            <br />
+            8pm - Improvers Salsa (LA - crossbody on1)
+            <br />
+            Venue: Castle Dance Studio, 52a Castle Street High Wycombe HP13 6RG.
+          </>
+        }
+      />
+      <Article
         header={<>Fri, 3rd Feb 2023 | New SALSA Courses!</>}
         body={
           <>
-          📣 NEW SALSA COURSES STARTING IN MARCH 2023! 📣
-          <br />
-          <br />
-          You have been asking and we have listened! We are Starting our new LA Style (Crossbody on1) Salsa classes at Castle Street Dance Studio. Classes will be taught by two of our instructors Alyssa and Martin.
-          Watch this space for more Information!
-          Partners are not required! 
-          <br />
-          Beginners are welcome!
-          <br />
-          <br />
-          Price: £10 per person 
-          <br />
-          (£7 for student with the valid NUS/University card).
-          <br />
-          Time:
-          <br />
-          7pm - Beginners Salsa (LA - crossbody on1)
-          <br />
-          8pm - Improvers Salsa (LA - crossbody on1)
-          <br />
-          Venue: Castle Dance Studio, 52a Castle Street High Wycombe HP13 6RG.
+            📣 NEW SALSA COURSES STARTING IN MARCH 2023! 📣
+            <br />
+            <br />
+            You have been asking and we have listened! We are Starting our new
+            LA Style (Crossbody on1) Salsa classes at Castle Street Dance
+            Studio. Classes will be taught by two of our instructors Alyssa and
+            Martin. Watch this space for more Information! Partners are not
+            required!
+            <br />
+            Beginners are welcome!
+            <br />
+            <br />
+            Price: £10 per person
+            <br />
+            (£7 for student with the valid NUS/University card).
+            <br />
+            Time:
+            <br />
+            7pm - Beginners Salsa (LA - crossbody on1)
+            <br />
+            8pm - Improvers Salsa (LA - crossbody on1)
+            <br />
+            Venue: Castle Dance Studio, 52a Castle Street High Wycombe HP13 6RG.
           </>
         }
       />
@@ -171,8 +196,7 @@ export const News = () => {
               <a
                 className="underline text-white"
                 href="https://fb.me/e/3nBtbBFEi"
-                target="_self"
-              >
+                target="_self">
                 https://fb.me/e/3nBtbBFEi
               </a>
             </p>
@@ -224,7 +248,7 @@ export const News = () => {
               Time: 7pm - 9pm
             </p>
             <p className="l:my-12 md:m-0 sm:my-0 font-light font-outfit text-bodyXS md:text-bodyS md:w-100">
-              Venue:{" "}
+              Venue:{' '}
               <Link href="/location" passHref>
                 <a className="underline text-white">
                   Guildhall (High Street), High Wycombe.
@@ -232,31 +256,28 @@ export const News = () => {
               </Link>
             </p>
             <p className="l:my-12 md:m-0 sm:my-0 font-light font-outfit text-bodyXS md:text-bodyS md:w-100">
-              You can view all of our upcoming events here:{" "}
+              You can view all of our upcoming events here:{' '}
               <a
                 className="underline text-white"
-                href="https://www.facebook.com/LatinShineDance/events"
-              >
+                href="https://www.facebook.com/LatinShineDance/events">
                 Latin Shine Facebook Events
               </a>
             </p>
             <p className="l:my-12 md:m-0 sm:my-0 font-light font-outfit text-bodyXS md:text-bodyS md:w-100">
-              Follow us on our{" "}
+              Follow us on our{' '}
               <a
                 className="underline text-white"
                 href="https://www.facebook.com/LatinShineDance"
-                target="_self"
-              >
+                target="_self">
                 Facebook
-              </a>{" "}
-              or{" "}
+              </a>{' '}
+              or{' '}
               <a
                 className="underline text-white"
                 href="https://www.instagram.com/latinshinedance/"
-                target="_self"
-              >
+                target="_self">
                 Instagram
-              </a>{" "}
+              </a>{' '}
               for more exciting news and events.
             </p>
           </>
