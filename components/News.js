@@ -249,10 +249,8 @@ export const News = () => {
             </p>
             <p className="l:my-12 md:m-0 sm:my-0 font-light font-outfit text-bodyXS md:text-bodyS md:w-100">
               Venue:{' '}
-              <Link href="/location" passHref>
-                <a className="underline text-white">
-                  Guildhall (High Street), High Wycombe.
-                </a>
+              <Link href="/location" className="underline text-white">
+                Guildhall (High Street), High Wycombe.
               </Link>
             </p>
             <p className="l:my-12 md:m-0 sm:my-0 font-light font-outfit text-bodyXS md:text-bodyS md:w-100">

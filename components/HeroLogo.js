@@ -35,7 +35,6 @@ const HeroLogo = ({hero}) => {
                 </p>
               );
             })}
-            {/* <a className="underline text-blue-600 hover:text-blue-800 visited:text-purple-600" href={emailLink}>{hero.email}</a> */}
           </div>
         </div>
         <p className="font-outfit text-white font-light text-bodyM w-[550px] mb-10">

@@ -48,10 +48,8 @@ const config = [
 const NavLink = ({title, path, isActive}) => (
   <div>
     {isActive ? (<h3 className="text-4xl font-semibold text-black">{title}</h3>) : (
-      <Link href={path}>
-        <a className="text-4xl font-semibold text-white cursor-pointer transition-colors hover:text-shineDark">
+      <Link href={path} className="text-4xl font-semibold text-white cursor-pointer transition-colors hover:text-shineDark">
         {title}
-        </a>
       </Link>
     )}
   </div>

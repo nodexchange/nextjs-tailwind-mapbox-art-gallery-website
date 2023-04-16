@@ -134,7 +134,7 @@ const Register = (props) => {
               <div className="form-check inline-block pt-4">
                 <input className="form-check-input appearance-none h-4 w-4 border border-gray-300 rounded-sm bg-white checked:bg-shine checked:border-white focus:outline-none transition duration-200 mt-1 align-top bg-no-repeat bg-center bg-contain float-left mr-2 cursor-pointer" type="checkbox" id="flexCheckChecked" onChange={checkboxHandler} />
                 <label className="form-check-label block w-full pl-7 text-left text-white" htmlFor="flexCheckChecked">
-                  You agree to the <Link href="/terms"><a className="underline text-white hover:text-shine" target="_self">Terms and Conditions</a></Link> set out by this site, including our Cookie Use.
+                  You agree to the <Link href="/terms" className="underline text-white hover:text-shine" target="_self">Terms and Conditions</Link> set out by this site, including our Cookie Use.
                 </label>
               </div>
               <ButtonC title="Register" action={register} disabled={!valid} />

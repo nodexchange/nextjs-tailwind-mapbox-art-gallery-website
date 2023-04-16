@@ -23,19 +23,17 @@ export default function Footer() {
       <p className="my-12 md:m-0 font-light font-outfit text-bodyXS md:w-2/5">
         {footer.description}
         <br />
-        <Link href="/terms"><a className="underline text-white hover:text-shine" target="_self">Terms and Conditions</a></Link>
+        <Link href="/terms" className="underline text-white hover:text-shine" target="_self">Terms and Conditions</Link>
         {' | '}
-        <Link href="/privacy"><a className="underline text-white hover:text-shine" target="_self">Privacy Policy</a></Link>
-        {/* {' | '} */}
-        {/* <Link href="/dataprotection"><a className="underline text-white hover:text-shine" target="_self">Data Protection</a></Link> */}
+        <Link href="/privacy" className="underline text-white hover:text-shine" target="_self">Privacy Policy</Link>
       </p>
 
       <div className="gap-5">
         <SocialIcons />
         <div className="flex flex-row justify-center">
-          <a id="email_us_text" className="hover:underline hover:text-shine" href="mailto:latin_shine@outlook.com?subject = Website&body = Hi Latin Shine," onClick={handleClick}>
+          <Link id="email_us_text" className="hover:underline hover:text-shine" href="mailto:latin_shine@outlook.com?subject = Website&body = Hi Latin Shine," onClick={handleClick}>
             latin_shine@outlook.com
-          </a>
+          </Link>
         </div>
         
       </div>

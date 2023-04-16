@@ -119,10 +119,8 @@ const AdminMenu = ({ isActive, info, signOut }) => (
     <p>
       {info}
     </p>
-    <Link href="/admin/customers">
-      <a className="bold" data-active={isActive('/')}>
-        Customers
-      </a>
+    <Link href="/admin/customers" className="bold" data-active={isActive('/')}>
+      Customers
     </Link>
     <button onClick={() => signOut()}>
       <a>Log out</a>

@@ -79,11 +79,11 @@ const ImageGallery = () => {
           <h3
             className="text-bodyM pb-1 font-black uppercase font-bigShoulder cursor-pointer"
             style={{ lineHeight: '1.5rem' }}>
-            <Link href="https://www.instagram.com/latinshinedance/" passHref>Latest from our Instagram</Link>
+            <Link href="https://www.instagram.com/latinshinedance/">Latest from our Instagram</Link>
           </h3>
         </div>
         <div className="inline-block ml-1 ">
-          <Link href="https://www.instagram.com/latinshinedance/" passHref>
+          <Link href="https://www.instagram.com/latinshinedance/">
             <svg
               className="dark:fill-white relative top-[1px] left-0 fill-black transition-colors cursor-pointer"
               width="20"
