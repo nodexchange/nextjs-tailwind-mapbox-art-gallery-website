@@ -28,7 +28,7 @@ const Confirmation = ({ user, session }) => {
   const isSessionAvailable = (session && Object.keys(session).length > 0);
     return (
       <Layout title="Latin Shine | Dance Company - Payment Confirmation Screen" description="Latin Shine Payment Confirmation Screen for all online dance classes">
-        <main className="text-left bg-almostBlack text-white px-8 py-10 md:py-20 lg:py-30 lg:px-30 xl:px-40 justify-between md:items-start">
+        <main className="text-left bg-almostBlack text-white px-8 py-10 lg:py-30 lg:px-30 xl:px-40 justify-between md:items-start">
           <p>🎉 Success! 🎉 We have received your payment! Thank you for your support from ✨ Latin Shine team ✨</p>
           <br />
           {isSessionAvailable && (

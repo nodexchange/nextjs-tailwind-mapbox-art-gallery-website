@@ -1,7 +1,7 @@
 module.exports = {
 	reactStrictMode: true,
 	images: {
-    domains: ['scontent.cdninstagram.com', 'cdninstagram.com'],
+    domains: ['scontent.cdninstagram.com', 'cdninstagram.com', 'mdbootstrap.com'],
   },
 	async redirects() {
     return [

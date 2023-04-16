@@ -5,7 +5,7 @@ import text from "../config/text.json";
 export const Instructors = () => {
   const { instructors } = text;
   return (
-    <section className="bg-no-repeat bg-cover bg-instructorsImage text-white px-8 py-10 md:py-20 lg:py-30 lg:px-30 xl:px-40 justify-between md:items-start">
+    <section className="bg-no-repeat bg-cover bg-instructorsImage text-white px-8 py-10 md:py-10 lg:py-30 lg:px-30 xl:px-40 justify-between md:items-start">
       <div className="block lg:flex">
         <div className="flex-none w-[300px] md:w-[445px] md:h-[889px] ">
           <Image

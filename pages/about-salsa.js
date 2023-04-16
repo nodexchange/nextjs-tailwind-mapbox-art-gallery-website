@@ -6,7 +6,7 @@ const AboutSalsaPage = () => {
     <Layout
       title="Latin Shine | Dance Company - About Salsa"
       description="Learn more about Salsa LA Style, history of the dance and the rhythm">
-      <main className=" bg-almostBlack text-white py-10 md:py-20 lg:py-30 justify-between md:items-start">
+      <main className=" bg-almostBlack text-white py-10 md:py-10 lg:py-30 justify-between md:items-start">
         <AboutSalsa full="true" />
       </main>
     </Layout>

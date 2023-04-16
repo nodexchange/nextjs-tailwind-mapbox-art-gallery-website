@@ -2,7 +2,7 @@ import Link from 'next/link';
 
 export const AboutSalsa = ({ full }) => {
   return (
-    <main className="text-left bg-almostBlack text-white px-8 py-10 md:py-20 lg:py-30 lg:px-30 xl:px-40 justify-between md:items-start">
+    <main className="text-left bg-almostBlack text-white px-8 py-10 md:py-10 lg:py-30 lg:px-30 xl:px-40 justify-between md:items-start">
       {full === 'true' && (
         <>
           <h2 className="font-black uppercase font-bigShoulder text-headingS lg:text-headingS md:mb-4">

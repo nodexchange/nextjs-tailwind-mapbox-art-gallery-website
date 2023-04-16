@@ -1,7 +1,7 @@
 import React, { useState, useRef, useEffect } from 'react';
 import { Wrapper, Status } from '@googlemaps/react-wrapper';
 const center = { lat: 51.62945971678308, lng: -0.7514637303734821 };
-
+const castleCenter = { lat: 51.62953531782615, lng: -0.7478802432022472};
 const render = (status) => {
   const zoom = 17;
   switch (status) {
@@ -12,7 +12,8 @@ const render = (status) => {
       return <p>error</p>;
     case Status.SUCCESS:
       return (<MyMapComponent center={center} zoom={zoom}>
-        <Marker key={0} position={center} icon={'/icon-location.svg'} />
+        <Marker key={0} label="Bachata" position={center} icon={'/icon-marker.svg'} />
+        <Marker key={1} label="Salsa" position={castleCenter} icon={'/icon-marker.svg'} />
       </MyMapComponent>);
   }
 };

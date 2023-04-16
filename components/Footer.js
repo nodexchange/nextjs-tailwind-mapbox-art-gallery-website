@@ -10,13 +10,13 @@ export default function Footer() {
   }
 
   return (
-    <footer className="flex flex-col md:flex-row bg-almostBlack dark:bg-shine text-white dark:text-almostBlack px-8 py-10 md:py-20 lg:py-30 lg:px-30 xl:px-40 justify-between md:items-start">
+    <footer className="flex flex-col md:flex-row bg-almostBlack dark:bg-shine text-white dark:text-almostBlack px-8 py-10 md:py-10 lg:py-30 lg:px-30 xl:px-40 justify-between md:items-start">
       <h3
         className="text-bodyM font-black uppercase font-bigShoulder cursor-pointer"
         style={{ lineHeight: '1.5rem' }}>
-        Latin Shine
+        <Link href="/">Latin Shine</Link>
         <br />
-        Dance Company
+        <Link href="/">Dance Company</Link>
         <br />
         <span className="text-[10px]">© All Rights Reserved</span>
       </h3>
