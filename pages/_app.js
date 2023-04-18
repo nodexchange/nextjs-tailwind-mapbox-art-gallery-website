@@ -69,7 +69,7 @@ function MyApp({ Component, pageProps }) {
       <SessionProvider session={pageProps.session} refetchInterval={0}>
         <AnimatePresence
           mode='wait'
-          initial={false}
+          // initial={false}
           onExitComplete={() => window.scrollTo(0, 0)}>
           <Component {...pageProps} />
         </AnimatePresence>

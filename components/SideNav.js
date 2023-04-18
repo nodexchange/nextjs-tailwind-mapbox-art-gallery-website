@@ -93,7 +93,7 @@ const SideNav = () => {
       )}
 
       <div
-        className={`top-0 right-0 w-full bg-shine-low-alpha p-10 pl-20 text-white fixed h-full z-40  ease-in-out duration-300 ${
+        className={`top-0 right-0 w-full bg-shine-low-alpha p-10 pl-20 text-white fixed h-full z-40 ease-in-out duration-300 ${
           showSidebar ? "translate-x-0 " : "translate-x-full"
         } sm:w-full md:w-[55vw] lg:w-[35vw]`}
       >
