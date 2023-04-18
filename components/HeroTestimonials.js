@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 
 const HeroTestimonials = ({ hero }) => {
   return (
-    <div className='absolute top-[388px] w-[590px] pt-4 pb-4'>
+    <div className='hidden lg:absolute lg:block top-[388px] w-[590px] pt-4 pb-4'>
     <motion.div
         key="announcement"
         initial={{ x: 50, opacity: 0 }}
