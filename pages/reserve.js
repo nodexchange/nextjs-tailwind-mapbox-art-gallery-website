@@ -16,8 +16,9 @@ const Reserve = () => {
   const inputLastNameEl = useRef(null);
 
   const [message, setMessage] = useState('');
+  const [loading, setLoading] = useState(false);
   const [bachataRadioCheck, setBachataRadioCheck] = useState(true);
-  const [salsaRadioCheck, setSalsaRadioCheck] = useState(true);
+  const [salsaRadioCheck, setSalsaRadioCheck] = useState(false);
   const [completeBeginnerCheck, setCompleteBeginnerCheck] = useState(true);
   const [validation, setValidation] = useState('');
 
@@ -48,7 +49,7 @@ const Reserve = () => {
       });
       return;
     }
-
+    setLoading(true);
     gaEvent({ action: 'reserve_button_click', params: { section: 'reserve' } });
     const res = await fetch('/api/reserve', {
       body: JSON.stringify({
@@ -64,7 +65,6 @@ const Reserve = () => {
       method: 'POST',
     });
     const { error } = await res.json();
-
     if (error) {
       gaEvent({ action: 'reserve_error', params: { section: 'reserve' } });
       setMessage(error);
@@ -109,10 +109,9 @@ const Reserve = () => {
             <br />
             <p>Looks like there was an error reserving your spot.</p>
             <br />
-            <p>Don&apos;t worry you can still join our class! 💃 🕺</p>
+            <p>Don&apos;t worry you can still join our classes! 💃 🕺</p>
             <p>
-              You learn more about our events and reach out to us via Facebook
-              or Instagram.
+              Visit our Facebook or Instagram to learn more about upcoming Dance classes and events.
             </p>
             <p>
               <SocialIcons />
@@ -124,7 +123,7 @@ const Reserve = () => {
               <h1
                 className="text-bodyM font-black uppercase font-bigShoulder cursor-pointer"
                 style={{ lineHeight: '1.5rem' }}>
-                Reserve your spot!
+                Reserve your spot (no payment needed)!
               </h1>
             </header>
             <br />
@@ -221,7 +220,8 @@ const Reserve = () => {
                   reserve
                 </label>
               </div> */}
-              <ButtonC title="Reserve" action={reserve} />
+              {loading ? (<p><br/>Reserving your class, Please wait...</p>) : (<ButtonC title="Reserve" action={reserve} />)}
+              
             </form>
             <br />
             <div className="font-light">
