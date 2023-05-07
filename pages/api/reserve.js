@@ -6,13 +6,13 @@ mailchimp.setConfig({
 });
 
 export default async function handle(req, res) {
-  const { email, firstName, lastName, beginner } = req.body;
+  const { email, firstName, lastName, beginner, classType } = req.body;
 
   if (!email) {
     return res.status(400).json({ error: 'Email is required' });
   }
   const selectedTag = beginner ? 'experienced' : 'beginner';
-  // const response = await mailchimp.lists.getListMergeFields(process.env.MAILCHIMP_AUDIENCE_ID);
+  const response = await mailchimp.lists.getListMergeFields(process.env.MAILCHIMP_AUDIENCE_ID);
 
   // const response2 = await mailchimp.lists.addListMergeField(process.env.MAILCHIMP_AUDIENCE_ID, {
   //   name: "experience",
@@ -29,7 +29,8 @@ export default async function handle(req, res) {
       "merge_fields": {
         "FNAME": firstName,
         "LNAME": lastName,
-        "MMERGE6": selectedTag
+        "MMERGE6": selectedTag,
+        "MMERGE7": classType,
       },
       status: 'subscribed',
     });

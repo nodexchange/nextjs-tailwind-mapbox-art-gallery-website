@@ -5,7 +5,7 @@ import ButtonA from '../components/ButtonA';
 
 const title = '🎉 Success! 🎉';
 const text =
-  'Thank you for reserving your spot! See you on Wednesday, in High Wycombe.';
+  'Thank you for reserving your spot!';
 const description = '✨ Enjoy your class with Latin Shine team ✨';
 
 const ReserveConfirmation = () => {
@@ -14,9 +14,9 @@ const ReserveConfirmation = () => {
     const d = new Date();
     const n = d.getTime(); // n == time in milliseconds since 1st Jan 1970
     const weekday = d.getDay() // 0...6 ; 0 == Sunday, 6 = Saturday, 4 = Thursday
-    const numDaysToNextThursday = weekday >= 3 ? 7 - (weekday-3) : 3 - weekday;
-    const nextThursday_msecs = n + numDaysToNextThursday * 24 * 60 * 60 * 1000;
-    const theDate = new Date(nextThursday_msecs); // this is the date
+    const numDaysToNextTuesday = weekday >= 2 ? 7 - (weekday-2) : 2 - weekday;
+    const nextTuesday_msecs = n + numDaysToNextTuesday * 24 * 60 * 60 * 1000;
+    const theDate = new Date(nextTuesday_msecs); // this is the date
     setNextDate(theDate.toLocaleDateString('en-GB'));
 
     gaEvent({ action: 'reserve_success', params: { section: 'reserve_confirmation' }});
@@ -33,7 +33,7 @@ const ReserveConfirmation = () => {
           {title}
         </h1>
         <div>
-          <p>You are all set for your next Wednesday Bachata Class on {nextDate}</p>
+          <p>You are all set for your next Tuesday Salsa Class on {nextDate}</p>
           <p>{text}</p>
           <p>{description}</p>
         </div>
