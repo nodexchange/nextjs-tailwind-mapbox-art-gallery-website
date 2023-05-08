@@ -17,7 +17,7 @@ const Reserve = () => {
 
   const [message, setMessage] = useState('');
   const [loading, setLoading] = useState(false);
-  const [bachataRadioCheck, setBachataRadioCheck] = useState(true);
+  const [bachataRadioCheck, setBachataRadioCheck] = useState(false);
   const [salsaRadioCheck, setSalsaRadioCheck] = useState(false);
   const [completeBeginnerCheck, setCompleteBeginnerCheck] = useState(true);
   const [validation, setValidation] = useState('');
@@ -38,6 +38,11 @@ const Reserve = () => {
       setValidation('First Name is required');
       return false;
     }
+    if (bachataRadioCheck === false && salsaRadioCheck === false) {
+      setValidation('Please select a class type');
+      return false;
+    }
+
     return true;
   };
   const reserve = async (e) => {
@@ -111,7 +116,8 @@ const Reserve = () => {
             <br />
             <p>Don&apos;t worry you can still join our classes! 💃 🕺</p>
             <p>
-              Visit our Facebook or Instagram to learn more about upcoming Dance classes and events.
+              Visit our Facebook or Instagram to learn more about upcoming Dance
+              classes and events.
             </p>
             <p>
               <SocialIcons />
@@ -128,8 +134,8 @@ const Reserve = () => {
             </header>
             <br />
             <p className="font-light">
-              Please fill in your details below to let us know that you coming
-              for the upcoming class. Our team will be in touch to confirm.
+              Please fill in your details below and select the class you would like to reserve.
+              Our team will be in touch to confirm.
             </p>
             <form className="w-full max-w-sm mx-auto">
               {validation && (
@@ -166,36 +172,34 @@ const Reserve = () => {
               </div>
               <div className="form-check inline-block pt-4">
                 <div>
-                <input
-                  className="form-check-input appearance-none h-4 w-4 border border-gray-300 rounded-sm bg-white checked:bg-shine checked:border-white focus:outline-none transition duration-200 mt-1 align-top bg-no-repeat bg-center bg-contain float-left mr-2 cursor-pointer"
-                  type="radio"
-                  name="classType"
-                  id="radioBachata"
-                  onChange={radioHandler}
-                  defaultChecked={bachataRadioCheck}
-                />
-                <label
-                  className="form-check-label block w-full pl-7 text-left text-white"
-                  htmlFor="radioBachata">
-                  Bachata
-                </label>
+                  <input
+                    className="form-check-input appearance-none h-4 w-4 border border-gray-300 rounded-sm bg-white checked:bg-shine checked:border-white focus:outline-none transition duration-200 mt-1 align-top bg-no-repeat bg-center bg-contain float-left mr-2 cursor-pointer"
+                    type="radio"
+                    name="classType"
+                    id="radioBachata"
+                    onChange={radioHandler}
+                    defaultChecked={bachataRadioCheck}
+                  />
+                  <label
+                    className="form-check-label block w-full pl-7 text-left text-white"
+                    htmlFor="radioBachata">
+                    Bachata
+                  </label>
                 </div>
                 <div>
-                  
-                <input
-                  className="form-check-input appearance-none h-4 w-4 border border-gray-300 rounded-sm bg-white checked:bg-shine checked:border-white focus:outline-none transition duration-200 mt-1 align-top bg-no-repeat bg-center bg-contain float-left mr-2 cursor-pointer"
-                  type="radio"
-                  name="classType"
-                  id="radioSalsa"
-                  onChange={radioHandler}
-                  defaultChecked={salsaRadioCheck}
-                />
-                <label
-                  className="form-check-label block w-full pl-7 text-left text-white"
-                  htmlFor="radioSalsa">
-                 Salsa
-                </label>
-
+                  <input
+                    className="form-check-input appearance-none h-4 w-4 border border-gray-300 rounded-sm bg-white checked:bg-shine checked:border-white focus:outline-none transition duration-200 mt-1 align-top bg-no-repeat bg-center bg-contain float-left mr-2 cursor-pointer"
+                    type="radio"
+                    name="classType"
+                    id="radioSalsa"
+                    onChange={radioHandler}
+                    defaultChecked={salsaRadioCheck}
+                  />
+                  <label
+                    className="form-check-label block w-full pl-7 text-left text-white"
+                    htmlFor="radioSalsa">
+                    Salsa
+                  </label>
                 </div>
               </div>
               <div className="form-check inline-block pt-4">
@@ -209,7 +213,7 @@ const Reserve = () => {
                 <label
                   className="form-check-label block w-full pl-7 text-left text-white"
                   htmlFor="flexCheckChecked">
-                  Check this box if you are{' '}
+                  Leave this box checked if you are{' '}
                   <span className="underline">a complete beginner</span> to
                   Latin Dancing.
                 </label>
@@ -220,8 +224,14 @@ const Reserve = () => {
                   reserve
                 </label>
               </div> */}
-              {loading ? (<p><br/>Reserving your class, Please wait...</p>) : (<ButtonC title="Reserve" action={reserve} />)}
-              
+              {loading ? (
+                <p>
+                  <br />
+                  Reserving your class, Please wait...
+                </p>
+              ) : (
+                <ButtonC title="Reserve" action={reserve} />
+              )}
             </form>
             <br />
             <div className="font-light">
