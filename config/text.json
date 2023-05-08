@@ -13,6 +13,7 @@
     "final": "Do you have a special celebration upcoming, need help with a wedding dance routine or simply interested in taking your dancing skills to the next level, contact our team to learn more about private dance class lessons."
   },
   "locationCopy": {
+    "id": "bachata-location",
     "title": "Bachata Location",
     "street": "Guildhall",
     "body1": "High Street",
@@ -22,11 +23,12 @@
     "description": "Bachata Sensual Classes every Wednesday! 7pm - 9pm!",
     "gettingHere": "Getting Here",
     "byCar": "By Car",
-    "byCarText": "From London or Oxfordshire, take A4, or M40 to High Wycombe, and follow directions for Eden Shopping Center (the parking at Eden, after 6:30pm, is only £1.50 for the whole evening). We are located near the TKMAXX. The Guildhall is just a short walk away from either Eden Shopping Center Car Park or Wycombe Swan Car Park. From Aylesbury, take A4010 and follow direction for High Wycombe.",
+    "byCarText": "From London or Oxfordshire, take A40, or M40 to High Wycombe, and follow directions for Eden Shopping Center (the parking at Eden, after 6:30pm, is only £1.50 for the whole evening). We are located near the TKMAXX. The Guildhall is just a short walk away from either Eden Shopping Center Car Park or Wycombe Swan Car Park. From Aylesbury, take A4010 and follow direction for High Wycombe.",
     "byTrain": "By Train",
     "byTrainText": "There is a regular service from London, Aylesbury and Oxford. High Wycombe station, located on the Amersham Hill and it is around 10min walk from Guildhall. Follow the main road down the hill and turn right on the high street."
   },
   "locationSalsaCopy": {
+    "id": "salsa-location",
     "title": "Salsa Location",
     "street": "Castle Street Dance Studio",
     "body1": "52a Castle Street",
@@ -36,7 +38,7 @@
     "description": "Salsa LA Style every Tuesday! 7pm - 9pm!",
     "gettingHere": "Getting Here",
     "byCar": "By Car",
-    "byCarText": "From London or Oxfordshire, take A4, or M40 to High Wycombe, and follow directions for High Wycombe Rail Station",
+    "byCarText": "From London or Oxfordshire, take A40, or M40 to High Wycombe, and follow directions for High Wycombe Rail Station",
     "byTrain": "By Train",
     "byTrainText": "There is a regular service from London, Aylesbury and Oxford. High Wycombe station, located on the Amersham Hill and it is around 2min walk from our dance studio. Follow the main road down the hill and turn right on the Castle Street."
   },

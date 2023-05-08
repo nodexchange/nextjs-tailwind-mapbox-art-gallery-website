@@ -40,7 +40,7 @@ const ReserveConfirmation = () => {
         <br />
         <div className="h-56 grid grid-cols-3 gap-4 content-between">
           <div></div>
-          <div><ButtonA path="/location" title="Bachata Location" /></div>
+          <div><ButtonA path="/location#bachata-location" title="Bachata Location" /></div>
           <div></div>
         </div>
         <div>
