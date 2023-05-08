@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import React from 'react';
 
 export const DanceLocation = ({ copy }) => {
@@ -17,6 +18,7 @@ export const DanceLocation = ({ copy }) => {
               <p>{copy.body2}</p>
               <p>{copy.body3}</p>
               <p>{copy.body4}</p>
+              <Link className="underline text-blue-600 hover:text-blue-800 visited:text-purple-600" href={copy.maps}>Google Maps Link</Link>
             </div>
             <p className="my-8">{copy.description}</p>
           </div>
