@@ -33,7 +33,6 @@ const Reserve = () => {
     const reserveRequest = async () => {
       setLoading(true);
       gaEvent({ action: 'reserve_button_click', params: { section: 'reserve' } });
-      console.log('}}}}} ', data);
       const res = await fetch('/api/reserveRequest', {
         body: JSON.stringify(data),
         headers: {
