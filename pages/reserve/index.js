@@ -46,13 +46,13 @@ const Reserve = () => {
         setMessage(error);
         return;
       }
-  
-      setData({});
-      if (bachataRadioCheck === true) {
+
+      if (data.classType === 'Bachata') {
         router.push('/reserve/confirmation-bachata');
         return;
       }
       router.push('/reserve/confirmation-salsa');
+      setData({});
     };
     if (data.hasOwnProperty('beginner')) reserveRequest();
   }, [data, bachataRadioCheck, router]);
