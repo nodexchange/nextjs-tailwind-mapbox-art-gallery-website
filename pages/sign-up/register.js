@@ -4,9 +4,9 @@ import { signIn, getSession } from 'next-auth/react';
 import Link from 'next/link';
 import { getCsrfToken } from "next-auth/react"
 
-import { Secondary as Layout } from "../layouts";
-import ButtonA from '../components/ButtonA';
-import ButtonC from '../components/ButtonC';
+import { Secondary as Layout } from "../../layouts";
+import ButtonA from '../../components/ButtonA';
+import ButtonC from '../../components/ButtonC';
 
 const Register = (props) => {
   const inputEmailEl = useRef(null);
