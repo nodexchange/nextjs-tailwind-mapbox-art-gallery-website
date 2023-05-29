@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
-import { Secondary as Layout } from '../layouts';
-import { gaEvent } from '../lib/ga';
-import ButtonA from '../components/ButtonA';
+import { Secondary as Layout } from '../../layouts';
+import { gaEvent } from '../../lib/ga';
+import ButtonA from '../../components/ButtonA';
 
 const title = '🎉 Success! 🎉';
 const text =

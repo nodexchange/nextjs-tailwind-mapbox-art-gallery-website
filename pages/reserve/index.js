@@ -49,10 +49,10 @@ const Reserve = () => {
   
       setData({});
       if (bachataRadioCheck === true) {
-        router.push('/reserve-confirmation-bachata');
+        router.push('/reserve/confirmation-bachata');
         return;
       }
-      router.push('/reserve-confirmation-salsa');
+      router.push('/reserve/confirmation-salsa');
     };
     if (data.hasOwnProperty('beginner')) reserveRequest();
   }, [data, bachataRadioCheck, router]);
