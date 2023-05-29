@@ -25,7 +25,7 @@ export default function HeroSection() {
           priority="true"
         />
       </div>
-      <div className="hidden sm:block sm:w-100 lg:hidden">
+      <div className="hidden sm:block sm:w-100 sm:max-h-[10vh] lg:hidden">
         <Image
           src="/tablet/image-hero.jpg"
           width={437}
