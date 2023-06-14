@@ -38,7 +38,7 @@ function MyApp({ Component, pageProps }) {
           locale: 'en_GB',
           url,
           description:
-            "Fun and friendly Latin dance classes in High Wycombe, every Wednesday by Latin Shine Dance Company. Beginners are welcome.",
+            "Fun and friendly Bachata and Salsa Latin dance classes in High Wycombe, every Wednesday by Latin Shine Dance Company. Beginners are welcome. No partners required.",
           site_name: 'Latin Shine | Dance Company',
           images: [],
         }}
