@@ -31,21 +31,21 @@ const Reserve = () => {
 
   useEffect(() => {
     const reserveRequest = async () => {
-      setLoading(true);
-      gaEvent({ action: 'reserve_button_click', params: { section: 'reserve' } });
-      const res = await fetch('/api/reserveRequest', {
-        body: JSON.stringify(data),
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        method: 'POST',
-      });
-      const { error } = await res.json();
-      if (error) {
-        gaEvent({ action: 'reserve_error', params: { section: 'reserve' } });
-        setMessage(error);
-        return;
-      }
+      // setLoading(true);
+      // gaEvent({ action: 'reserve_button_click', params: { section: 'reserve' } });
+      // const res = await fetch('/api/reserveRequest', {
+      //   body: JSON.stringify(data),
+      //   headers: {
+      //     'Content-Type': 'application/json',
+      //   },
+      //   method: 'POST',
+      // });
+      // const { error } = await res.json();
+      // if (error) {
+      //   gaEvent({ action: 'reserve_error', params: { section: 'reserve' } });
+      //   setMessage(error);
+      //   return;
+      // }
       if (data.classType === 'Bachata') {
         router.push({
           pathname: '/reserve/confirmation-bachata',

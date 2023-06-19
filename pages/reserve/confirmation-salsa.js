@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
-import { useRouter } from 'next/router'
 import Link from 'next/link';
+import { useSearchParams } from 'next/navigation'
 
 import { Secondary as Layout } from '../../layouts';
 import { gaEvent } from '../../lib/ga';
@@ -19,7 +19,6 @@ const calculateDate = (date) => {
   const numDaysToNextTuesday = weekday >= 2 ? 7 - (weekday-2) : 2 - weekday;
   const nextTuesday_msecs = n + numDaysToNextTuesday * 24 * 60 * 60 * 1000;
   const theDate = new Date(nextTuesday_msecs); // this is the date
-    
   return {today: n, weekOfMonth, weekday, nextDate: theDate};
 }
 
@@ -27,9 +26,12 @@ const selectedDate = 2; // tuesday;
 
 const ReserveConfirmation = () => {
   const [nextDate, setNextDate] = useState('');
-  const router = useRouter();
+  const searchParams = useSearchParams();
   useEffect(() => {
-    const beginner = router.query.beginner || true;
+    if (typeof searchParams.get('beginner') === undefined || searchParams.get('beginner') === null) {
+      return;
+    }
+    const beginner = searchParams.get('beginner');
     const d = new Date();
     const { weekday, weekOfMonth, nextDate } = calculateDate(d);
     if (!beginner || beginner === 'false') {
@@ -58,7 +60,7 @@ const ReserveConfirmation = () => {
       return; // done
     }
     gaEvent({ action: 'reserve_success', params: { section: 'reserve_confirmation' }});
-  }, []);
+  }, [searchParams.get('beginner')]);
 
   return (
     <Layout
@@ -74,11 +76,14 @@ const ReserveConfirmation = () => {
           <br/>
           <p>You are all set for your Tuesday Salsa Class on: <b><u>{nextDate}</u></b>.</p>
           <br/>
-          <p>If the proposed above date is set for next month and you would rather start earlier, please contact our team:{' '}
+          {searchParams.get('beginner') === 'true' && (
+            <p>If you have registered in the middle of the month, please join us next month to start your beginners course from day one, so you don&apos;t miss out on anything. If you would rather start earlier, please contact our team</p>
+            )}
+          <br/>
+          <p>Contact details:</p>
           <Link id="email_us_text" className="hover:underline hover:text-shine" href="mailto:latin_shine@outlook.com?subject = Website&body = Hi Latin Shine,">
             latin_shine@outlook.com
           </Link>
-          </p>
           <br/>
           <br/>
           <p>{text}</p>
