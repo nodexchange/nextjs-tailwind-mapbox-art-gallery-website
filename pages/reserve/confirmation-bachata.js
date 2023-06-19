@@ -1,5 +1,7 @@
 import { useEffect, useState } from 'react';
 import { useRouter } from 'next/router'
+import Link from 'next/link';
+
 import { Secondary as Layout } from '../../layouts';
 import { gaEvent } from '../../lib/ga';
 import ButtonA from '../../components/ButtonA';
@@ -73,7 +75,12 @@ const ReserveConfirmation = () => {
           <br/>
           <p>You are all set for your Wednesday Bachata Class on: <b><u>{nextDate}</u></b>.</p>
           <br/>
-          <p>If the proposed above date is set for next month and you would rather start earlier, please contact our team.</p>
+          <p>If the proposed above date is set for next month and you would rather start earlier, please contact our team:{' '}
+          <Link id="email_us_text" className="hover:underline hover:text-shine" href="mailto:latin_shine@outlook.com?subject = Website&body = Hi Latin Shine,">
+            latin_shine@outlook.com
+          </Link>
+          </p>
+          <br/>
           <br/>
           <p>{text}</p>
           <p>{description}</p>
