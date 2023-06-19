@@ -1,3 +1,5 @@
+import Link from 'next/link';
+
 const ReserveHeader = () => {
   return (
     <>
@@ -15,8 +17,10 @@ const ReserveHeader = () => {
       </p>
       <br />
       <p>
-        If you don&apos;t like online forms or you encountered an error, get in
-        touch via email: latin_shine@outlook.com. You can also come and see us in person, our schedule and locations are
+        This is optional. If you don&apos;t like online forms or you encountered an error, get in
+        touch via email: <Link id="email_us_text" className="hover:underline hover:text-shine" href="mailto:latin_shine@outlook.com?subject = Reserve&body = Hi Latin Shine,">
+            latin_shine@outlook.com
+          </Link>. You can also come and see us in person, our schedule and locations are
         listed below.
       </p>
     </>

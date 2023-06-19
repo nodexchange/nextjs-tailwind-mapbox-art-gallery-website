@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react';
+import { useRouter } from 'next/router'
 import { Secondary as Layout } from '../../layouts';
 import { gaEvent } from '../../lib/ga';
 import ButtonA from '../../components/ButtonA';
@@ -8,17 +9,53 @@ const text =
   'Thank you for reserving your spot!';
 const description = '✨ Enjoy your class with Latin Shine team ✨';
 
+const calculateDate = (date) => {
+  const n = date.getTime();
+  const weekday = date.getDay(); 
+  const dateConverted = date.getDate();
+  const weekOfMonth = Math.ceil((dateConverted - 1 - weekday) / 7);
+  const numDaysToNextTuesday = weekday >= 2 ? 7 - (weekday-2) : 2 - weekday;
+  const nextTuesday_msecs = n + numDaysToNextTuesday * 24 * 60 * 60 * 1000;
+  const theDate = new Date(nextTuesday_msecs); // this is the date
+    
+  return {today: n, weekOfMonth, weekday, nextDate: theDate};
+}
+
+const selectedDate = 2; // tuesday;
+
 const ReserveConfirmation = () => {
   const [nextDate, setNextDate] = useState('');
+  const router = useRouter();
   useEffect(() => {
+    const beginner = router.query.beginner || true;
+    console.log('beginner:', beginner, router.query);
     const d = new Date();
-    const n = d.getTime(); // n == time in milliseconds since 1st Jan 1970
-    const weekday = d.getDay() // 0...6 ; 0 == Sunday, 6 = Saturday, 4 = Thursday
-    const numDaysToNextTuesday = weekday >= 2 ? 7 - (weekday-2) : 2 - weekday;
-    const nextTuesday_msecs = n + numDaysToNextTuesday * 24 * 60 * 60 * 1000;
-    const theDate = new Date(nextTuesday_msecs); // this is the date
-    setNextDate(theDate.toLocaleDateString('en-GB'));
-
+    const { weekday, weekOfMonth, nextDate } = calculateDate(d);
+    if (!beginner || beginner === 'false') {
+      if (weekday === selectedDate) {
+        setNextDate(d.toLocaleDateString('en-GB'));
+        return;
+      }
+      setNextDate(nextDate.toLocaleDateString('en-GB'));
+      return; // done
+    }
+    if (beginner) {
+      // not too late
+      if (weekOfMonth <= 1) {
+        if (weekday === selectedDate) {
+          setNextDate(d.toLocaleDateString('en-GB'));
+          return;
+        }
+        setNextDate(nextDate.toLocaleDateString('en-GB'));
+        return
+      }
+      // too late, next month
+      const nextMonth = d.getMonth() + 1;
+      const firstDay = new Date(d.getFullYear(), nextMonth, 1);
+      const future = calculateDate(firstDay);
+      setNextDate(future.nextDate.toLocaleDateString('en-GB'));
+      return; // done
+    }
     gaEvent({ action: 'reserve_success', params: { section: 'reserve_confirmation' }});
   }, []);
 
@@ -33,7 +70,11 @@ const ReserveConfirmation = () => {
           {title}
         </h1>
         <div>
-          <p>You are all set for your next Tuesday Salsa Class on {nextDate}</p>
+          <br/>
+          <p>You are all set for your Tuesday Salsa Class on: <b><u>{nextDate}</u></b>.</p>
+          <br/>
+          <p>If the proposed above date is set for next month and you would rather start earlier, please contact our team.</p>
+          <br/>
           <p>{text}</p>
           <p>{description}</p>
         </div>

@@ -46,12 +46,17 @@ const Reserve = () => {
         setMessage(error);
         return;
       }
-
       if (data.classType === 'Bachata') {
-        router.push('/reserve/confirmation-bachata');
+        router.push({
+          pathname: '/reserve/confirmation-bachata',
+          query: { beginner: data.beginner },
+        })
         return;
       }
-      router.push('/reserve/confirmation-salsa');
+      router.push({
+        pathname: '/reserve/confirmation-salsa',
+        query: { beginner: data.beginner },
+      })
       setData({});
     };
     if (data.hasOwnProperty('beginner')) reserveRequest();
