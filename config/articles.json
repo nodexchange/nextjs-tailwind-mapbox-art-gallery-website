@@ -1,123 +1,163 @@
 {
   "articles": [
     {
+      "id":15,
+      "title": "Back to School - our new September courses info!",
+      "author": "Alyssa",
+      "date": "22nd Aug 2023",
+      "category": "Salsa & Bachata",
+      "text": "With summer breaks over, we are announcing our September beginners courses date. Join Alyssa and Martin on the 5th and 6th of September for our new Salsa and Bachata courses. We are looking forward to seeing you all there! 💆💆‍♀️ Partners are not required! Beginners are welcome!\nPrice: £10 per person\n(£7 for student with the valid NUS/University card).\nTime:\n7pm - Beginners \n8pm - Improvers. Start your early Autumn dancing journey with us.",
+      "href":"news/2023-aug-back-to-school",
+      "img": "/news/bachata1.jpg"
+    },
+    {
+      "id":14,
       "title": "☀️ August Summer Holiday (8th and 9th of August)! ☀️",
       "author": "Martin",
       "date": "2nd Aug 2023",
       "category": "Salsa & Bachata",
       "text": "Reminder: No classes this week (Tue & Wed, 08/08 & 09/08) due to the summer break 💆💆‍♀️ We are back the week after. See you all then!",
+      "href":"news/2023-aug-holiday",
       "img": "/news/summer.png"
     },
     {
+      "id":13,
       "title": "☀️ August Courses 2023! ☀️",
       "author": "Martin",
       "date": "25th July 2023",
       "category": "Salsa & Bachata",
       "text": "Our new August courses are just around the corner. Come and take your mind of rainy July while enjoying dancing with likeminded people. Join our July Bachata & Salsa classes. Join our instructors Alyssa and Martin and start your Dancing Journey with us! 💆💆‍♀️ Partners are not required! Beginners are welcome!\nPrice: £10 per person\n(£7 for student with the valid NUS/University card).\nTime:\n7pm - Beginners \n8pm - Improvers",
+      "href":"news/2023-july-our-august-courses",
       "img": "/news/salsa1.jpg"
     },
     {
+      "id":12,
       "title": "☀️ July Courses 2023! ☀️",
       "author": "Martin",
       "date": "25th June 2023",
       "category": "Salsa & Bachata",
       "text": "Join our July Bachata & Salsa classes. Join our instructors Alyssa and Martin and start your Dancing Journey with us! 💆💆‍♀️ Partners are not required! Beginners are welcome!\nPrice: £10 per person\n(£7 for student with the valid NUS/University card).\nTime:\n7pm - Beginners \n8pm - Improvers",
+      "href":"news/2023-june-our-july-courses",
       "img": "/news/salsa1.jpg"
     },
     {
+      "id":11,
       "title": "☀️ New June Courses! ☀️",
       "author": "Martin",
       "date": "29th May 2023",
       "category": "Salsa & Bachata",
       "text": "Don't miss our June Bachata & Salsa classes. On the 6th and 7th of June, join our instructors Alyssa and Martin and start your Dancing Journey with us! 💆💆‍♀️ Partners are not required! Beginners are welcome!\nPrice: £10 per person\n(£7 for student with the valid NUS/University card).\nTime:\n7pm - Beginners \n8pm - Improvers",
+      "href":"news/2023-may-our-june-courses",
       "img": "/news/salsa1.jpg"
     },
     {
+      "id":10,
       "title": "💆💆‍♀️ New April Courses!",
       "author": "Martin",
       "date": "29th March 2023",
       "category": "Salsa",
       "text": "Join us in April for our new LA Style (Crossbody on1) Salsa classes at Castle Street Dance Studio. Come and join our instructors Alyssaand Martin and start your Salsa Journey with us! 💆💆‍♀️ Partners arenot required! Beginners are welcome!\nPrice: £10 per person\n(£7 for student with the valid NUS/University card).\nTime:\n7pm - Beginners Salsa (LA - crossbody on1)\n8pm - Improvers Salsa (LA - crossbody on1)\nVenue: Castle Dance Studio, 52a Castle Street High Wycombe HP13 6RG.",
+      "href":"news/2023-march-our-april-courses",
       "img": "/news/salsa1.jpg"
     },
     {
+      "id":9,
       "title": "📣 SALSA! Today is finally here! 📣",
       "author": "Martin",
       "date": "7th March 2023",
       "category": "Salsa",
       "text": "💃🕺 Our new LA Style (Crossbody on1) Salsa classes at Castle StreetDance Studio are finally here. Come and join our instructors Alyssaand Martin and start your Salsa Journey with us! 💆💆‍♀️ Partners arenot required!",
+      "href":"news/2023-march-salsa-today-is-finally-here",
       "img": "/news/salsa2.jpg"
     },
     {
+      "id":8,
       "title": "📣 NEW SALSA COURSES STARTING IN MARCH 2023! 📣",
       "author": "Martin",
       "date": "3rd Feb 2023",
       "category": "New Salsa Course",
       "text": "You have been asking and we have listened! We are Starting our newLA Style (Crossbody on1) Salsa classes at Castle Street DanceStudio. Classes will be taught by two of our instructors Alyssa andMartin. Watch this space for more Information! Partners are notrequired!",
+      "href":"news/2023-feb-new-salsa-courses-starting-in-march",
       "img": "/news/salsa3.jpg"
     },
     {
+      "id":7,
       "title": "🕺💃 Classes are on!",
       "author": "Martin",
       "date": "11th January 2023",
       "category": "Bachata",
       "text": "📣 Join us tonight for our regular Bachata beginner and improver classes! 📣 You do not want to miss it. 🕺💃",
+      "href":"news/2023-jan-classes-are-on",
       "img": "/news/bachata1.jpg"
     },
     {
+      "id":6,
       "title": "📣 Classes are on!",
       "author": "Martin",
       "date": "28th December 2022",
       "category": "Bachata",
       "text": "Join us tonight for our last class of 2022! 📣 We are back this week for more fun Bachata classes!",
+      "href":"news/2022-dec-classes-are-on",
       "img": "/news/bachata2.jpg"
     },
     {
+      "id":5,
       "title": "🎄🎄🎄 Reminder! Schedule Changes! 🎄🎄🎄",
       "author": "Martin",
       "date": "14th November 2022",
       "category": "Bachata",
       "text": " 🎄🎄🎄 Early Winter break! 🎄🎄🎄 Quick reminder to all of our students that this week (16th) it will be our last November class. No classes on the 23rd & 30th of November. We will resume on the 7th of December. See you all then!",
+      "href":"news/2022-nov-reminder-schedule-changes",
       "img": "/news/bachata3.jpg"
     },
     {
+      "id":4,
       "title": "💃🕺 October Bachata Classes!",
       "author": "Martin",
       "date": "29th September 2022",
       "category": "Bachata",
       "text": "💃🕺Interested in trying something new in October? 💃🕺 Come learnSensual Bachata which includes basic steps, dancing technique andshines and body movement in High Wycombe! Our new completebeginner`s course starts this Wednesday! (4 Week course) 🕖 Time:7PM (beginners) 📆 Date: 5th of October, 2022 (every Wednesday) 📣Price: £10 or £7 for students 🔹 Venue: Guildhall (1st floor), HighStreet, High Wycombe ▶️ Details: https://fb.me/e/208mrMMqg Nopartner or prior dancing experience is necessary. Our Latin Shinecommunity is growing every week ❤️ Come meet new people and have funlearning something new!",
+      "href":"news/2022-sept-october-bachata-classes",
       "img": "/news/bachata4.jpg"
     },
     {
+      "id":3,
       "title": "📣 Extended hours - New Bachata Social!",
       "author": "Martin",
       "date": "6th September 2022",
       "category": "Bachata",
       "text": "We are back this week with a new beginners course and new extendedhours (📣) to add an additional hour of social dancing! Join us thisweek and practise with us. ❤️ - Latin Shine Dance Company",
+      "href":"news/2022-sept-extended-hours-new-bachata-social",
       "img": "/news/bachata5.jpg"
     },
     {
+      "id":2,
       "title": "💆💆‍♀️ Summer Break!",
       "author": "Martin",
       "date": "23rd August 2022",
       "category": "Bachata Schedule Change",
       "text": "Reminder: No classes this week (Wed, 24/08) due to the summer break 💆💆‍♀️ We are back on the 31st of August, 2022. See you all then!",
+      "href":"news/2022-aug-summer-break",
       "img": "/news/bachata6.jpg"
     },
     {
+      "id":1,
       "title": "💃🕺 August Bachata Classes!",
       "author": "Martin",
       "date": "2nd August 2022",
       "category": "Bachata",
       "text": "💃🕺Interested in trying something new in August 🌤? Join us for our Latin #dance Bachata classes in #highwycombe. Our Latin Shine community is growing every week ❤️ Come meet new people and have fun learning something new! New complete beginners course starts this Wednesday! (4 Week course)",
+      "href":"news/2022-july-august-bachata-classes",
       "img": "/news/bachata7.jpg"
     },
     {
+      "id":0,
       "title": "💃🕺 BACHATA CLASSES IN HIGH WYCOMBE - EVERY WEDNESDAY!",
       "author": "Martin",
       "date": "6th July 2022",
       "category": "Bachata",
       "text": " We are teaching Bachata Sensual classes at the High WycombeGuildhall (High Street). Classes are taught by two of ourinstructors Alyssa and Martin to represent Sensual Style dynamicsof followers and leaders.",
+      "href":"news/2022-july-bachata-classes-in-high-wycombe",
       "img": "/news/bachata8.jpg"
     }
   ]
