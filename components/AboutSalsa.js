@@ -56,6 +56,16 @@ export const AboutSalsa = ({ full }) => {
         dance rather than a particular dance style.
       </p>
       <br />
+      <p>Ready to start learning: {' '}
+        <Link href="/classes#salsa" className="font-medium text-blue-600 dark:text-blue-500 hover:underline">
+          Learn about our Salsa Classes in High Wycombe
+        </Link>
+      </p>
+      <br/>
+      <hr />
+      <br/>
+      <br/>
+      <br/>
       <p>
         Ref:{' '}
         <Link
@@ -64,6 +74,7 @@ export const AboutSalsa = ({ full }) => {
           https://www.salsavida.com/
         </Link>
       </p>
+      
     </main>
   );
 };

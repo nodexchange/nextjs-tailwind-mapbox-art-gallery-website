@@ -28,7 +28,7 @@ export default function VideoHero() {
           a spark of inspiration. Will these pieces inspire you? Visit us and
           find out.
         </p>
-        <ButtonA path="/location" title="Our Location" />
+        <ButtonA path="/location" title="Our Locations" />
       </div>
       
     </div>

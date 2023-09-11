@@ -16,7 +16,7 @@ const config = [
     path: "/classes",
   },
   {
-    title: "Location",
+    title: "Locations",
     path: "/location",
   },
   {

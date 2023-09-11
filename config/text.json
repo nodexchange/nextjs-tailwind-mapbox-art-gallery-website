@@ -22,6 +22,8 @@
     "body4": "Bucks",
     "maps": "https://goo.gl/maps/7SHAuBn3iTjBnMgy5",
     "description": "Bachata Sensual Classes every Wednesday! 7pm - 9pm!",
+    "detailsHref": "/classes#bachata",
+    "detailsText": "Click here for Bachata Class Details",
     "gettingHere": "Getting Here",
     "byCar": "By Car",
     "byCarText": "From London or Oxfordshire, take A40, or M40 to High Wycombe, and follow directions for Eden Shopping Center (the parking at Eden, after 6:30pm, is only £1.50 for the whole evening). We are located near the TKMAXX. The Guildhall is just a short walk away from either Eden Shopping Center Car Park or Wycombe Swan Car Park. From Aylesbury, take A4010 and follow direction for High Wycombe.",
@@ -38,6 +40,8 @@
     "body4": "Bucks",
     "maps": "https://goo.gl/maps/Ca3UhFNHqZaHaXoS6",
     "description": "Salsa LA Style every Tuesday! 7pm - 9pm!",
+    "detailsHref": "/classes#salsa",
+    "detailsText": "Click here for Salsa Class Details",
     "gettingHere": "Getting Here",
     "byCar": "By Car",
     "byCarText": "From London or Oxfordshire, take A40, or M40 to High Wycombe, and follow directions for High Wycombe Rail Station",
@@ -54,7 +58,7 @@
     "main:": "What is Bachata Sensual Dance?",
     "first": "Bachata is a beautiful and sensual dance, that originated in the Dominican Republic in the 1960s as a fusion of Merengue, Bolero, and Son Cubano. Following Salsa, Bachata is the second most prominent Latin American music and dance genre in the world, and it has grown extremely popular in the United Kingdom. At Latin Shine Dance Company, we offer our students fundamentals of traditional Bachata dancing with the focus on Sensual variant.",
     "second": "Sensual Bachata was created by Korke Escalona, that introduced to the dance a more complex follower and leader patterns, body isolations, and a stronger representation of individual musicality through body movement and partner connection. In his words, Korke interpreted the instruments with longer movements and isolations, in other words, a higher corporal expression. Without dismissing the origins and keeping the essence of the traditional bachata.",
-    "third": "You can learn more about their history by visiting their official website:",
+    "third": "Korke and Judith official website:",
     "link": "https://korkeyjudith.com/"
   },
   "footer": {

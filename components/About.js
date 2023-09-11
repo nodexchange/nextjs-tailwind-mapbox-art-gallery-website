@@ -41,9 +41,20 @@ export const About = () => {
             {about.second}
           </p>
           <br />
+          <br />
+          <p>Ready to start learning: {' '}
+            <Link href="/classes#bachata" className="font-medium text-blue-400 dark:text-blue-400 hover:underline">
+              Learn about our Bachata Classes in High Wycombe
+            </Link>
+          </p>
+          <br/>
+          <hr />
+          <br/>
+          <br/>
+          <br/>
           <p className="my-4 l:my-12 md:m-0 font-light font-outfit text-bodyXS md:text-bodyS md:w-100">
-            {about.third}{" "}
-            <Link href={about.link} className="font-medium text-blue-600 dark:text-blue-500 hover:underline">
+            Ref: {about.third}{" "}
+            <Link href={about.link} className="font-medium text-blue-400 dark:text-blue-400 hover:underline">
               {about.link}
             </Link>
           </p>

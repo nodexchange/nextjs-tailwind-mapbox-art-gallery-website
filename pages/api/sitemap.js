@@ -21,37 +21,37 @@ export default async (req, res) => {
 
     smStream.write({
       url: `/`,
-      changefreq: 'weekly',
+      changefreq: 'monthly',
       priority: 1
     });
     smStream.write({
       url: `/location`,
-      changefreq: 'monthly',
+      changefreq: 'yearly',
       priority: 0.3
     });
     smStream.write({
       url: `/reserve`,
-      changefreq: 'monthly',
+      changefreq: 'yearly',
       priority: 0.3
     });
     smStream.write({
       url: `/register`,
-      changefreq: 'monthly',
+      changefreq: 'yearly',
       priority: 0.3
     });
     smStream.write({
       url: `/dataprotection`,
-      changefreq: 'monthly',
+      changefreq: 'yearly',
       priority: 0.3
     });
     smStream.write({
       url: `/privacy`,
-      changefreq: 'monthly',
+      changefreq: 'yearly',
       priority: 0.3
     });
     smStream.write({
       url: `/terms`,
-      changefreq: 'monthly',
+      changefreq: 'yearly',
       priority: 0.3
     });
 

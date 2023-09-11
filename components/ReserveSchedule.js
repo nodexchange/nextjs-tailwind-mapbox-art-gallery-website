@@ -19,7 +19,7 @@ const ReserveSchedule = () => (
     </div>
     <br />
     <Link href="/location" className="underline text-white">
-      Click here for venues (address) in High Wycombe.
+      Click here for our locations (venues & address) in High Wycombe.
     </Link>
   </>
 );

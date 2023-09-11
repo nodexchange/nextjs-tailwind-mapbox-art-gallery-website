@@ -21,6 +21,7 @@ export const DanceLocation = ({ copy }) => {
               <Link className="underline text-blue-600 hover:text-blue-800 visited:text-purple-600" href={copy.maps}>Google Maps Link</Link>
             </div>
             <p className="my-8">{copy.description}</p>
+            <p className="my-8">Class details: <Link className="font-medium text-blue-600 dark:text-blue-500 hover:underline" href={copy.detailsHref}>{copy.detailsText}</Link></p>
           </div>
         </div>
       </div>

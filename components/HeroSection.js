@@ -64,7 +64,7 @@ export default function HeroSection() {
             return <p key={`item-${id}`}>{item}</p>;
           })}
         </div>
-        <ButtonA path="/location" title="Our Location" />
+        <ButtonA path="/location" title="Our Locations" />
         <br />
         <ButtonA path="/reserve" title="Reserve your spot" />
       </div>
