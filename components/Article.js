@@ -26,7 +26,7 @@ export const Article = ({ img, title, date, author, text, category, href, standa
       </div>
 
       <div className="grow-0 shrink-0 basis-auto w-full md:w-9/12 xl:w-7/12 px-3 mb-6 md:mb-0 mr-auto">
-        {!standalone && (<h5 className="text-lg font-bold mb-3">{title}</h5>)}
+        {!standalone && (<Link href={href}><h5 className="text-lg font-bold mb-3">{title}</h5></Link>)}
         <div className="mb-3 text-yellow-300 font-medium text-sm flex items-center justify-center md:justify-start">
           <svg
             className="w-4 h-4 mr-2"
@@ -43,7 +43,7 @@ export const Article = ({ img, title, date, author, text, category, href, standa
           Published <u>{date}</u> by{' '}
           <span className="text-white">{author}</span>
         </p>
-        <p className="text-white">{text}</p>
+        <p className="text-white whitespace-pre-line align-bottom">{text}</p>
         {!standalone && (
           <Link href={href}>
             <button className="bg-yellow-300 text-black font-bold uppercase text-sm px-6 py-3 rounded-full mt-6">Read more</button>
