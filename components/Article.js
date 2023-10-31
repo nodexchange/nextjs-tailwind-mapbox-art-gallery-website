@@ -1,4 +1,4 @@
-import Image from 'next/image';
+import Image from "next/legacy/image";
 import Link from 'next/link';
 
 export const Article = ({ img, title, date, author, text, category, href, short, standalone }) => {
