@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import Image from "next/legacy/image";
+import Image from "next/image";
 
 import SocialIcons from './SocialIcons';
 import ProfileIcon from './ProfileIcon';
@@ -18,7 +18,10 @@ const NavLeft = ({ isActive }) => (
       // layout="responsive"
       alt="Latin Shine - Dance Company - Logo"
       priority="true"
-    />
+      style={{
+        maxWidth: "100%",
+        height: "auto"
+      }} />
   </div>
 );
 
@@ -66,7 +69,10 @@ const UserNavLeft = ({ isActive }) => {
         // layout="responsive"
         alt="Latin Shine - Dance Company - Logo"
         priority="true"
-      />
+        style={{
+          maxWidth: "100%",
+          height: "auto"
+        }} />
     </div>
   );
 };

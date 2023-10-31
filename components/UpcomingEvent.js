@@ -1,4 +1,4 @@
-import Image from "next/legacy/image";
+import Image from "next/image";
 // import WishIcon from './WishIcon';
 
 const UpcomingEvent = ({ type, text, amount, children }) => {
@@ -17,7 +17,10 @@ const UpcomingEvent = ({ type, text, amount, children }) => {
               height={720}
               // layout="responsive"
               alt="Latin Shine Dance Company Teaster event"
-            />
+              style={{
+                maxWidth: "100%",
+                height: "auto"
+              }} />
           </div>
           <div className="flex-auto p-2 justify-evenly">
             <div className="flex flex-wrap ">

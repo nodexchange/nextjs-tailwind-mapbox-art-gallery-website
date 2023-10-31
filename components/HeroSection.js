@@ -1,4 +1,4 @@
-import Image from "next/legacy/image";
+import Image from "next/image";
 
 import ButtonA from './ButtonA';
 import HeroLogo from './HeroLogo';
@@ -20,21 +20,27 @@ export default function HeroSection() {
           src="/mobile/image-hero.jpg"
           width={375}
           height={240}
-          layout="responsive"
           alt="hero image mobile"
           priority="true"
-        />
+          sizes="100vw"
+          style={{
+            width: "100%",
+            height: "auto"
+          }} />
       </div>
       <div className="hidden sm:block sm:w-100 sm:max-h-[10vh] lg:hidden">
         <Image
           src="/tablet/image-hero.jpg"
           width={437}
           height={100}
-          layout="responsive"
-          objectFit="cover"
           alt="hero image tablet"
           priority="true"
-        />
+          sizes="100vw"
+          style={{
+            width: "100%",
+            height: "auto",
+            objectFit: "cover"
+          }} />
       </div>
       <div className="flex flex-col px-4 py-10 sm:top-[5px] lg:hidden">
         <div className="mx-0 p-[0px] border-2 border-white mb-10 w-[290px]">
@@ -46,7 +52,10 @@ export default function HeroSection() {
               // layout="responsive"
               alt="Latin Shine Dance Company - Tablet Logo"
               priority="true"
-            />
+              style={{
+                maxWidth: "100%",
+                height: "auto"
+              }} />
           </div>
         </div>
         <h1 className="font-black w-screen text-white font-bigShoulder uppercase text-headingS md:text-headingS">

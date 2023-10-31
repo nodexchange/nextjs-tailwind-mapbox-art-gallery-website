@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import Image from "next/legacy/image";
+import Image from "next/image";
 import Link from 'next/link';
 import { gaEvent } from '../lib/ga';
 
@@ -13,14 +13,17 @@ const ImageItem = ({ src, setMainImg, mainImg, caption, setMainImgCaption }) => 
       alt={caption}
       height="250"
       width="250"
-      objectFit='cover'
       onClick={() => {
         gaEvent({ action: 'instagram_image_click', params: { caption: truncate(caption, 100) } });
         setMainImgCaption(truncate(caption, 400));
         setMainImg(srcUrl);
         setSrcUrl(mainImg);
       }}
-    />
+      style={{
+        maxWidth: "100%",
+        height: "auto",
+        objectFit: "cover"
+      }} />
   );
 };
 
@@ -98,7 +101,16 @@ const ImageGallery = () => {
         <div className="container">
           <div className="main-image">
             <div className='absolute'>
-              <Image src={mainImg} alt={mainImgCaption} height="500" width="500" objectFit='cover' />
+              <Image
+                src={mainImg}
+                alt={mainImgCaption}
+                height="500"
+                width="500"
+                style={{
+                  maxWidth: "100%",
+                  height: "auto",
+                  objectFit: "cover"
+                }} />
             </div>
             <div className='absolute bottom-0 p-3 bg-gradient-to-t from-shine to-transparent opacity-75 hover:opacity-100'>
               <p className='text-white text-bodyXS main-text'>{mainImgCaption}</p>

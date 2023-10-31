@@ -1,4 +1,4 @@
-import Image from "next/legacy/image";
+import Image from "next/image";
 import Link from 'next/link';
 import { motion } from "framer-motion"
 import ButtonA from '../components/ButtonA';
@@ -16,7 +16,10 @@ const HeroLogo = ({hero}) => {
               // layout="responsive"
               alt="Latin Shine Dance Company Logo"
               priority="true"
-            />
+              style={{
+                maxWidth: "100%",
+                height: "auto"
+              }} />
           </div>
           <div className="drop-shadow-xl ml-[76px] text-shine font-light text-5xl mb-10 mr-[61px]">
             {hero.logoText.split('_').map((item, id) => {
@@ -65,8 +68,7 @@ const HeroLogo = ({hero}) => {
             </div>
           </div>
       </div>
-      
-  )
+  );
 }
 
 export default HeroLogo

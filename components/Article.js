@@ -1,4 +1,4 @@
-import Image from "next/legacy/image";
+import Image from "next/image";
 import Link from 'next/link';
 
 export const Article = ({ img, title, date, author, text, category, href, short, standalone }) => {
@@ -18,7 +18,10 @@ export const Article = ({ img, title, date, author, text, category, href, short,
             alt="Louvre"
             width="619"
             height="413"
-          />
+            style={{
+              maxWidth: "100%",
+              height: "auto"
+            }} />
           <Link href="/classes">
             <div className="absolute top-0 right-0 bottom-0 left-0 w-full h-full overflow-hidden bg-fixed opacity-0 hover:opacity-100 transition duration-300 ease-in-out"></div>
           </Link>
