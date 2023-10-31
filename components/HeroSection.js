@@ -42,8 +42,8 @@ export default function HeroSection() {
             objectFit: "cover"
           }} />
       </div>
-      <div className="flex flex-col px-4 py-10 sm:top-[5px] lg:hidden">
-        <div className="mx-0 p-[0px] border-2 border-white mb-10 w-[290px]">
+      <div className="flex flex-col text-center px-4 py-10 sm:top-[5px] lg:hidden">
+        <div className="mx-auto p-[0px] border-2 border-white mb-10 w-[290px]">
           <div className="ml-[20px] mt-[15px]">
             <Image
               src="/tablet/logo.png"
@@ -58,8 +58,8 @@ export default function HeroSection() {
               }} />
           </div>
         </div>
-        <h1 className="font-black w-screen text-white font-bigShoulder uppercase text-headingS md:text-headingS">
-          {hero.headingMobile.split('_').map((item, id) => {
+        <h1 className="py-2 font-black w-screen text-shine font-bigShoulder uppercase text-headingS md:text-headingS">
+          {hero.heading.split('_').map((item, id) => {
             return (
               <span key={`item-${id}`}>
                 {item}
