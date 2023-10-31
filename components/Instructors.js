@@ -1,5 +1,3 @@
-import Link from "next/link";
-import Image from "next/image";
 import text from "../config/text.json";
 
 export const Instructors = () => {
@@ -7,16 +5,10 @@ export const Instructors = () => {
   return (
     <section className="bg-no-repeat bg-cover bg-instructorsImage text-white px-8 py-10 md:py-10 lg:py-30 lg:px-30 xl:px-40 justify-between md:items-start">
       <div className="block lg:flex">
-        <div className="flex-none w-[300px] md:w-[445px] md:h-[889px] ">
-          <Image
-            src="/desktop/instructors.jpg"
-            width={500}
-            height={889}
-            objectFit="cover"
-            layout="responsive"
-            alt="Latin Shine - instructors - Alyssa and Martin"
-            priority="true"
-          />
+        <div className="flex-none w-full md:w-[445px] md:h-[889px] ">
+          <video id="player" controls className="w-auto h-[800px] relative top-0 left-0 sm:w-[320px] md:w-full lg:w-auto">
+            <source src="/instructors.mp4" />
+          </video>
         </div>
         <div className="grow px-4 pt-4 md:pt-0">
           <h2 className="font-black uppercase font-bigShoulder text-headingS lg:text-headingS md:mb-4">

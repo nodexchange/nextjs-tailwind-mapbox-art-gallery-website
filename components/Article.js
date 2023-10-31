@@ -1,7 +1,7 @@
 import Image from 'next/image';
 import Link from 'next/link';
 
-export const Article = ({ img, title, date, author, text, category, href, standalone }) => {
+export const Article = ({ img, title, date, author, text, category, href, short, standalone }) => {
   return (
     <article className="flex flex-wrap mb-6">
       <div className="grow-0 shrink-0 basis-auto w-full md:w-3/12 px-3 mb-6 md:mb-0 ml-auto">
@@ -43,11 +43,15 @@ export const Article = ({ img, title, date, author, text, category, href, standa
           Published <u>{date}</u> by{' '}
           <span className="text-white">{author}</span>
         </p>
-        <p className="text-white whitespace-pre-line align-bottom">{text}</p>
-        {!standalone && (
+        {!standalone ? (
+          <>
+          <p className="text-white whitespace-pre-line align-bottom">{short}</p>
           <Link href={href}>
             <button className="bg-yellow-300 text-black font-bold uppercase text-sm px-6 py-3 rounded-full mt-6">Read more</button>
           </Link>
+          </>
+        ) : (
+          <p className="text-white whitespace-pre-line align-bottom">{text}</p>
         )}
         <p>--------------------</p>
       </div>

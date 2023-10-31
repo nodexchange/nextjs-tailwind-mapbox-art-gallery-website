@@ -38,3 +38,14 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/deploym
 `npx prisma db push`
 
 `npm prisma studio`
+
+## Fix INSTA gallery
+
+1. Visit `https://developers.facebook.com/apps/?show_reminder=true`
+2. Click on My Apps > [APP NAME]
+3. Visit 'Products' (left hand side nav -- quite low)
+4. Click on 'Instagram Basic Display' - Basic Display
+5. Scroll down to users token generation
+6. Click on the generate button next to the user
+7. Authenticate Instagram account
+8. Copy into .env file post auth.
