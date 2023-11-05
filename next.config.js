@@ -1,5 +1,6 @@
 module.exports = {
 	reactStrictMode: true,
+  experimental: { esmExternals: false },
 	images: {
     domains: ['scontent.cdninstagram.com', 'cdninstagram.com', 'mdbootstrap.com'],
   },
