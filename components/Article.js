@@ -56,7 +56,7 @@ export const Article = ({ img, title, date, author, text, category, href, short,
         ) : (
           <p className="text-white whitespace-pre-line align-bottom">{text}</p>
         )}
-        <p>--------------------</p>
+        <hr className="mt-4" />
       </div>
     </article>
   );
