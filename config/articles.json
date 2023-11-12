@@ -1,6 +1,17 @@
 {
   "articles": [
     {
+      "id":18,
+      "title": "🎄🎄🎄 Early Winter Break - We will resume in January 2024 🎄🎄🎄",
+      "author": "Alyssa",
+      "date": "12th November 2023",
+      "category": "Salsa & Bachata",
+      "short": "It's time to recharge, our instructors are taking a well deserved break and we'll be back on January 9th and 10th to kick off the new year with a bang! (...)",
+      "text": "It's time to recharge, our instructors are taking a well deserved break and we'll be back on January 9th and 10th to kick off the new year with a bang! Lots of love and have a Merry Christmas from Latin Shine Dance Company (Alyssa & Martin)",
+      "href":"news/2023-december-winter-break",
+      "img": "/news/salsa3.jpg"
+    },
+    {
       "id":17,
       "title": "🎉💃 November 3-week Beginner Dance Courses! 💃🎉",
       "author": "Alyssa",

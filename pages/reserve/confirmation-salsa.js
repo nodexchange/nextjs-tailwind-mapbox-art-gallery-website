@@ -74,7 +74,8 @@ const ReserveConfirmation = () => {
         </h1>
         <div>
           <br/>
-          <p>You are all set for your Tuesday Salsa Class on: <b><u>{nextDate}</u></b>.</p>
+          {/* <p>You are all set for your Tuesday Salsa Class on: <b><u>{nextDate}</u></b>.</p> */}
+          <p>Due to our Winter Break, Your next Tuesday Salsa Class will be on: <b><u>9th of January 2024</u></b>.</p>
           <br/>
           {searchParams.get('beginner') === 'true' && (
             <p>If you have registered in the middle of the month, please join us next month to start your beginners course from day one, so you don&apos;t miss out on anything. If you would rather start earlier, please contact our team</p>
