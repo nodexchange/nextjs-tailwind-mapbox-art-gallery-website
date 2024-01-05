@@ -2,6 +2,17 @@
   "articles": [
     {
       "id":18,
+      "title": "Happy New Year 2024 - Join us in January 2024 💃🕺",
+      "author": "Alyssa",
+      "date": "5th January 2024",
+      "category": "Salsa & Bachata",
+      "short": "With the Christmas break over, we will start our new Beginners and Improvers classes on January 9th and 10th. Kick off the New Year with a bang! (...)",
+      "text": "With the Christmas break over, we will start our new Beginners and Improvers classes on January 9th and 10th. Kick off the New Year with a bang! Visit our CLASSES section for details. Beginners always welcome. If you have any questions, please reach out to our Latin Shine Team (Alyssa & Martin)",
+      "href":"news/2024-jan-new-salsa-bachata-dance-courses",
+      "img": "/news/bachata1.jpg"
+    },
+    {
+      "id":18,
       "title": "🎄🎄🎄 Early Winter Break - We will resume in January 2024 🎄🎄🎄",
       "author": "Alyssa",
       "date": "12th November 2023",
