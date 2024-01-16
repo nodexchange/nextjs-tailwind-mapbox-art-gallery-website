@@ -1,0 +1,66 @@
+{
+  "faq": [
+    {
+      "id": 0,
+      "title": "What types of Latin dance classes do you offer?",
+      "text": "We specialize in salsa and bachata, offering classes for various skill levels – from beginners to advanced dancers."
+    },
+    {
+      "id": 1,
+      "title": "Do I need a partner to join a class?",
+      "text": "No partner is required to join our classes. We encourage individual sign-ups and facilitate partner rotation during the class."
+    },
+    {
+      "id": 2,
+      "title": "What should I wear to a Latin dance class?",
+      "text": "Comfortable clothing that allows for movement is recommended. For footwear, dance shoes or shoes with a smooth sole are ideal."
+    },
+    {
+      "id": 3,
+      "title": "I'm a beginner. Will I be able to keep up?",
+      "text": "Absolutely! Our beginner classes are designed to introduce the basics at a comfortable pace. Everyone is welcome, regardless of experience."
+    },
+    {
+      "id": 4,
+      "title": "How long does it take to learn salsa/bachata?",
+      "text": "The learning time varies depending on the individual. Consistent practice is key, and most students feel confident with the basics after a few classes."
+    },
+    {
+      "id": 5,
+      "title": "Are there any age restrictions for joining the classes?",
+      "text": "Our classes are open to adults of all ages."
+    },
+    {
+      "id": 6,
+      "title": "Can I attend classes if I have no previous dance experience?",
+      "text": "Yes, our beginner classes are perfect for those with no previous dance experience."
+    },
+    {
+      "id": 7,
+      "title": "How do I reserve my spot for a class?",
+      "text": "You can sign up through our website, turnin up to one of our classes or by contacting us directly via phone or email."
+    },
+    {
+      "id": 8,
+      "title": "What is the cost of a class?",
+      "text": "The cost varies depending on the type of class and package options. Please refer to our pricing page for detailed information:",
+      "link": "/classes",
+      "linkText": "Pricing & Class Schedule"
+    },
+    {
+      "id": 9,
+      "title": "Do you offer private lessons?",
+      "text": "Yes, we offer private lessons for individuals or small groups. Please contact us for more details and scheduling."
+    },
+    {
+      "id": 10,
+      "title": "Do you offer gift certificates?",
+      "text": "Yes, we offer gift certificates for all of our classes. Please contact us for more details."
+    },
+    {
+      "id": 11,
+      "title": "Do I need to rotate partners in the lessons?",
+      "text": "As Salsa and Bachata are very social dances, we do ask everyone to rotate during our classes to ensure everyone has a turn and helps you become a better dancer."
+    }
+  ]
+}
