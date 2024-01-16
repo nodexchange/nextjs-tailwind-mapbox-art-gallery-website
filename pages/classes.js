@@ -90,6 +90,31 @@ const AboutOurClasses = () => {
             />
           </div>
         </section>
+        <section
+          id="pricing"
+          className="text-left bg-almostBlack text-white px-8 py-10 md:py-10 lg:py-30 lg:px-30 xl:px-40 justify-between md:items-start"
+        >
+          <h2 className="font-black uppercase font-bigShoulder text-headingS lg:text-headingS md:mb-4">
+            Prices
+          </h2>
+          <p className="font-bold">Adult Classes (Salsa and Bachata):</p>
+          <p>
+            One class (Bachata or Salsa): £10
+            <br />
+            Two classes (Bachata and Salsa same week): £15
+            <br />
+            Monthly Pass (All monthly Bachata and Salsa classes): £50
+          </p>
+          <br />
+          <p className="font-bold">Students (Salsa and Bachata):</p>
+          <p>
+            One class (Bachata or Salsa): £7
+            <br />
+            Two classes (Bachata and Salsa - same week): £10
+            <br />
+            Monthly Pass (All monthly Bachata and Salsa classes): £35
+          </p>
+        </section>
       </main>
     </Layout>
   );
