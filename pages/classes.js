@@ -43,7 +43,14 @@ const AboutOurClasses = () => {
             6RG.
           </p>
           <div className="w-[200px]">
-            <ButtonA path="/location#salsa-location" title="Salsa Location" />
+            <div className="flex">
+              <div className="flex-1">
+                <ButtonA path="/location#salsa-location" title="Salsa Location" />
+              </div>
+              <div className="flex-1 ml-5">
+                <ButtonA path="/reserve" title="Reserve Now" />
+              </div>
+            </div>
           </div>
         </section>
         <section
@@ -84,10 +91,17 @@ const AboutOurClasses = () => {
           <br />
           <p>Address: Guildhall (High Street), High Wycombe.</p>
           <div className="w-[200px]">
-            <ButtonA
-              path="/location#bachata-location"
-              title="Bachata Location"
-            />
+            <div className="flex">
+              <div className="flex-1 ml-5">
+              <ButtonA
+                path="/location#bachata-location"
+                title="Bachata Location"
+              />
+              </div>
+              <div className="flex-1 ml-5">
+                  <ButtonA path="/reserve" title="Reserve Now" />
+                </div>
+            </div>
           </div>
         </section>
         <section
