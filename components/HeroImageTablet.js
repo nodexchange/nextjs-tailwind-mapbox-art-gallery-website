@@ -1,4 +1,5 @@
 import React from 'react'
+import Link from 'next/link';
 import Image from 'next/image';
 import ButtonA from './ButtonA';
 
@@ -38,16 +39,18 @@ function HeroImageTablet({hero}) {
             />
           </div>
         </div>
-        <h1 className="py-2 font-black w-screen text-shine font-bigShoulder uppercase text-headingS md:text-headingS">
-          {hero.heading.split('_').map((item, id) => {
-            return (
-              <span key={`item-${id}`}>
-                {item}
-                <br />
-              </span>
-            );
-          })}
-        </h1>
+        <Link href="/reserve">
+          <h1 className="py-2 font-black w-screen text-shine font-bigShoulder uppercase text-headingS md:text-headingS">
+            {hero.heading.split('_').map((item, id) => {
+              return (
+                <span key={`item-${id}`}>
+                  {item}
+                  <br />
+                </span>
+              );
+            })}
+          </h1>
+        </Link>
         <div className="font-outfit text-white font-light text-bodyS py-8 sm:py-12 sm:w-[280px] md:w-[340px] mx-auto">
           {hero.logoText.split('_').map((item, id) => {
             return <p key={`item-${id}`}>{item}</p>;

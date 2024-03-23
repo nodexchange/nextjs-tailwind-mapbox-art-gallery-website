@@ -30,17 +30,17 @@ const HeroLogo = ({hero}) => {
               );
             })}
           </div>
+          <Link href="/reserve">
           <div className="drop-shadow-xl ml-[76px] text-white font-light text-4xl uppercase mb-20  mr-[61px]">
             {hero.logoWhite.split('_').map((item, id) => {
               return (
                 <p key={`item-${id}`}>
-                  <Link href="/reserve">
-                    {item}
-                  </Link>
+                  {item}
                 </p>
               );
             })}
           </div>
+          </Link>
         </div>
         <p className="drop-shadow-xl font-outfit text-white font-light text-bodyM w-[550px] mb-10">
           {hero.description}

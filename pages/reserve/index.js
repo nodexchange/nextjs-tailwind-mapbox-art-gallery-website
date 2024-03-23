@@ -66,7 +66,7 @@ const Reserve = () => {
   };
   const validateForm = () => {
     if (inputEmailEl.current.value === '') {
-      setValidation('Email is required');
+      setValidation('Please check if your email is correct');
       return false;
     }
     if (!testForEmail(inputEmailEl.current.value)) {

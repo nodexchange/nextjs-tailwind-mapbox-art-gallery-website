@@ -10,20 +10,20 @@ const HeroAnnouncement = ({ hero }) => {
         initial={{ x: -600 }}
         animate={{ x: 0 }}
         transition={{ duration: 0.5, delay: 0.5 }}>
-        <div className="bg-shine-alpha absolute top-[88px] w-[590px] pt-4 pb-4">
-          <h1 className="pl-[85px] font-black w-auto text-white font-bigShoulder uppercase text-headingS">
-            {hero.heading.split('_').map((item, id) => {
-              return (
-                <Link key={`item-${id}`} href="/classes">
-                  <span>
+        <Link href="/reserve">
+          <div className="bg-shine-alpha absolute top-[88px] w-[590px] pt-4 pb-4">
+            <h1 className="pl-[85px] font-black w-auto text-white font-bigShoulder uppercase text-headingS">
+              {hero.heading.split('_').map((item, id) => {
+                return (
+                  <span key={`item-${id}`}>
                     <span className="drop-shadow-3xl">{item}</span>
                     <br />
                   </span>
-                </Link>
-              );
-            })}
-          </h1>
-        </div>
+                );
+              })}
+            </h1>
+          </div>
+        </Link>
       </motion.div>
     </div>
   );
