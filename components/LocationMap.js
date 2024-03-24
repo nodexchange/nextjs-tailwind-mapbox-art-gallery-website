@@ -1,83 +1,91 @@
-import React, { useState, useRef, useEffect } from 'react';
-import { Wrapper, Status } from '@googlemaps/react-wrapper';
-const center = { lat: 51.62945971678308, lng: -0.7514637303734821 };
-const castleCenter = { lat: 51.62953531782615, lng: -0.7478802432022472};
-const render = (status) => {
-  const zoom = 17;
-  switch (status) {
-    case Status.LOADING:
-      // return <Spinner />;
-      return <p>Loading</p>;
-    case Status.FAILURE:
-      return <p>error</p>;
-    case Status.SUCCESS:
-      return (<MyMapComponent center={center} zoom={zoom}>
-        <Marker key={0} label="Bachata" position={center} icon={'/icon-marker.svg'} />
-        <Marker key={1} label="Salsa" position={castleCenter} icon={'/icon-marker.svg'} />
-      </MyMapComponent>);
-  }
-};
+import React, { useRef, useState } from 'react';
+import GoogleMap from 'google-maps-react-markers';
 
-const Marker = (options) => {
-  const [marker, setMarker] = useState();
+import { Icon } from '@iconify/react';
+import locationIcon from '@iconify/icons-mdi/map-marker';
 
-  useEffect(() => {
-    if (!marker) {
-      setMarker(new google.maps.Marker());
-    }
+const locations = [
+  {
+    name: 'Bachata Wednesdays at Guildhall, High Wycombe',
+    lat: 51.62945971678308,
+    lng: -0.7514637303734821,
+  },
+  {
+    name: 'Salsa Tuesdays at Castle Street Dance Studio, High Wycombe',
+    lat: 51.62953531782615,
+    lng: -0.7478802432022472,
+  },
+];
 
-    // remove marker from map on unmount
-    return () => {
-      if (marker) {
-        marker.setMap(null);
-      }
-    };
-  }, [marker]);
+const Marker = ({
+  className,
+  name,
+  lat,
+  lng,
+  markerId,
+  onClick,
+  draggable,
+  ...props
+}) =>
+  lat && lng ? (
+    <div id="pin" className="w-[200px]" onClick={(e) => (onClick ? onClick(e, { markerId, lat, lng }) : null)} alt={markerId}>
+      <Icon height="2em" icon={locationIcon} className="pin-icon w-15" />
+      <p id="pin-text" className="p-4 font-bigShoulder text-bodyS bg-red-400 bg-opacity-80">
+      {name}
+    </p>
+    </div>
+  ) : null;
 
-  useEffect(() => {
-    if (marker) {
-      marker.setOptions(options);
-    }
-  }, [marker, options]);
-
-  return null;
-};
-
-function MyMapComponent({ center, zoom, children }) {
-  const ref = useRef();
-  const [map, setMap] = useState();
-
-
-  useEffect(() => {
-    if (map) return;
-    setMap(new window.google.maps.Map(ref.current, {
-      center,
-      zoom,
-      mapTypeControl: false,
-      fullscreenControl: false,
-    }));
-  }, [ref, map]);
-
-  return (
-    <>
-      <div ref={ref} id="map" />
-      {React.Children.map(children, (child) => {
-        if (React.isValidElement(child)) {
-          // set the map prop on the child component
-          return React.cloneElement(child, { map });
-        }
-      })}
-    </>
-  );
-}
-
-export default function LocationMap() {
-  return (
-    <div className="relative w-full h-550 md:h-600">
-      <Wrapper
-        apiKey={process.env.NEXT_PUBLIC_MAP_API}
-        render={render}>
-      </Wrapper>
+  const SimpleMarker = ({ lat, lng, name, onClick }) => (
+    <div id="pin" className="w-[200px]" onClick={(e) => (onClick ? onClick(e, { markerId, lat, lng }) : null)} alt={markerId}>
+      <Icon height="2em" icon={locationIcon} className="pin-icon w-15" />
     </div>
   );
-}
+
+const LocationMap = () => {
+  const mapRef = useRef(null);
+  const [mapReady, setMapReady] = useState(false);
+
+  /**
+   * @description This function is called when the map is ready
+   * @param {Object} map - reference to the map instance
+   * @param {Object} maps - reference to the maps library
+   */
+  const onGoogleApiLoaded = ({ map, maps }) => {
+    mapRef.current = map;
+    setMapReady(true);
+  };
+
+  const onMarkerClick = (e, { markerId, lat, lng }) => {
+    console.log('This is ->', markerId);
+
+    // inside the map instance you can call any google maps method
+    mapRef.current.setCenter({ lat, lng });
+    // ref. https://developers.google.com/maps/documentation/javascript/reference?hl=it
+  };
+  return (
+    <>
+      {mapReady && <div>.</div>}
+      <GoogleMap
+        apiKey={process.env.NEXT_PUBLIC_MAP_API}
+        defaultCenter={locations[0]}
+        defaultZoom={17}
+        mapMinHeight="65vh"
+        onGoogleApiLoaded={onGoogleApiLoaded}
+        onChange={(map) => console.log('Map moved', map)}>
+        {locations.map(({ lat, lng, name }, index) => (
+          <Marker
+            key={index}
+            lat={lat}
+            lng={lng}
+            markerId={name}
+            name={name}
+            onClick={onMarkerClick} // you need to manage this prop on your Marker component!
+          />
+        ))}
+      </GoogleMap>
+    </>
+  );
+};
+
+export default LocationMap;
