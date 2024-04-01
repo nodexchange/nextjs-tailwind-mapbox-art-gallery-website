@@ -22,7 +22,7 @@ export const AnnouncementBanner = () => {
         <div className="pt-2 mx-4 pl-4 my-4 l:my-12 md:m-0 font-light font-outfit text-bodyXS md:text-bodyS md:w-100">
           <span>We are excited to announce our upcoming workshop with UK&apos;s MOST popular instructor{' '}</span>
           <span className='underline'>Gil Prado Mendez.</span>
-          <span>{' '}On 20th of April, 2024, join us for a fun-filled day of dance and music. Location: Wycombe Community Arts Centre, Desborough Rd, High Wycombe HP11 2PU. Time: 2PM-4PM. Price: £25.00 per person.</span>
+          <span>{' '}On 20th of April, 2024, join us for a special fun-filled two-hour workshop. Location: Wycombe Community Arts Centre, Desborough Rd, High Wycombe HP11 2PU. Time: 2PM-4PM. Price: £25.00 per person.</span>
           <br/>
           <br/>
           <hr/>
