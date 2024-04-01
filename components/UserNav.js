@@ -11,17 +11,19 @@ import HomeIcon from './HomeIcon';
 
 const NavLeft = ({ isActive }) => (
   <div className="left pl-10">
-    <Image
-      src="/android-chrome-192x192.png"
-      width={22}
-      height={22}
-      // layout="responsive"
-      alt="Latin Shine - Dance Company - Logo"
-      priority="true"
-      style={{
-        maxWidth: "100%",
-        height: "auto"
-      }} />
+    <Link href="/">
+      <Image
+        src="/android-chrome-192x192.png"
+        width={22}
+        height={22}
+        // layout="responsive"
+        alt="Latin Shine - Dance Company - Logo"
+        priority="true"
+        style={{
+          maxWidth: "100%",
+          height: "auto"
+        }} />
+    </Link>
   </div>
 );
 

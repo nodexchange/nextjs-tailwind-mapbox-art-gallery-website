@@ -6,7 +6,7 @@ const titles = {
 const textOptions = {
   0: 'Please fill in your details below and click NEXT',
   1: 'Please select your preferred dance class, if you would like to attend both Salsa and Bachata, get in touch with our team after you reserve your spot.',
-  2: 'Please select your current level, if you are not sure, you can speak to our instructors before your dance class',
+  2: 'Please select your current level, if you are not sure, you can speak to our instructors before your dance class.',
   3: 'Confirmation'
 }
 

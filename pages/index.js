@@ -8,6 +8,7 @@ import { News } from "../components/News";
 import Header from "../components/Header";
 import { Main as Layout } from "../layouts";
 import ImageGallery from "../components/ImageGallery";
+import { AnnouncementBanner } from "../components/AnnouncementBanner";
 
 export default function Home() {
   return (
@@ -15,6 +16,7 @@ export default function Home() {
       <Header />
       {/* <HeroVideo /> */}
       <HeroSection />
+      <AnnouncementBanner />
       <div className='overflow-auto h-[42vh] scroll-smooth hover:scroll-auto'>
         <News limit={4} />
       </div>

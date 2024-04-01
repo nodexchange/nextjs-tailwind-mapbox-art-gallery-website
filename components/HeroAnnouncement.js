@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 
 const HeroAnnouncement = ({ hero }) => {
   return (
-    <div className="hidden lg:relative lg:block lg:bg-almostBlack lg:w-[990px] lg:h-[800px] lg:bg-desktopHero lg:bg-no-repeat lg:bg-right lg:bg-cover">
+    <div className="hidden lg:relative lg:block lg:bg-almostBlack lg:w-full lg:h-[600px] lg:bg-desktopHero lg:bg-no-repeat lg:bg-right lg:bg-cover">
       {/* <h1 className="absolute top-[189px] left-[165px] mix-blend-exclusion font-black w-screen text-white font-bigShoulder uppercase text-headingL"> */}
       <motion.div
         key="announcement"

@@ -6,13 +6,14 @@ import ButtonA from '../components/ButtonA';
 /* Right hand side only */
 const HeroLogo = ({hero}) => {
   return (
-    <div className="hidden lg:block lg:absolute lg:top-[89px] lg:right-0 text-center mr-20">
+    <div className="hidden lg:block lg:absolute lg:top-[49px] lg:right-0 text-center mr-20">
         <div className="p-[0px] border-2 border-white">
-          <div className="ml-[76px] mt-[40px] drop-shadow-xl">
+          <div className="w-full mt-[10px] drop-shadow-xl">
             <Image
+              className="mx-auto"
               src="/desktop/logo.png"
-              width={500}
-              height={170}
+              width={400}
+              height={136}
               // layout="responsive"
               alt="Latin Shine Dance Company Logo"
               priority="true"
@@ -21,7 +22,7 @@ const HeroLogo = ({hero}) => {
                 height: "auto"
               }} />
           </div>
-          <div className="drop-shadow-xl ml-[76px] text-shine font-light text-5xl mb-10 mr-[61px]">
+          <div className="drop-shadow-xl ml-[76px] text-shine font-light text-4xl mb-10 mr-[61px]">
             {hero.logoText.split('_').map((item, id) => {
               return (
                 <p key={`item-${id}`}>
@@ -42,7 +43,7 @@ const HeroLogo = ({hero}) => {
           </div>
           </Link>
         </div>
-        <p className="drop-shadow-xl font-outfit text-white font-light text-bodyM w-[550px] mb-10">
+        <p className="drop-shadow-xl font-outfit text-white font-light text-bodyM w-[550px] mb-6">
           {hero.description}
         </p>
         
