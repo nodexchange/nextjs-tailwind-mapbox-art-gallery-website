@@ -11,7 +11,6 @@ export default function MainSection() {
           width={343}
           height={320}
           alt="Dancing Couple"
-          priority="true"
           sizes="100vw"
           style={{
             width: "100%",
@@ -34,7 +33,6 @@ export default function MainSection() {
             width={398}
             height={400}
             alt="Dancing Couple"
-            priority="true"
             sizes="100vw"
             style={{
               width: "100%",
@@ -48,7 +46,6 @@ export default function MainSection() {
             width={635}
             height={400}
             alt="Dancing Couple"
-            priority="true"
             sizes="100vw"
             style={{
               width: "100%",
@@ -64,7 +61,6 @@ export default function MainSection() {
             width={343}
             height={480}
             alt="Footwork of dancing couple"
-            priority="true"
             sizes="100vw"
             style={{
               width: "100%",
@@ -78,7 +74,6 @@ export default function MainSection() {
             width={398}
             height={720}
             alt="Footwork of dancing couple"
-            priority="true"
             sizes="100vw"
             style={{
               width: "100%",
@@ -92,7 +87,6 @@ export default function MainSection() {
             width={635}
             height={720}
             alt="Footwork of dancing couple"
-            priority="true"
             sizes="100vw"
             style={{
               width: "100%",
@@ -106,7 +100,6 @@ export default function MainSection() {
             width={343}
             height={200}
             alt="Couple practising a spin"
-            priority="true"
             sizes="100vw"
             style={{
               width: "100%",
@@ -121,7 +114,6 @@ export default function MainSection() {
               width={280}
               height={313}
               alt="Couple practising a spin"
-              priority="true"
               sizes="100vw"
               style={{
                 width: "100%",
@@ -135,7 +127,6 @@ export default function MainSection() {
               width={445}
               height={313}
               alt="Couple practising a spin"
-              priority="true"
               sizes="100vw"
               style={{
                 width: "100%",

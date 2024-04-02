@@ -13,7 +13,6 @@ function HeroImageTablet({hero}) {
           width={437}
           height={100}
           alt="hero image tablet"
-          priority="true"
           sizes="100vw"
           style={{
             width: '100%',
@@ -31,7 +30,6 @@ function HeroImageTablet({hero}) {
               height={95}
               // layout="responsive"
               alt="Latin Shine Dance Company - Tablet Logo"
-              priority="true"
               style={{
                 maxWidth: '100%',
                 height: 'auto',

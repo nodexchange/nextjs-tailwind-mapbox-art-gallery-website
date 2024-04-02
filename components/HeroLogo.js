@@ -16,7 +16,6 @@ const HeroLogo = ({hero}) => {
               height={136}
               // layout="responsive"
               alt="Latin Shine Dance Company Logo"
-              priority="true"
               style={{
                 maxWidth: "100%",
                 height: "auto"

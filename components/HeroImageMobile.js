@@ -9,7 +9,6 @@ function HeroImageMobile() {
           width={375}
           height={240}
           alt="hero image mobile"
-          priority="true"
           sizes="100vw"
           style={{
             width: '100%',
