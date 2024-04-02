@@ -1,9 +1,20 @@
 {
   "articles": [
     {
+      "id":23,
+      "title": "Elevate Your Salsa with Gil Prado Mendez at Our Exclusive Workshop!",
+      "author": "Martin, High Wycombe",
+      "date": "2nd April 2024 ",
+      "category": "Special Salsa Workshop",
+      "short": "Get ready to spin, shine, and elevate your Salsa skills to new heights! We're thrilled to announce an exclusive opportunity for dance enthusiasts and aspiring Salsa stars: a special Salsa Spinning and Technique Workshop featuring the UK's most sought-after instructor, Gil Prado Mendez. Mark your calendars for April 20th, 2024, and join us at the Wycombe Community Arts Centre for a masterclass that promises to transform your dance floor prowess. (...)",
+      "text": "Get ready to spin, shine, and elevate your Salsa skills to new heights! We're thrilled to announce an exclusive opportunity for dance enthusiasts and aspiring Salsa stars: a special Salsa Spinning and Technique Workshop featuring the UK's most sought-after instructor, Gil Prado Mendez. Mark your calendars for April 20th, 2024, and join us at the Wycombe Community Arts Centre for a masterclass that promises to transform your dance floor prowess.\n\nMaster the Art of Salsa with an International Sensation\nGil Prado Mendez is not just any instructor; he's a celebrated figure in the world of Latin dance, known internationally for his inventive turn patterns, captivating shines, and, most importantly, his meticulous attention to technique. Gil brings humor and energy to every lesson, making complex moves accessible to all levels of dancers. Alongside his partner, Anke Obermayer of the Pexava Dance Company, Gil has dazzled audiences and judges alike, representing Mexico and Austria in the most prestigious national and international dance competitions.\n\nWorkshop Details You Need to Know\nWhen: April 20th, 2024\nWhere: Wycombe Community Arts Centre, Desborough Rd, High Wycombe HP11 2PU\nTime: 2PM - 4PM\nPrice: £25.00 per person\n\nThis two-hour workshop is designed not just to teach but to inspire, offering insights into the techniques that make a world-class Salsa performer. Whether you're looking to improve your spinning, enhance your styling, or simply add new patterns to your repertoire, Gil's workshop is an unmissable event.\n\nLimited Spots for an Intimate Learning Experience\nTo ensure each participant receives personalized attention, spots in this workshop are highly limited. This is your chance to learn from a master of Salsa in an intimate setting, where every question is answered and every spin is perfected.\n\nSecure Your Place on the Dance Floor\nDon't miss this unique opportunity to learn from one of the best in the business. Whether you're a seasoned Salsa dancer or just beginning to explore the rhythm and passion of Latin dance, Gil's workshop will leave you inspired, energized, and ready to take on the dance floor with newfound confidence and skill.\n\nEmail us at latin_shine@outlook.com to reserve your spot now and get ready to spin your way to Salsa success with Gil Prado Mendez!",
+      "href":"news/2024-april-salsa-workshop",
+      "img": "/images/poster-banner-gil.jpg"
+    },
+    {
       "id":22,
       "title": "Discover the Joy of Dance This April: Join Our Salsa and Bachata Classes!",
-      "author": "Alyssa",
+      "author": "Alyssa, High Wycombe",
       "date": "20th March 2024 ",
       "category": "Salsa & Bachata",
       "short": "Are you looking to add a spark of joy and a splash of rhythm to your life? This April, we're rolling out the red carpet for all dance enthusiasts, beginners, and seasoned movers to join our vibrant Salsa and Bachata dance courses. Whether you're aiming to break free from the monotony of daily routines, meet new people, or simply find a fun way to stay fit, our dance floor is open to everyone! (...)",
@@ -14,7 +25,7 @@
     {
       "id":21,
       "title": "March Classes in High Wycombe: Join Our Bachata and Salsa Dance Courses!",
-      "author": "Alyssa",
+      "author": "Alyssa, High Wycombe",
       "date": "3rd March 2024 ",
       "category": "Salsa & Bachata",
       "short": "High Wycombe, Buckinghamshire – starting 5th and 6th of March, ignite your passion for dance at our Latin dance academy in High Wycombe with the launch of our exciting Salsa and Bachata dance courses! (...)",
@@ -25,7 +36,7 @@
     {
       "id":20,
       "title": "Get Ready to Sway This February: Join Our Bachata and Salsa Dance Courses!",
-      "author": "Alyssa",
+      "author": "Alyssa, High Wycombe",
       "date": "24th January 2024",
       "category": "Salsa & Bachata",
       "short": "High Wycombe, Buckinghamshire – This February, our Latin dance school in High Wycombe is excited to announce the commencement of our much-anticipated Bachata and Salsa dance courses! (...)",
@@ -36,7 +47,7 @@
     {
       "id":19,
       "title": "Happy New Year 2024 - Join us in January 2024 💃🕺",
-      "author": "Alyssa",
+      "author": "Alyssa, High Wycombe",
       "date": "5th January 2024",
       "category": "Salsa & Bachata",
       "short": "With the Christmas break over, we will start our new Beginners and Improvers classes on January 9th and 10th. Kick off the New Year with a bang! (...)",
@@ -47,7 +58,7 @@
     {
       "id":18,
       "title": "🎄🎄🎄 Early Winter Break - We will resume in January 2024 🎄🎄🎄",
-      "author": "Alyssa",
+      "author": "Alyssa, High Wycombe",
       "date": "12th November 2023",
       "category": "Salsa & Bachata",
       "short": "It's time to recharge, our instructors are taking a well deserved break and we'll be back on January 9th and 10th to kick off the new year with a bang! (...)",
@@ -58,7 +69,7 @@
     {
       "id":17,
       "title": "🎉💃 November 3-week Beginner Dance Courses! 💃🎉",
-      "author": "Alyssa",
+      "author": "Alyssa, High Wycombe",
       "date": "30th October 2023",
       "category": "Salsa & Bachata",
       "short": "November marks your last chance to join our electrifying dance classes for the year before we take a short break. We'll be back on January 9th and 10th to kick off the new year with a bang! (...)",
@@ -69,7 +80,7 @@
     {
       "id":16,
       "title": "🎉💃 NEW October Beginner Dance Courses: Unleash Your Inner Rhythm with Latin Shine Dance Company! 💃🎉",
-      "author": "Alyssa",
+      "author": "Alyssa, High Wycombe",
       "date": "25th Sept 2023",
       "category": "Salsa & Bachata",
       "short": "Exciting news, dance enthusiasts! High Wycombe's favorite Latin dance hub, Latin Shine Dance Company, is kickstarting a fresh and vibrant batch of Bachata and Salsa classes this October. (...)",
@@ -80,7 +91,7 @@
     {
       "id":15,
       "title": "Back to School - our new September courses info!",
-      "author": "Alyssa",
+      "author": "Alyssa, High Wycombe",
       "date": "22nd Aug 2023",
       "category": "Salsa & Bachata",
       "short": "With summer breaks over, we are announcing our September beginners courses date. Join Alyssa and Martin on the 5th and 6th of September for our new Salsa and Bachata courses. (...)",
@@ -91,7 +102,7 @@
     {
       "id":14,
       "title": "☀️ August Summer Holiday (8th and 9th of August)! ☀️",
-      "author": "Martin",
+      "author": "Martin, High Wycombe",
       "date": "2nd Aug 2023",
       "category": "Salsa & Bachata",
       "short": "Reminder: No classes this week (Tue & Wed, 08/08 & 09/08) due to the summer break (...)",
@@ -102,7 +113,7 @@
     {
       "id":13,
       "title": "☀️ August Courses 2023! ☀️",
-      "author": "Martin",
+      "author": "Martin, High Wycombe",
       "date": "25th July 2023",
       "category": "Salsa & Bachata",
       "short": "Our new August courses are just around the corner. Come and take your mind of rainy July while enjoying dancing with like minded people. (...)",
@@ -113,7 +124,7 @@
     {
       "id":12,
       "title": "☀️ July Courses 2023! ☀️",
-      "author": "Martin",
+      "author": "Martin, High Wycombe",
       "date": "25th June 2023",
       "category": "Salsa & Bachata",
       "short": "Join our July Bachata & Salsa classes. Join our instructors Alyssa and Martin and start your Dancing Journey with us! (...)",
@@ -124,7 +135,7 @@
     {
       "id":11,
       "title": "☀️ New June Courses! ☀️",
-      "author": "Martin",
+      "author": "Martin, High Wycombe",
       "date": "29th May 2023",
       "category": "Salsa & Bachata",
       "short": "Don't miss our June Bachata & Salsa classes. On the 6th and 7th of June, join our instructors Alyssa and Martin and start your Dancing Journey with us! (...)",
@@ -135,7 +146,7 @@
     {
       "id":10,
       "title": "💆💆‍♀️ New April Courses!",
-      "author": "Martin",
+      "author": "Martin, High Wycombe",
       "date": "29th March 2023",
       "category": "Salsa",
       "short": "Join us in April for our new LA Style (Crossbody on1) Salsa classes at Castle Street Dance Studio. (...)",
@@ -146,7 +157,7 @@
     {
       "id":9,
       "title": "📣 SALSA! Today is finally here! 📣",
-      "author": "Martin",
+      "author": "Martin, High Wycombe",
       "date": "7th March 2023",
       "category": "Salsa",
       "short": "💃🕺 Our new LA Style (Crossbody on1) Salsa classes at Castle StreetDance Studio are finally here. Come and join our instructors Alyssa and Martin and start your Salsa Journey with us! (...)",
@@ -157,7 +168,7 @@
     {
       "id":8,
       "title": "📣 NEW SALSA COURSES STARTING IN MARCH 2023! 📣",
-      "author": "Martin",
+      "author": "Martin, High Wycombe",
       "date": "3rd Feb 2023",
       "category": "New Salsa Course",
       "short": "You have been asking and we have listened! We are Starting our newLA Style (Crossbody on1) Salsa classes at Castle Street Dance Studio. (...)",
@@ -168,7 +179,7 @@
     {
       "id":7,
       "title": "🕺💃 Classes are on!",
-      "author": "Martin",
+      "author": "Martin, High Wycombe",
       "date": "11th January 2023",
       "category": "Bachata",
       "short": "📣 Join us tonight for our regular Bachata beginner and improver classes! (...)",
@@ -179,7 +190,7 @@
     {
       "id":6,
       "title": "📣 Classes are on!",
-      "author": "Martin",
+      "author": "Martin, High Wycombe",
       "date": "28th December 2022",
       "category": "Bachata",
       "short": "Join us tonight for our last class of 2022! (...)",
@@ -190,7 +201,7 @@
     {
       "id":5,
       "title": "🎄🎄🎄 Reminder! Schedule Changes! 🎄🎄🎄",
-      "author": "Martin",
+      "author": "Martin, High Wycombe",
       "date": "14th November 2022",
       "category": "Bachata",
       "short": "🎄🎄🎄 Early Winter break! 🎄🎄🎄 Quick reminder to all of our students that this week (16th) it will be our last November class. (...)",
@@ -201,7 +212,7 @@
     {
       "id":4,
       "title": "💃🕺 October Bachata Classes!",
-      "author": "Martin",
+      "author": "Martin, High Wycombe",
       "date": "29th September 2022",
       "category": "Bachata",
       "short": "💃🕺Interested in trying something new in October? 💃🕺 Come learn Sensual Bachata which includes basic steps, dancing technique and shines and body movement in High Wycombe! (...)",
@@ -212,7 +223,7 @@
     {
       "id":3,
       "title": "📣 Extended hours - New Bachata Social!",
-      "author": "Martin",
+      "author": "Martin, High Wycombe",
       "date": "6th September 2022",
       "category": "Bachata",
       "short": "We are back this week with a new beginners course and new extended hours (📣) to add an additional hour of social dancing! (...)",
@@ -223,7 +234,7 @@
     {
       "id":2,
       "title": "💆💆‍♀️ Summer Break!",
-      "author": "Martin",
+      "author": "Martin, High Wycombe",
       "date": "23rd August 2022",
       "category": "Bachata Schedule Change",
       "short": "Reminder: No classes this week (Wed, 24/08) due to the summer break (...)",
@@ -234,7 +245,7 @@
     {
       "id":1,
       "title": "💃🕺 August Bachata Classes!",
-      "author": "Martin",
+      "author": "Martin, High Wycombe",
       "date": "2nd August 2022",
       "category": "Bachata",
       "short": "💃🕺Interested in trying something new in August 🌤? Join us for our Latin #dance Bachata classes in #highwycombe. (...)",
@@ -245,7 +256,7 @@
     {
       "id":0,
       "title": "💃🕺 BACHATA CLASSES IN HIGH WYCOMBE - EVERY WEDNESDAY!",
-      "author": "Martin",
+      "author": "Martin, High Wycombe",
       "date": "6th July 2022",
       "category": "Bachata",
       "short": "We are teaching Bachata Sensual classes at the High Wycombe Guildhall (High Street). (...)",
