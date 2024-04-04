@@ -31,7 +31,7 @@ export const AnnouncementBanner = () => {
         </div>
       </div>
       <div className="flex justify-end">
-      <ButtonA path="mailto:latin_shine@outlook.com?subject=Salsa Workshop with Gil - 20th April!" title="Reserve Workshop" target="_blank" />
+      <ButtonA path="https://www.eventbrite.co.uk/e/salsa-spinning-and-technique-workshop-tickets-875929848757?aff=oddtdtcreator&fbclid=IwAR0-P2QAPudamni6J8WinqVBUO2vHTSbpgUF0dDwBiLuHZarkCjKCioI4YM_aem_AepqvaLXJy1VeHIMJtq0ymUBWDcZzFoGHvhheULvZ5GuA-sHtqFKorXVm_Sb-zo2MYuWe7BAe6tBUlSY0gBj3EVp" title="Reserve Workshop" target="_blank" />
       </div>
     </section>
   );
