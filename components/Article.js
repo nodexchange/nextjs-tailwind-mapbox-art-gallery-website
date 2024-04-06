@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from 'next/link';
 
-export const Article = ({ img, title, date, author, text, category, href, short, standalone }) => {
+export const Article = ({ img, title, date, author, text, category, href, short, standalone, price, button, buttonUrl }) => {
   return (
     <article className="flex flex-wrap mb-6">
       <div className="grow-0 shrink-0 basis-auto w-full md:w-3/12 px-3 mb-6 md:mb-0 ml-auto">
@@ -15,12 +15,14 @@ export const Article = ({ img, title, date, author, text, category, href, short,
           <Image
             src={img}
             className="w-full"
-            alt="Louvre"
+            alt={title}
             width="619"
             height="413"
             style={{
               maxWidth: "100%",
-              height: "auto"
+              height: "auto",
+              maxHeight: "280px",
+              objectFit: "contain",
             }} />
           <Link href="/classes">
             <div className="absolute top-0 right-0 bottom-0 left-0 w-full h-full overflow-hidden bg-fixed opacity-0 hover:opacity-100 transition duration-300 ease-in-out"></div>
@@ -43,8 +45,11 @@ export const Article = ({ img, title, date, author, text, category, href, short,
           {category}
         </div>
         <p className="text-gray-400 mb-6">
-          Published <u>{date}</u> by{' '}
+          {price ? ('Event date: ') : ('Published: ')}
+          <u>{date}</u> 
+          {price ? (' in ') : (' by ')}
           <span className="text-white">{author}</span>
+          {price ? (<><br /><span className="text-yellow-300"> Event price: {price}</span></>) : ('')}
         </p>
         {!standalone ? (
           <>
@@ -54,7 +59,13 @@ export const Article = ({ img, title, date, author, text, category, href, short,
           </Link>
           </>
         ) : (
+          <>
           <p className="text-white whitespace-pre-line align-bottom">{text}</p>
+          {button && (
+            <Link href={buttonUrl}>
+              <button className="bg-yellow-300 text-black font-bold uppercase text-sm px-6 py-3 rounded-full mt-6">{button}</button>
+            </Link>)}
+          </>
         )}
         <hr className="mt-4" />
       </div>

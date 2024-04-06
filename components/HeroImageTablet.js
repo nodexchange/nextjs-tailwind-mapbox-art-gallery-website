@@ -9,7 +9,7 @@ function HeroImageTablet({hero}) {
     
     <div className="hidden sm:block sm:w-100 sm:max-h-[10vh] lg:hidden">
         <Image
-          src="/tablet/image-hero.jpg"
+          src="/tablet/image-hero.webp"
           width={437}
           height={100}
           alt="hero image tablet"
@@ -25,7 +25,7 @@ function HeroImageTablet({hero}) {
         <div className="mx-auto p-[0px] border-2 border-white mb-10 w-[290px]">
           <div className="ml-[20px] mt-[15px]">
             <Image
-              src="/tablet/logo.png"
+              src="/tablet/logo.webp"
               width={250}
               height={95}
               // layout="responsive"

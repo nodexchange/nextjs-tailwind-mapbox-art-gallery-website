@@ -11,7 +11,7 @@ const HeroLogo = ({hero}) => {
           <div className="w-full mt-[10px] drop-shadow-xl">
             <Image
               className="mx-auto"
-              src="/desktop/logo.png"
+              src="/desktop/logo.webp"
               width={400}
               height={136}
               // layout="responsive"

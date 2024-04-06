@@ -14,7 +14,7 @@ export const AnnouncementBanner = () => {
           <Image
             width={200}
             height={312}
-            src="/images/poster-banner-gil.jpg"
+            src="/images/poster-banner-gil.webp"
             alt="Salsa Spinning and Technique Workshop with Gil Prado Mendez"
             className="w-full h-full object-contain"
           />

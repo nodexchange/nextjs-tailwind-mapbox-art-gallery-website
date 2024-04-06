@@ -5,7 +5,7 @@ function HeroImageMobile() {
   return (
     <div className="sm:hidden">
         <Image
-          src="/mobile/image-hero.jpg"
+          src="/mobile/image-hero.webp"
           width={375}
           height={240}
           alt="hero image mobile"

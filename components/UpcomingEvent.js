@@ -12,7 +12,7 @@ const UpcomingEvent = ({ type, text, amount, children }) => {
               {type}
             </div>
             <Image
-              src="/eventlogo.jpeg"
+              src="/eventlogo.webp"
               width={720}
               height={720}
               // layout="responsive"
