@@ -12,7 +12,7 @@ const HeroTestimonials = ({ hero }) => {
           <h1 className="pl-[85px] font-black w-auto text-white font-bigShoulder uppercase text-headingS">
             {hero.comment.split('_').map((item, id) => {
               return (
-                <Link key={`item-${id}`} href="/classes">
+                <Link key={`item-${id}`} href="/events">
                   <span>
                     <span className="drop-shadow-3xl">{item}</span>
                     <br />
