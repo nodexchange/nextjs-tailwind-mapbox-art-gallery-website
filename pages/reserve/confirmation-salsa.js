@@ -54,9 +54,11 @@ const ReserveConfirmation = () => {
       }
       // too late, next month
       const nextMonth = d.getMonth() + 1;
-      const firstDay = new Date(d.getFullYear(), nextMonth, 1);
-      const future = calculateDate(firstDay);
-      setNextDate(future.nextDate.toLocaleDateString('en-GB'));
+      // const firstDay = new Date(d.getFullYear(), nextMonth, 1);
+      const firstDay = new Date(d.getFullYear(), nextMonth, 20);
+      // const future = calculateDate(firstDay);
+      // setNextDate(future.nextDate.toLocaleDateString('en-GB'));
+      setNextDate(firstDay.toLocaleDateString('en-GB'));
       return; // done
     }
     gaEvent({ action: 'reserve_success', params: { section: 'reserve_confirmation' }});
