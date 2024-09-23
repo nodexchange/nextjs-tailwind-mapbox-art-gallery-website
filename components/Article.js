@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from 'next/link';
+import dayjs from "dayjs";
 
 export const Article = ({ img, title, date, author, text, category, href, short, standalone, price, button, buttonUrl }) => {
   return (
@@ -24,7 +25,7 @@ export const Article = ({ img, title, date, author, text, category, href, short,
               maxHeight: "280px",
               objectFit: "contain",
             }} />
-          <Link href="/classes">
+          <Link href={href}>
             <div className="absolute top-0 right-0 bottom-0 left-0 w-full h-full overflow-hidden bg-fixed opacity-0 hover:opacity-100 transition duration-300 ease-in-out"></div>
           </Link>
         </div>
@@ -44,10 +45,10 @@ export const Article = ({ img, title, date, author, text, category, href, short,
           </svg>
           {category}
         </div>
-        <p className="text-gray-400 mb-6">
+        <p className="text-blue-300 mb-6">
           {price ? ('Event date: ') : ('Published: ')}
-          <u>{date}</u> 
-          {price ? (' in ') : (' by ')}
+          <u>{dayjs(date).format("d MMM YYYY")}</u> 
+          <span className="text-white">{price ? (' in ') : (' by ')}</span>
           <span className="text-white">{author}</span>
           {price ? (<><br /><span className="text-yellow-300"> Event price: {price}</span></>) : ('')}
         </p>

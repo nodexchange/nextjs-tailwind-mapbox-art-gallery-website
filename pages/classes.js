@@ -87,7 +87,6 @@ const AboutOurClasses = () => {
           <p className="font-bold">Wednesdays</p>
           <p>19:00 - 20:00 - Bachata Beginners Class</p>
           <p>20:00 - 21:00 - Bachata Improvers Class</p>
-          <p>21:00 - 22:00 - Bachata Intermediate Class (invite-only)</p>
           <br />
           <p>Address: Guildhall (High Street), High Wycombe.</p>
           <div className="w-[200px]">
