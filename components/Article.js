@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from 'next/link';
-import dayjs from "dayjs";
+import { format } from "date-fns";
+
 
 export const Article = ({ img, title, date, author, text, category, href, short, standalone, price, button, buttonUrl }) => {
   return (
@@ -47,7 +48,7 @@ export const Article = ({ img, title, date, author, text, category, href, short,
         </div>
         <p className="text-blue-300 mb-6">
           {price ? ('Event date: ') : ('Published: ')}
-          <u>{dayjs(date).format("d MMM YYYY")}</u> 
+          <span>{format(new Date(date), "dd MMM yyyy")}</span>
           <span className="text-white">{price ? (' in ') : (' by ')}</span>
           <span className="text-white">{author}</span>
           {price ? (<><br /><span className="text-yellow-300"> Event price: {price}</span></>) : ('')}

@@ -1,6 +1,19 @@
 {
   "articles": [
     {
+      "id": 32,
+      "title": "October - Important Schedule Update!",
+      "author": "Alyssa, High Wycombe",
+      "date": "2024-10-01",
+      "category": "Salsa & Bachata",
+      "short": "Please note that there will be no classes on 8th and 9th of October, and we will resume from the 15th and 16th.",
+      "text": "Please note that there will be no classes on 8th and 9th of October, and we will resume from the 15th and 16th.",
+      "href":"news/2024-october-schedule",
+      "button": "",
+      "buttonUrl": "",
+      "img": "/news/bachata8.jpg"
+    },
+    {
       "id": 31,
       "title": "October - Salsa and Bachata dance courses in High Wycombe!",
       "author": "Alyssa, High Wycombe",
@@ -8,7 +21,7 @@
       "category": "Salsa & Bachata",
       "short": "This October, step into the vibrant world of Latin dance with our new Salsa and Bachata dance courses at Latin Shine Dance Academy in High Wycombe! (...)",
       "text": "High Wycombe, Buckinghamshire – This October, step into the vibrant world of Latin dance with our new Salsa and Bachata dance courses at Latin Shine Dance Academy in High Wycombe! As the autumn leaves fall, there's no better time to bring warmth and excitement to your evenings by learning some fiery moves. Whether you're new to the scene or a seasoned dancer looking to fine-tune your skills, our October classes are designed just for you! Our inclusive community is perfect for adults of all levels and backgrounds. We are passionate about creating an environment where everyone can enjoy the joy and passion of Latin dance. So, if you're eager to meet new people, get moving, and embrace the spirit of Salsa and Bachata, look no further. (starting 1st of October): Beginners: 7:00 PM – New to salsa? Our beginner classes are the perfect introduction. Dive into the vibrant world of salsa with no pressure—just fun and learning at your own pace with our supportive instructors guiding the way.\nImprovers: 8:00 PM – If you’ve got the basics down, our improvers' level will take your salsa to the next step with new moves, exciting combinations, and enhanced techniques to keep you dancing confidently.\n\nBachata Wednesdays (starting 2nd of October): Beginners: 7:00 PM – Get lost in the sensual beats of bachata. Our beginner classes focus on creating a comfortable, engaging environment where you can learn the basics and grow your confidence step by step.\nImprovers: 8:00 PM – Ready to up your bachata game? Our improvers' class will introduce you to more complex rhythms and stylish moves, helping you shine on the dance floor.\n\nWhy Dance with Us This October? Welcoming Atmosphere: We pride ourselves on making dance accessible to everyone, regardless of experience. Our classes are beginner-friendly and designed to make you feel at ease while learning.\n\nAdults-Only Classes: Enjoy a mature and relaxed setting where you can learn, connect, and enjoy the social side of dancing with fellow adults.\n\nExpert Instructors: Our team of dedicated, passionate dance instructors are here to support you every step of the way, offering personalized guidance to help you thrive.\n\nCommunity Connection: Become a part of a lively dance community that shares your love for Latin culture and dance. Our classes are more than just lessons—they’re about building friendships and creating unforgettable experiences.\n\nConvenient Location: Located in the heart of High Wycombe, our dance studio is the perfect place to unwind, have fun, and let loose with plenty of space to express yourself.\n\nGet Ready to Dance! Don’t miss out this October! Spaces are filling up quickly, and we can’t wait to see new faces on the dance floor. Whether you’re looking for a new passion, a way to stay fit, or simply a fun night out, our Salsa and Bachata classes are your gateway to a thrilling Latin dance adventure.\n\nSign up today and let’s make this October your month of dance! We’re excited to welcome you to the floor and share the infectious energy of Latin dance with you.",
-      "href":"news/2024-september-classes",
+      "href":"news/2024-october-classes",
       "button": "",
       "buttonUrl": "",
       "img": "/news/salsa4.jpg"
