@@ -37,7 +37,7 @@ export default function NewsArticle({
 
 export const getServerSideProps = ({ params }) => {
   const { slug } = params;
-  const article = articles.articles.find((article) => article.href === `news/${slug}`);
+  const article = articles.articles.find((article) => article.href === slug);
 
   return { props: { article } }
 }

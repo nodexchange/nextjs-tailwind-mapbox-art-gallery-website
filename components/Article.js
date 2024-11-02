@@ -4,7 +4,7 @@ import { format } from "date-fns";
 
 
 export const Article = ({ img, title, date, author, text, category, href, short, standalone, price, button, buttonUrl }) => {
-  const eventHref = `/events/${href}`;
+  const eventHref = price ? `/events/${href}` : `/news/${href}`;
   return (
     <article className="flex flex-wrap mb-6">
       <div className="grow-0 shrink-0 basis-auto w-full md:w-3/12 px-3 mb-6 md:mb-0 ml-auto">
