@@ -4,6 +4,7 @@ import { format } from "date-fns";
 
 
 export const Article = ({ img, title, date, author, text, category, href, short, standalone, price, button, buttonUrl }) => {
+  const eventHref = `/events/${href}`;
   return (
     <article className="flex flex-wrap mb-6">
       <div className="grow-0 shrink-0 basis-auto w-full md:w-3/12 px-3 mb-6 md:mb-0 ml-auto">
@@ -26,14 +27,14 @@ export const Article = ({ img, title, date, author, text, category, href, short,
               maxHeight: "280px",
               objectFit: "contain",
             }} />
-          <Link href={href}>
+          <Link href={eventHref}>
             <div className="absolute top-0 right-0 bottom-0 left-0 w-full h-full overflow-hidden bg-fixed opacity-0 hover:opacity-100 transition duration-300 ease-in-out"></div>
           </Link>
         </div>
       </div>
 
       <div className="grow-0 shrink-0 basis-auto w-full md:w-9/12 xl:w-7/12 px-3 mb-6 md:mb-0 mr-auto">
-        {!standalone && (<Link href={href}><h5 className="text-lg font-bold mb-3">{title}</h5></Link>)}
+        {!standalone && (<Link href={eventHref}><h5 className="text-lg font-bold mb-3">{title}</h5></Link>)}
         <div className="mb-3 text-yellow-300 font-medium text-sm flex items-center justify-center md:justify-start">
           <svg
             className="w-4 h-4 mr-2"
@@ -56,7 +57,7 @@ export const Article = ({ img, title, date, author, text, category, href, short,
         {!standalone ? (
           <>
           <p className="text-white whitespace-pre-line align-bottom">{short}</p>
-          <Link href={href}>
+          <Link href={eventHref}>
             <button className="bg-yellow-300 text-black font-bold uppercase text-sm px-6 py-3 rounded-full mt-6">Read more</button>
           </Link>
           </>

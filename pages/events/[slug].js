@@ -36,7 +36,7 @@ export default function EventPage({
 
 export const getServerSideProps = ({ params }) => {
   const { slug } = params;
-  const event = events.events.find((event) => event.href === `events/${slug}`);
+  const event = events.events.find((event) => event.href === slug);
 
   return { props: { event } }
 }
