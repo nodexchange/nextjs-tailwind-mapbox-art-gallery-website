@@ -1,6 +1,18 @@
 {
   "articles": [
-
+    {
+      "id":35,
+      "title": "🎄🎄🎄 We are on a winter break - We will resume in February 2025 🎄🎄🎄",
+      "author": "Alyssa, High Wycombe",
+      "date": "2024-12-18",
+      "category": "Salsa & Bachata",
+      "short": "It's time to recharge, our instructors are taking a well deserved break and we'll be back on February 4th and 5th to kick off the new year with a bang! (...)",
+      "text": "It's time to recharge, our instructors are taking a well deserved break and we'll be back on February 4th and 5th to kick off the new year with a bang! Lots of love and have a Merry Christmas from Latin Shine Dance Company (Alyssa & Martin)",
+      "href": "2024-december-winter-break",
+      "button": "",
+      "buttonUrl": "",
+      "img": "/news/winter.jpeg"
+    },
       {
         "id": 34,
         "title": "High Wycombe, Bucks – This December, Make Your Nights Shine with Salsa and Bachata!",
