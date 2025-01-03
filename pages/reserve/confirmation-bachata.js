@@ -80,10 +80,13 @@ const ReserveConfirmation = () => {
         </h1>
         <div>
           <br />
+          <p>Please note that we are currently on our winter break</p>
+          <p>---------</p>
           <p>
-            You are all set for your Wednesday Bachata Class on:{' '}
+            You are all set for your Tuesday Salsa Class on:{" "}
             <b>
-              <u>{nextDate}</u>
+              {/* <u>{nextDate}</u> */}
+              <u>5th February 2024</u>
             </b>
             .
           </p>

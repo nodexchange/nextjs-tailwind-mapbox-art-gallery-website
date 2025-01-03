@@ -1,14 +1,14 @@
-import { useEffect, useState } from 'react';
-import Link from 'next/link';
-import { useSearchParams } from 'next/navigation';
+import { useEffect, useState } from "react";
+import Link from "next/link";
+import { useSearchParams } from "next/navigation";
 
-import { Secondary as Layout } from '../../layouts';
-import { gaEvent } from '../../lib/ga';
-import ButtonA from '../../components/ButtonA';
+import { Secondary as Layout } from "../../layouts";
+import { gaEvent } from "../../lib/ga";
+import ButtonA from "../../components/ButtonA";
 
-const title = '🎉 Success! 🎉';
-const text = 'Thank you for reserving your spot! 💃🕺';
-const description = '✨ Enjoy your class with Latin Shine team ✨';
+const title = "🎉 Success! 🎉";
+const text = "Thank you for reserving your spot! 💃🕺";
+const description = "✨ Enjoy your class with Latin Shine team ✨";
 
 const calculateDate = (date) => {
   const n = date.getTime();
@@ -24,70 +24,75 @@ const calculateDate = (date) => {
 const selectedDate = 2; // tuesday;
 
 const ReserveConfirmation = () => {
-  const [nextDate, setNextDate] = useState('');
+  const [nextDate, setNextDate] = useState("");
   const searchParams = useSearchParams();
   useEffect(() => {
     if (
-      typeof searchParams.get('beginner') === undefined ||
-      searchParams.get('beginner') === null
+      typeof searchParams.get("beginner") === undefined ||
+      searchParams.get("beginner") === null
     ) {
       return;
     }
-    const beginner = searchParams.get('beginner');
+    const beginner = searchParams.get("beginner");
     const d = new Date();
     const { weekday, weekOfMonth, nextDate } = calculateDate(d);
-    if (!beginner || beginner === 'false') {
+    if (!beginner || beginner === "false") {
       if (weekday === selectedDate) {
-        setNextDate(d.toLocaleDateString('en-GB'));
+        setNextDate(d.toLocaleDateString("en-GB"));
         return;
       }
-      setNextDate(nextDate.toLocaleDateString('en-GB'));
+      setNextDate(nextDate.toLocaleDateString("en-GB"));
       return; // done
     }
     if (beginner) {
       // not too late
       if (weekOfMonth <= 1) {
         if (weekday === selectedDate) {
-          setNextDate(d.toLocaleDateString('en-GB'));
+          setNextDate(d.toLocaleDateString("en-GB"));
           return;
         }
-        setNextDate(nextDate.toLocaleDateString('en-GB'));
+        setNextDate(nextDate.toLocaleDateString("en-GB"));
         return;
       }
       // too late, next month
       const nextMonth = d.getMonth() + 1;
       const firstDay = new Date(d.getFullYear(), nextMonth, 1);
       const future = calculateDate(firstDay);
-      setNextDate(future.nextDate.toLocaleDateString('en-GB'));
+      setNextDate(future.nextDate.toLocaleDateString("en-GB"));
       return; // done
     }
     gaEvent({
-      action: 'reserve_success',
-      params: { section: 'reserve_confirmation' },
+      action: "reserve_success",
+      params: { section: "reserve_confirmation" },
     });
-  }, [searchParams.get('beginner')]);
+  }, [searchParams.get("beginner")]);
 
   return (
     <Layout
       title="Latin Shine | Dance Company - Reserve Confirmation Screen"
-      description="Latin Shine Reserve Confirmation Screen for dance classes">
+      description="Latin Shine Reserve Confirmation Screen for dance classes"
+    >
       <main className="text-center bg-almostBlack text-white px-8 py-10 md:py-10 lg:py-30 lg:px-30 xl:px-40 justify-between md:items-start">
         <h1
           className="text-bodyM font-black uppercase font-bigShoulder"
-          style={{ lineHeight: '1.5rem' }}>
+          style={{ lineHeight: "1.5rem" }}
+        >
           {title}
         </h1>
         <div>
           <br />
+          <p>Please note that we are currently on our winter break</p>
+          <p>---------</p>
           <p>
-            You are all set for your Tuesday Salsa Class on:{' '}
+            You are all set for your Tuesday Salsa Class on:{" "}
             <b>
-              <u>{nextDate}</u>
+              {/* <u>{nextDate}</u> */}
+              <u>4th February 2024</u>
             </b>
             .
           </p>
           <br />
-          {searchParams.get('beginner') === 'true' && (
+          {searchParams.get("beginner") === "true" && (
             <p>
               If you have registered in the middle of the month, please join us
               next month to start your beginners course from day one, so you
@@ -100,7 +105,8 @@ const ReserveConfirmation = () => {
           <Link
             id="email_us_text"
             className="hover:underline hover:text-shine"
-            href="mailto:latin_shine@outlook.com?subject = Website&body = Hi Latin Shine,">
+            href="mailto:latin_shine@outlook.com?subject = Website&body = Hi Latin Shine,"
+          >
             latin_shine@outlook.com
           </Link>
           <br />
