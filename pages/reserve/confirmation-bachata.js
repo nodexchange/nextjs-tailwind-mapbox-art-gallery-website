@@ -85,8 +85,7 @@ const ReserveConfirmation = () => {
           <p>
             You are all set for your Tuesday Bachata Class on:{" "}
             <b>
-              {/* <u>{nextDate}</u> */}
-              <u>5th February 2024</u>
+              <u>{nextDate}</u>
             </b>
             .
           </p>
